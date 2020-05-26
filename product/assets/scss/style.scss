@@ -1,0 +1,119 @@
+
+$color-small: rgb(182, 182, 182);
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+main{
+    max-width: 55%;
+    margin: 0 auto;
+}
+
+
+
+#entête{
+    margin: 2% 0% 2% 0%;
+
+}
+
+#product{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 0.5fr;
+    grid-template-areas: 
+            "sac prix"
+            "miniature category";
+
+    .sac{
+        grid-area: sac;
+
+        img{
+            width: 500px;
+            height: 500px;
+        }
+    }
+
+    .prix{
+        grid-area: prix;
+        
+        .small{
+            color: $color-small;
+            font-size: small;
+            margin-bottom: 3%;
+        }
+
+        h1{
+            font-size: x-large;
+            margin-bottom: 3%;
+            
+        }
+
+  
+        .price{
+            color: black;
+            margin-bottom: 5%;
+            font-size: large;
+        }
+
+        p{
+            color: rgb(131, 130, 130);
+            margin-bottom: 3%;
+        }
+
+        h3{
+            color: grey;
+            font-size: medium;
+            margin-bottom: 2%;
+        }
+
+        .color{
+            display: flex;
+            margin-bottom: 5%;
+
+            .blue{
+                background-color: rgb(49, 49, 197);
+                padding: -2px;
+                
+                border-radius: 50%;
+                margin-right: 4px;
+            }
+            .jaune{
+                background-color: rgb(138, 138, 18);
+                padding: 0px;
+                border-radius: 50%;
+                margin-right: 4px;
+            }
+            .rose{
+                background-color: rgb(233, 120, 139);
+                padding: 0px;
+                border-radius: 50%;
+            }
+
+        }
+
+        .size{
+            display: flex;
+            margin-bottom: 5%;
+     
+        }
+
+
+
+    }
+
+    .miniature{
+        grid-area: miniature;
+    }
+    
+    .category{
+        grid-area: category;
+    }
+}
+
+
+
+
+
+
