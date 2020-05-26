@@ -18,4 +18,8 @@ Réalisation de la page du produit simple en HTML, CSS, SASS.
 
 Pour la realisation du projet Supro, je vais travailler sur le html et css des pages **about** et **contact**.
 
+## What does Arnaud have to do ?
 
+··* Making the structure of the shop page
+··* Styling the shop page in CSS/SASS once the HTML is done
+··* Provide help to team mates whenever necessary
