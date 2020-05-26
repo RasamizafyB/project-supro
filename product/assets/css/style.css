@@ -13,15 +13,27 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 0.5fr;
-  grid-template-areas: "sac prix" "miniature category"; }
+  grid-template-areas: "sac prix" "miniature category"; }
   #product .sac {
     grid-area: sac; }
     #product .sac img {
       width: 500px;
-      height: 500px; }
+      height: 470px; }
   #product .prix {
     grid-area: prix; }
-    #product .prix .small {
+    #product .prix .star {
+      margin-bottom: 3%; }
+      #product .prix .star .checked {
+        color: orange; }
+      #product .prix .star .NO {
+        color: #adadad; }
+      #product .prix .star .small {
+        float: right;
+        left: -100px;
+        color: #b6b6b6;
+        font-size: small;
+        margin-bottom: 3%; }
+    #product .prix .serial-number {
       color: #b6b6b6;
       font-size: small;
       margin-bottom: 3%; }
@@ -32,34 +44,102 @@ main {
       color: black;
       margin-bottom: 5%;
       font-size: large; }
+      #product .prix .price strike {
+        color: #999999; }
     #product .prix p {
       color: #838282;
-      margin-bottom: 3%; }
+      margin-bottom: 5%; }
     #product .prix h3 {
       color: grey;
       font-size: medium;
-      margin-bottom: 2%; }
+      margin-bottom: 3%; }
     #product .prix .color {
       display: flex;
       margin-bottom: 5%; }
       #product .prix .color .blue {
         background-color: #3131c5;
-        padding: -2px;
+        padding: 0px;
         border-radius: 50%;
-        margin-right: 4px; }
+        margin-right: 10px; }
       #product .prix .color .jaune {
         background-color: #8a8a12;
         padding: 0px;
         border-radius: 50%;
-        margin-right: 4px; }
+        margin-right: 10px; }
       #product .prix .color .rose {
         background-color: #e9788b;
         padding: 0px;
-        border-radius: 50%; }
+        border-radius: 50%;
+        margin-right: 10px; }
     #product .prix .size {
       display: flex;
       margin-bottom: 5%; }
+      #product .prix .size .S {
+        padding: 0px;
+        border-radius: 50%;
+        margin-right: 10px; }
+      #product .prix .size .M {
+        padding: 0px;
+        border-radius: 50%;
+        margin-right: 10px; }
+      #product .prix .size .L {
+        padding: 0px;
+        border-radius: 50%;
+        margin-right: 10px; }
+    #product .prix .buy {
+      margin-top: 8%;
+      margin-bottom: 0%;
+      border-bottom: 2px solid #a8a7a7;
+      display: grid;
+      grid-template-columns: 1fr 3fr 0.5fr;
+      grid-template-rows: 40px 40px;
+      grid-template-areas: "quantity add_card like" "buy_now buy_now buy_now";
+      grid-column-gap: 5px;
+      grid-row-gap: 20px; }
+      #product .prix .buy .quantity {
+        grid-area: quantity;
+        border: 2px solid grey;
+        display: grid;
+        grid-template-columns: 0.2fr 1fr 0.2fr;
+        grid-template-rows: 40px; }
+        #product .prix .buy .quantity .minus {
+          grid-column: 1;
+          grid-row: 1;
+          text-align: center;
+          padding-top: 4%; }
+        #product .prix .buy .quantity .one {
+          grid-column: 2;
+          grid-row: 1;
+          text-align: center;
+          padding-top: 4%; }
+        #product .prix .buy .quantity .plus {
+          grid-column: 3;
+          grid-row: 1;
+          text-align: center;
+          padding-top: 4%; }
+      #product .prix .buy .add_card {
+        grid-area: add_card;
+        text-align: center;
+        padding-top: 4%;
+        background-color: black; }
+        #product .prix .buy .add_card a {
+          color: white;
+          text-decoration: none; }
+      #product .prix .buy .like {
+        grid-area: like;
+        border: 2px solid grey; }
+      #product .prix .buy .buy_now {
+        grid-area: buy_now;
+        text-align: center;
+        padding-top: 3%;
+        background-color: black; }
+        #product .prix .buy .buy_now a {
+          color: white;
+          text-decoration: none; }
   #product .miniature {
-    grid-area: miniature; }
+    grid-area: miniature;
+    display: flex; }
+    #product .miniature .face .coté .face2 .dos {
+      margin-right: 20px; }
   #product .category {
     grid-area: category; }

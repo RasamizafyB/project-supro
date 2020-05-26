@@ -2,6 +2,21 @@
 $color-small: rgb(182, 182, 182);
 
 
+@mixin small {
+    color: $color-small;
+    font-size: small;
+    margin-bottom: 3%;
+    
+}
+
+@mixin cercle {
+    padding: 0px;
+    border-radius: 50%;
+    margin-right: 10px;
+    
+}
+
+
 body{
     font-family: 'Roboto', sans-serif;
 }
@@ -31,17 +46,35 @@ main{
 
         img{
             width: 500px;
-            height: 500px;
+            height: 470px;
         }
     }
 
     .prix{
         grid-area: prix;
-        
-        .small{
-            color: $color-small;
-            font-size: small;
+
+        .star{
             margin-bottom: 3%;
+
+            .checked {
+                color: orange;
+            }
+            
+            .NO{
+                color: rgb(173, 173, 173);
+            }
+
+            
+            .small{
+                float: right;
+                left: -100px;
+                @include small()
+            }
+            
+        }
+
+        .serial-number{
+            @include small()
         }
 
         h1{
@@ -55,62 +88,137 @@ main{
             color: black;
             margin-bottom: 5%;
             font-size: large;
+            strike{
+                color: rgb(153, 153, 153);
+            }
         }
 
         p{
             color: rgb(131, 130, 130);
-            margin-bottom: 3%;
+            margin-bottom: 5%;
         }
 
         h3{
             color: grey;
             font-size: medium;
-            margin-bottom: 2%;
+            margin-bottom: 3%;
         }
 
         .color{
             display: flex;
             margin-bottom: 5%;
-
             .blue{
                 background-color: rgb(49, 49, 197);
-                padding: -2px;
-                
-                border-radius: 50%;
-                margin-right: 4px;
+                @include cercle()
             }
             .jaune{
                 background-color: rgb(138, 138, 18);
-                padding: 0px;
-                border-radius: 50%;
-                margin-right: 4px;
+                @include cercle()
             }
             .rose{
                 background-color: rgb(233, 120, 139);
-                padding: 0px;
-                border-radius: 50%;
+                @include cercle()
             }
-
         }
 
         .size{
             display: flex;
             margin-bottom: 5%;
-     
+
+            .S{  
+                @include cercle()
+            }
+            .M{  
+                @include cercle()
+            }
+            .L{  
+                @include cercle()
+            }
         }
 
+        .buy{
+            margin-top: 8%;
+            margin-bottom: 0%;
+            border-bottom: 2px solid rgb(168, 167, 167);
+            display: grid;
+            grid-template-columns: 1fr 3fr 0.5fr;
+            grid-template-rows: 40px 40px;
+            grid-template-areas: 
+                    "quantity add_card like"
+                    "buy_now buy_now buy_now";
+            grid-column-gap: 5px;
+            grid-row-gap: 20px;
+            .quantity{
+                grid-area: quantity;
+                border: 2px solid grey;
+                display: grid;
+                grid-template-columns: 0.2fr 1fr 0.2fr;
+                grid-template-rows: 40px;
+                .minus{
+                    grid-column: 1;
+                    grid-row: 1;
+                    text-align: center;
+                    padding-top: 4%;
+                }
+                .one{
+                    grid-column: 2;
+                    grid-row: 1;
+                    text-align: center;
+                    padding-top: 4%;
+                }
+                .plus{
+                    grid-column: 3;
+                    grid-row: 1;
+                    text-align: center;
+                    padding-top: 4%;
+                }
+            }
+            .add_card{
+                grid-area: add_card;
+                text-align: center;
+                padding-top: 4%;
+                background-color: black;
+                a{
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+            .like{
+                grid-area: like;
+                border: 2px solid grey;
+                
+            }
+
+            .buy_now{
+                grid-area: buy_now;
+                text-align: center;
+                padding-top: 3%;
+                background-color: black;
+                a{
+                    color: white;
+                    text-decoration: none;
+                }
+
+            }
+        }
 
 
     }
 
     .miniature{
         grid-area: miniature;
+        display: flex;
+        .face .coté .face2 .dos{
+            margin-right: 20px;
+        }
     }
     
     .category{
         grid-area: category;
     }
 }
+
+
 
 
 
