@@ -22,11 +22,9 @@ body{
 }
 
 main{
-    max-width: 55%;
+    max-width: 60%;
     margin: 0 auto;
 }
-
-
 
 #entête{
     margin: 2% 0% 2% 0%;
@@ -45,8 +43,8 @@ main{
         grid-area: sac;
 
         img{
-            width: 500px;
-            height: 470px;
+            width: 750px;
+            height: 750px;
         }
     }
 
@@ -55,6 +53,8 @@ main{
 
         .star{
             margin-bottom: 3%;
+            display: flex;
+            justify-content: flex-start;
 
             .checked {
                 color: orange;
@@ -66,9 +66,8 @@ main{
 
             
             .small{
-                float: right;
-                left: -100px;
-                @include small()
+                @include small();
+                margin-bottom: 0%;
             }
             
         }
@@ -208,9 +207,15 @@ main{
     .miniature{
         grid-area: miniature;
         display: flex;
-        .face .coté .face2 .dos{
-            margin-right: 20px;
+        justify-content: space-between;
+        margin: 7% 3% 7% 5%;
+        img{
+            width: 150px;
+            height: 150px;
         }
+
+        
+
     }
     
     .category{
