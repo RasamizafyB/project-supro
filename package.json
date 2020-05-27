@@ -1,0 +1,15 @@
+{
+  "name": "supro-project",
+  "version": "1.0.0",
+  "description": "Supro Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch assets/scss -o assets/css"
+  },
+  "author": "Arnaud De Baerdemaeker",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
