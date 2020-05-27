@@ -1,5 +1,6 @@
 
 $color-small: rgb(182, 182, 182);
+$color-strike: rgb(153, 153, 153);
 
 @mixin display {
     display: flex;
@@ -26,32 +27,124 @@ $color-small: rgb(182, 182, 182);
     padding: 1px 5px 1px 5px;
     border-radius: 45%;
     @include cercle();
- 
+}
+@mixin articlele {
+    h5{
+        margin-top: 5%;
+        margin-bottom: 3%;
+    }
+    p{
+        strike{
+            color: $color-strike;
+        }
+    }
+}
+@mixin title_article {
+    text-align: center;
+    h2{
+        font-size: 25px;
+        margin-top: 5%;
+        margin-bottom: 2%;
+    }
+}
+@mixin webkit($fill-color) {
+    -webkit-text-fill-color: $fill-color;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color:  rgb(194, 194, 194);
+}
+$black: #222;
+$grey: #999;
+$orange: #f68773;
+$banner-top: #F2EDE9;
+
+@mixin flex($type, $x, $y) {
+    display: $type;
+    justify-content: $x;
+    align-items: $y;
 }
 
+@mixin position($type, $top, $right, $bottom, $left) {
+    position: $type;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
 
 body{
     font-family: 'Roboto', sans-serif;
 }
 
+//header
+
+header {
+    padding: 5vh; 
+    height: 25px;
+    border-bottom: 0.5px solid rgb(197, 197, 197);
+    position: relative;
+    .logo {
+        @include position(absolute, 5.5vh, 0, 0, 5%);
+        display: block;
+
+    }
+    .navig {
+        @include position(absolute, 5vh, 0, 0, 22%);
+        p {
+            text-decoration: none;
+            color: black; 
+            @include flex(inline-flex, center, center);
+            width: 80px;
+            height: 40px;  
+        }
+    }    
+    .search {
+        @include position(absolute, 5vh, 0, 0, 65%);
+        @include flex(inline-flex, center, center);
+        width: 200px;
+        height: 40px;
+        input {
+            width: 200px;
+            height: 40px;
+            border-radius: 25px;
+            padding: 0 40px 0 15px;
+            border: none;
+            &:focus {
+                outline: none;
+            }
+        }
+        i {
+            @include position(absolute, 50%, 0, 0, 85%);
+            transform: translateY(-30%);
+            font-size: 0.8em;
+        }
+    }
+    .icon {
+        @include position(absolute, 5vh, 0, 0, 85%);
+        .icons {
+            @include flex(inline-flex, center, center);
+            width: 40px;
+            height: 40px;
+        }
+    }
+}
+
+// main
+
 main{
     max-width: 60%;
     margin: 0 auto;
 }
-
-
-
 #entête{
-    margin: 2% 0% 2% 0%;
+    margin: 40px 0% 2% 0%;
     display: flex;
     justify-self: start;
-    p{
-        .home{
-            color: rgb(148, 148, 148);
-        }    
+    h4{
+        color: rgb(148, 148, 148);       
     }
+    p{
+        margin-left: 2%;
+    } 
 }
-
 #product{
     display: grid;
     grid-template-columns: 518.91px 1fr;
@@ -59,7 +152,6 @@ main{
     grid-template-areas: 
             "sac prix"
             "miniature category";
-
     .sac{
         grid-area: sac; 
         display: flex; 
@@ -69,7 +161,6 @@ main{
             align-self: center;
         }
     }
-
     .prix{
         grid-area: prix;
         margin: 5%;
@@ -90,27 +181,21 @@ main{
                 margin-bottom: 0;
                 margin-left: 2%;
             }
-  
         }
-
         .serial-number{
             @include small()
         }
-
         h1{
             font-size: x-large;
-            margin-bottom: 3%;
-            
-        }
-
-  
+            margin-bottom: 3%;   
+        }  
         .price{
             color: black;
             margin-bottom: 5%;
             margin-top: 2%;
             font-size: large;
             strike{
-                color: rgb(153, 153, 153);
+                color: $color-strike;
             }
         }
 
@@ -130,9 +215,7 @@ main{
             margin-bottom: 5%;
             .blue{
                 a{
-                    -webkit-text-fill-color: rgb(87, 51, 245);
-                    -webkit-text-stroke-width: 2px;
-                    -webkit-text-stroke-color: rgb(194, 194, 194);
+                    @include webkit(rgb(87, 51, 245));
                     @include cercle();
                     @include hover;
                 }  
@@ -140,18 +223,14 @@ main{
                
             .jaune{
                 a{
-                    -webkit-text-fill-color:rgb(245, 209, 51);
-                    -webkit-text-stroke-width: 2px;
-                    -webkit-text-stroke-color:  rgb(194, 194, 194);
+                    @include webkit(rgb(245, 209, 51));
                     @include cercle();
                     @include hover;
                 }  
             }
             .rose{
                 a{
-                    -webkit-text-fill-color: rgb(245, 51, 109);
-                    -webkit-text-stroke-width: 2px;
-                    -webkit-text-stroke-color: rgb(194, 194, 194);
+                    @include webkit(rgb(245, 51, 109));
                     @include cercle();
                     @include hover;
                 } 
@@ -161,24 +240,21 @@ main{
         .size{
             display: flex;
             margin-bottom: 5%;
-            .S{ 
+           .S{ 
                 a{
                     @include size();
                 }
-                
             }
             .M{  
                 a{
 
                     @include size();
                 }
-                
             }
             .L{ 
                 a{
                     @include size();
-                }
-                
+                } 
             }
         }
 
@@ -239,7 +315,7 @@ main{
                     -webkit-text-fill-color: white;
                     -webkit-text-stroke-width: 1px;
                     -webkit-text-stroke-color: black;
-                    :active{
+                    :hover{
                         -webkit-text-fill-color: black;
                     }
                 } 
@@ -263,17 +339,16 @@ main{
         display: flex;
         justify-content: space-between;
         margin: 0% 10% 2% 10%;
-        img { 
+        img{ 
             width: 90px;
             height: 90px;
             filter: opacity(50%); 
             -webkit-filter: opacity(50%);
-            img:hover { 
+            :hover{ 
                 filter: opacity(100%);
                 -webkit-filter: opacity(100%); 
             }
-        } 
-
+        }
     }  
     .HTAG{
         padding-top: 5%;
@@ -324,10 +399,108 @@ main{
     }
 }
 
+#information{
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: 2fe 1fr;
+    grid-template-rows: 1fr 1fr 0.5fr;
+    grid-template-areas: 
+            "introduction shoes"
+            "features shoes"
+            "vide shoes";
+    .shoes{
+        grid-area: shoes;
+    }
+    .introduction{
+        grid-area: introduction;
+        margin-right: 10%;
+        h2{
+            font-size: 25px;
+            margin-bottom: 3%;
+        }
+        p{
+            line-height: 30px;
+            color: rgb(130, 130, 130);
+        }
+    }
+    .features{
+        grid-area: features;
+        margin-right: 10%;
+        h2{
+            font-size: 25px;
+            margin-bottom: 3%;
+        }
+        ul{
+            list-style: disc;
+            margin-left: 5%;
+            line-height: 30px;
+            color: rgb(130, 130, 130);
+        }
+    }
+}
 
-
-
-
+#related_products{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 0.1fr 0.2fr 1fr 0.1fr;
+    grid-template-areas: 
+            "product product product product"
+            "cotton_sweater glitter embroidered floral"
+            "page page page page"
+            "upsell upsell upsell upsell"
+            "oversize  metallic suede striped"
+            "page2 page2 page2 page2";
+    .product{
+        grid-area: product;
+        @include title_article();
+    }
+    .cotton_sweater{
+        grid-area: cotton_sweater;
+        @include articlele();
+        
+    }
+    .glitter{
+        grid-area: glitter;
+        @include articlele();
+    }
+    .embroidered{
+        grid-area: embroidered;
+        @include articlele();
+    }
+    .floral{
+        grid-area: floral;
+        @include articlele();
+    }
+    .page{
+        grid-area: page;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+    .upsell{
+        grid-area: upsell;
+        @include title_article();
+    }
+    .oversize{
+        grid-area: oversize;
+        @include articlele();
+    }
+    .metallic{
+        grid-area: metallic;
+        @include articlele();
+    }
+    .suede{
+        grid-area: suede;
+        @include articlele();
+    }
+    .striped{
+        grid-area: striped;
+        @include articlele();
+    }
+    .page2{
+        grid-area: page2;
+    }
+}
 
 
 

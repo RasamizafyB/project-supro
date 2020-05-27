@@ -2,45 +2,104 @@
 body {
   font-family: 'Roboto', sans-serif; }
 
+header {
+  padding: 5vh;
+  height: 25px;
+  border-bottom: 0.5px solid #c5c5c5;
+  position: relative; }
+  header .logo {
+    position: absolute;
+    top: 5.5vh;
+    right: 0;
+    bottom: 0;
+    left: 5%;
+    display: block; }
+  header .navig {
+    position: absolute;
+    top: 5vh;
+    right: 0;
+    bottom: 0;
+    left: 22%; }
+    header .navig p {
+      text-decoration: none;
+      color: black;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 80px;
+      height: 40px; }
+  header .search {
+    position: absolute;
+    top: 5vh;
+    right: 0;
+    bottom: 0;
+    left: 65%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 40px; }
+    header .search input {
+      width: 200px;
+      height: 40px;
+      border-radius: 25px;
+      padding: 0 40px 0 15px;
+      border: none; }
+      header .search input:focus {
+        outline: none; }
+    header .search i {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      bottom: 0;
+      left: 85%;
+      transform: translateY(-30%);
+      font-size: 0.8em; }
+  header .icon {
+    position: absolute;
+    top: 5vh;
+    right: 0;
+    bottom: 0;
+    left: 85%; }
+    header .icon .icons {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px; }
+
 main {
   max-width: 60%;
   margin: 0 auto; }
 
 #entête {
-  margin: 2% 0% 2% 0%;
+  margin: 40px 0% 2% 0%;
   display: flex;
   justify-self: start; }
-  #entête p .home {
+  #entête h4 {
     color: #949494; }
+  #entête p {
+    margin-left: 2%; }
 
 #product {
   display: grid;
   grid-template-columns: 518.91px 1fr;
   grid-template-rows: 1fr 0.5fr;
-  grid-template-areas: "sac prix" "miniature category"; }
+  grid-template-areas: "sac prix" "miniature category"; }
   #product .sac {
     grid-area: sac;
     display: flex; }
     #product .sac img {
-<<<<<<< HEAD
       width: 518.91px;
       height: 477.25px;
       align-self: center; }
-=======
-      width: 750px;
-      height: 750px; }
->>>>>>> ee9151b30564f045f658ab43a6b5bfb6c6363671
   #product .prix {
     grid-area: prix;
     margin: 5%; }
     #product .prix .star {
       margin-bottom: 3%;
       display: flex;
-<<<<<<< HEAD
       justify-content: start; }
-=======
-      justify-content: flex-start; }
->>>>>>> ee9151b30564f045f658ab43a6b5bfb6c6363671
       #product .prix .star .checked {
         color: orange; }
       #product .prix .star .NO {
@@ -49,12 +108,8 @@ main {
         color: #b6b6b6;
         font-size: small;
         margin-bottom: 3%;
-<<<<<<< HEAD
         margin-bottom: 0;
         margin-left: 2%; }
-=======
-        margin-bottom: 0%; }
->>>>>>> ee9151b30564f045f658ab43a6b5bfb6c6363671
     #product .prix .serial-number {
       color: #b6b6b6;
       font-size: small;
@@ -131,7 +186,7 @@ main {
       display: grid;
       grid-template-columns: 1fr 3fr 0.5fr;
       grid-template-rows: 40px 40px;
-      grid-template-areas: "quantity add_card like" "buy_now buy_now buy_now";
+      grid-template-areas: "quantity add_card like" "buy_now buy_now buy_now";
       grid-column-gap: 5px;
       grid-row-gap: 20px; }
       #product .prix .buy .quantity {
@@ -171,7 +226,7 @@ main {
           -webkit-text-fill-color: white;
           -webkit-text-stroke-width: 1px;
           -webkit-text-stroke-color: black; }
-          #product .prix .buy .like a :active {
+          #product .prix .buy .like a :hover {
             -webkit-text-fill-color: black; }
       #product .prix .buy .buy_now {
         grid-area: buy_now;
@@ -188,27 +243,19 @@ main {
     grid-area: miniature;
     display: flex;
     justify-content: space-between;
-<<<<<<< HEAD
     margin: 0% 10% 2% 10%; }
     #product .miniature img {
       width: 90px;
       height: 90px;
       filter: opacity(50%);
       -webkit-filter: opacity(50%); }
-      #product .miniature img img:hover {
+      #product .miniature img :hover {
         filter: opacity(100%);
         -webkit-filter: opacity(100%); }
   #product .HTAG {
     padding-top: 5%;
     margin: 0px 5% 5% 5%;
     border-top: solid 2px #c2c0c0;
-=======
-    margin: 7% 3% 7% 5%; }
-    #product .miniature img {
-      width: 150px;
-      height: 150px; }
-  #product .category {
->>>>>>> ee9151b30564f045f658ab43a6b5bfb6c6363671
     grid-area: category; }
     #product .HTAG .category {
       display: flex;
@@ -240,3 +287,115 @@ main {
   color: #8d8d8d; }
   .bar_menu h3 :hover {
     color: black; }
+
+#information {
+  margin-top: 10%;
+  display: grid;
+  grid-template-columns: 2fe 1fr;
+  grid-template-rows: 1fr 1fr 0.5fr;
+  grid-template-areas: "introduction shoes" "features shoes" "vide shoes"; }
+  #information .shoes {
+    grid-area: shoes; }
+  #information .introduction {
+    grid-area: introduction;
+    margin-right: 10%; }
+    #information .introduction h2 {
+      font-size: 25px;
+      margin-bottom: 3%; }
+    #information .introduction p {
+      line-height: 30px;
+      color: #828282; }
+  #information .features {
+    grid-area: features;
+    margin-right: 10%; }
+    #information .features h2 {
+      font-size: 25px;
+      margin-bottom: 3%; }
+    #information .features ul {
+      list-style: disc;
+      margin-left: 5%;
+      line-height: 30px;
+      color: #828282; }
+
+#related_products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr 0.1fr 0.2fr 1fr 0.1fr;
+  grid-template-areas: "product product product product" "cotton_sweater glitter embroidered floral" "page page page page" "upsell upsell upsell upsell" "oversize  metallic suede striped" "page2 page2 page2 page2"; }
+  #related_products .product {
+    grid-area: product;
+    text-align: center; }
+    #related_products .product h2 {
+      font-size: 25px;
+      margin-top: 5%;
+      margin-bottom: 2%; }
+  #related_products .cotton_sweater {
+    grid-area: cotton_sweater; }
+    #related_products .cotton_sweater h5 {
+      margin-top: 5%;
+      margin-bottom: 3%; }
+    #related_products .cotton_sweater p strike {
+      color: #999999; }
+  #related_products .glitter {
+    grid-area: glitter; }
+    #related_products .glitter h5 {
+      margin-top: 5%;
+      margin-bottom: 3%; }
+    #related_products .glitter p strike {
+      color: #999999; }
+  #related_products .embroidered {
+    grid-area: embroidered; }
+    #related_products .embroidered h5 {
+      margin-top: 5%;
+      margin-bottom: 3%; }
+    #related_products .embroidered p strike {
+      color: #999999; }
+  #related_products .floral {
+    grid-area: floral; }
+    #related_products .floral h5 {
+      margin-top: 5%;
+      margin-bottom: 3%; }
+    #related_products .floral p strike {
+      color: #999999; }
+  #related_products .page {
+    grid-area: page;
+    display: flex;
+    justify-content: center;
+    flex-direction: row; }
+  #related_products .upsell {
+    grid-area: upsell;
+    text-align: center; }
+    #related_products .upsell h2 {
+      font-size: 25px;
+      margin-top: 5%;
+      margin-bottom: 2%; }
+  #related_products .oversize {
+    grid-area: oversize; }
+    #related_products .oversize h5 {
+      margin-top: 5%;
+      margin-bottom: 3%; }
+    #related_products .oversize p strike {
+      color: #999999; }
+  #related_products .metallic {
+    grid-area: metallic; }
+    #related_products .metallic h5 {
+      margin-top: 5%;
+      margin-bottom: 3%; }
+    #related_products .metallic p strike {
+      color: #999999; }
+  #related_products .suede {
+    grid-area: suede; }
+    #related_products .suede h5 {
+      margin-top: 5%;
+      margin-bottom: 3%; }
+    #related_products .suede p strike {
+      color: #999999; }
+  #related_products .striped {
+    grid-area: striped; }
+    #related_products .striped h5 {
+      margin-top: 5%;
+      margin-bottom: 3%; }
+    #related_products .striped p strike {
+      color: #999999; }
+  #related_products .page2 {
+    grid-area: page2; }
