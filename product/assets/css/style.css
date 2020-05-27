@@ -17,21 +17,30 @@ main {
   display: grid;
   grid-template-columns: 518.91px 1fr;
   grid-template-rows: 1fr 0.5fr;
-  grid-template-areas: "sac prix" "miniature category"; }
+  grid-template-areas: "sac prix" "miniature category"; }
   #product .sac {
     grid-area: sac;
     display: flex; }
     #product .sac img {
+<<<<<<< HEAD
       width: 518.91px;
       height: 477.25px;
       align-self: center; }
+=======
+      width: 750px;
+      height: 750px; }
+>>>>>>> ee9151b30564f045f658ab43a6b5bfb6c6363671
   #product .prix {
     grid-area: prix;
     margin: 5%; }
     #product .prix .star {
       margin-bottom: 3%;
       display: flex;
+<<<<<<< HEAD
       justify-content: start; }
+=======
+      justify-content: flex-start; }
+>>>>>>> ee9151b30564f045f658ab43a6b5bfb6c6363671
       #product .prix .star .checked {
         color: orange; }
       #product .prix .star .NO {
@@ -40,8 +49,12 @@ main {
         color: #b6b6b6;
         font-size: small;
         margin-bottom: 3%;
+<<<<<<< HEAD
         margin-bottom: 0;
         margin-left: 2%; }
+=======
+        margin-bottom: 0%; }
+>>>>>>> ee9151b30564f045f658ab43a6b5bfb6c6363671
     #product .prix .serial-number {
       color: #b6b6b6;
       font-size: small;
@@ -118,7 +131,7 @@ main {
       display: grid;
       grid-template-columns: 1fr 3fr 0.5fr;
       grid-template-rows: 40px 40px;
-      grid-template-areas: "quantity add_card like" "buy_now buy_now buy_now";
+      grid-template-areas: "quantity add_card like" "buy_now buy_now buy_now";
       grid-column-gap: 5px;
       grid-row-gap: 20px; }
       #product .prix .buy .quantity {
@@ -175,6 +188,7 @@ main {
     grid-area: miniature;
     display: flex;
     justify-content: space-between;
+<<<<<<< HEAD
     margin: 0% 10% 2% 10%; }
     #product .miniature img {
       width: 90px;
@@ -188,6 +202,13 @@ main {
     padding-top: 5%;
     margin: 0px 5% 5% 5%;
     border-top: solid 2px #c2c0c0;
+=======
+    margin: 7% 3% 7% 5%; }
+    #product .miniature img {
+      width: 150px;
+      height: 150px; }
+  #product .category {
+>>>>>>> ee9151b30564f045f658ab43a6b5bfb6c6363671
     grid-area: category; }
     #product .HTAG .category {
       display: flex;
