@@ -1,0 +1,52 @@
+.new {
+    h2 {
+        padding: 0 0 1vh 20vw;
+        font-size: 2em;
+    }
+    h3 {
+        padding-left: 20vw;
+        font-size: 1em;
+        font-weight: 300;
+        color: $grey;
+    }
+    .flex-container-1 {
+        @include flex(flex, space-between, center)
+        width: 60vw;
+        margin: 10vh auto;
+        img {
+            width: 15vw;
+        }
+        p {
+            font-weight: bold;
+            padding: 10px 0;
+        }
+        h4 {
+            color: $grey;
+            font-size: 12px;
+            font-weight: 300;
+            padding: 10px 0;
+        }
+        i {
+            font-size: 0.7em;
+            color: $grey;
+        }
+        .y {
+            color: yellow;
+        }
+    }
+
+    .flex-container-2 {
+        @extend .flex-container-1;
+    }
+    
+    @include more();
+
+    a {
+        display: block;
+        width: 90px;
+        margin: 5vh auto;
+        font-size: 14px;
+    }
+
+
+}

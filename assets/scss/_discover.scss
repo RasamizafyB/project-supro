@@ -1,0 +1,43 @@
+.discover {
+    position: relative;
+    height: 40vh;
+    width: 100%;
+    .flex-container {
+        z-index: 1;
+        height: 100%;
+        @include flex(flex, center, center)
+        img {
+            width: 33.33333%;
+            height: 100%;
+        }
+    }
+    .trio-1 {
+        z-index: 2;
+        @include position(absolute, 22%, 0, 0, 3%)
+        width: 16vw;
+        p {
+            font-size: 14px;
+        }
+        h4 {
+            font-size: 50px;
+            color: $black;
+            margin: 1vh 0 3vh 0;
+        }
+        @include more
+    }
+    .trio-2 {
+        @extend .trio-1;
+        text-align: center;
+        p, h4 {
+            color: white;
+        }
+        @include position(absolute, 22%, 0, 0, 50%)
+        transform: translateX(-50%);
+        a { color: white; border-bottom: solid 3px white;}
+    }
+    .trio-3 {
+        // width: 15vw;
+        @extend .trio-1;
+        @include position(absolute, 22%, 0, 0, 85%)
+    }
+}
