@@ -3,7 +3,7 @@
 ## What does Arnaud have to do ?
 
 * Making the structure of the shop page
-* Styling the shop page in CSS/SASS once the HTML is done
+* Styling the shop page in CSS/SCSS once the HTML is done
 * Provide help to team mates whenever necessary
 
 
