@@ -1,19 +1,32 @@
 
 $color-small: rgb(182, 182, 182);
 
-
+@mixin display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 @mixin small {
     color: $color-small;
     font-size: small;
-    margin-bottom: 3%;
-    
+    margin-bottom: 3%;  
 }
-
 @mixin cercle {
-    padding: 0px;
-    border-radius: 50%;
-    margin-right: 10px;
-    
+    margin-right: 10px; 
+}
+@mixin hover {
+    :hover{
+        -webkit-text-stroke-color: black;
+    }
+}
+@mixin size {
+    font-size: 12px;
+    text-decoration: none;
+    background-color: rgb(194, 194, 194);
+    padding: 1px 5px 1px 5px;
+    border-radius: 45%;
+    @include cercle();
+ 
 }
 
 
@@ -22,7 +35,7 @@ body{
 }
 
 main{
-    max-width: 55%;
+    max-width: 60%;
     margin: 0 auto;
 }
 
@@ -30,47 +43,54 @@ main{
 
 #entête{
     margin: 2% 0% 2% 0%;
-
+    display: flex;
+    justify-self: start;
+    p{
+        .home{
+            color: rgb(148, 148, 148);
+        }    
+    }
 }
 
 #product{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 518.91px 1fr;
     grid-template-rows: 1fr 0.5fr;
     grid-template-areas: 
             "sac prix"
             "miniature category";
 
     .sac{
-        grid-area: sac;
-
+        grid-area: sac; 
+        display: flex; 
         img{
-            width: 500px;
-            height: 470px;
+            width: 518.91px;
+            height: 477.25px;
+            align-self: center;
         }
     }
 
     .prix{
         grid-area: prix;
-
+        margin: 5%;
         .star{
             margin-bottom: 3%;
+            display: flex;
+            justify-content: start;
 
             .checked {
                 color: orange;
-            }
-            
+            } 
             .NO{
                 color: rgb(173, 173, 173);
             }
 
-            
             .small{
-                float: right;
-                left: -100px;
-                @include small()
+                @include small();
+                margin-bottom: 0;
+                margin-left: 2%;
             }
-            
+  
         }
 
         .serial-number{
@@ -87,6 +107,7 @@ main{
         .price{
             color: black;
             margin-bottom: 5%;
+            margin-top: 2%;
             font-size: large;
             strike{
                 color: rgb(153, 153, 153);
@@ -108,38 +129,63 @@ main{
             display: flex;
             margin-bottom: 5%;
             .blue{
-                background-color: rgb(49, 49, 197);
-                @include cercle()
-            }
+                a{
+                    -webkit-text-fill-color: rgb(87, 51, 245);
+                    -webkit-text-stroke-width: 2px;
+                    -webkit-text-stroke-color: rgb(194, 194, 194);
+                    @include cercle();
+                    @include hover;
+                }  
+            }          
+               
             .jaune{
-                background-color: rgb(138, 138, 18);
-                @include cercle()
+                a{
+                    -webkit-text-fill-color:rgb(245, 209, 51);
+                    -webkit-text-stroke-width: 2px;
+                    -webkit-text-stroke-color:  rgb(194, 194, 194);
+                    @include cercle();
+                    @include hover;
+                }  
             }
             .rose{
-                background-color: rgb(233, 120, 139);
-                @include cercle()
+                a{
+                    -webkit-text-fill-color: rgb(245, 51, 109);
+                    -webkit-text-stroke-width: 2px;
+                    -webkit-text-stroke-color: rgb(194, 194, 194);
+                    @include cercle();
+                    @include hover;
+                } 
             }
         }
 
         .size{
             display: flex;
             margin-bottom: 5%;
-
-            .S{  
-                @include cercle()
+            .S{ 
+                a{
+                    @include size();
+                }
+                
             }
             .M{  
-                @include cercle()
+                a{
+
+                    @include size();
+                }
+                
             }
-            .L{  
-                @include cercle()
+            .L{ 
+                a{
+                    @include size();
+                }
+                
             }
         }
 
         .buy{
             margin-top: 8%;
             margin-bottom: 0%;
-            border-bottom: 2px solid rgb(168, 167, 167);
+            padding-bottom: 0%;
             display: grid;
             grid-template-columns: 1fr 3fr 0.5fr;
             grid-template-rows: 40px 40px;
@@ -151,72 +197,140 @@ main{
             .quantity{
                 grid-area: quantity;
                 border: 2px solid grey;
-                display: grid;
-                grid-template-columns: 0.2fr 1fr 0.2fr;
-                grid-template-rows: 40px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-right: 5%;
+                padding-left: 5%;
                 .minus{
-                    grid-column: 1;
-                    grid-row: 1;
-                    text-align: center;
-                    padding-top: 4%;
-                }
-                .one{
-                    grid-column: 2;
-                    grid-row: 1;
-                    text-align: center;
-                    padding-top: 4%;
+                    a{
+                        color: rgb(180, 180, 180);
+                        :hover{
+                            color: black;
+                        }
+                    }  
                 }
                 .plus{
-                    grid-column: 3;
-                    grid-row: 1;
-                    text-align: center;
-                    padding-top: 4%;
+                    a{
+                        color: rgb(180, 180, 180);
+                        :hover{
+                            color: black;
+                        }
+                    } 
                 }
             }
             .add_card{
                 grid-area: add_card;
-                text-align: center;
-                padding-top: 4%;
                 background-color: black;
+                @include display;
                 a{
                     color: white;
                     text-decoration: none;
+                    :hover{
+                        background-color: rgb(88, 88, 88);
+                    }
                 }
             }
             .like{
                 grid-area: like;
                 border: 2px solid grey;
-                
+                @include display;
+                a{
+                    -webkit-text-fill-color: white;
+                    -webkit-text-stroke-width: 1px;
+                    -webkit-text-stroke-color: black;
+                    :active{
+                        -webkit-text-fill-color: black;
+                    }
+                } 
             }
-
             .buy_now{
                 grid-area: buy_now;
-                text-align: center;
-                padding-top: 3%;
                 background-color: black;
+                @include display;
                 a{
                     color: white;
                     text-decoration: none;
+                    :hover{
+                        background-color: rgb(88, 88, 88);
+                    }
                 }
-
             }
         }
-
-
     }
-
     .miniature{
         grid-area: miniature;
         display: flex;
-        .face .coté .face2 .dos{
-            margin-right: 20px;
+        justify-content: space-between;
+        margin: 0% 10% 2% 10%;
+        img { 
+            width: 90px;
+            height: 90px;
+            filter: opacity(50%); 
+            -webkit-filter: opacity(50%);
+            img:hover { 
+                filter: opacity(100%);
+                -webkit-filter: opacity(100%); 
+            }
+        } 
+
+    }  
+    .HTAG{
+        padding-top: 5%;
+        margin: 0px 5% 5% 5%;
+        border-top: solid 2px rgb(194, 192, 192);
+        grid-area: category;
+        .category{
+            display: flex;
+            justify-content: start;
+            margin-bottom: 3%;
+            p{
+                margin-left: 2%;
+            }
+        }
+        .tag{
+            display: flex;
+            justify-content: start;
+            margin-bottom: 7%;
+            p{
+                margin-left: 2%;
+            }
+        }
+        .reseau{
+            display: flex;
+            justify-self: start;
+            a{
+                margin-right: 2%;
+                img{
+                    width: 20px;
+                    height: 20px;
+                }
+            }   
         }
     }
-    
-    .category{
-        grid-area: category;
+}
+
+.bar_menu{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgb(173, 173, 173);
+    border-bottom: 1px solid rgb(173, 173, 173);
+    padding: 3% 30% 3% 30%;
+    color: rgb(141, 141, 141);
+    h3{
+        :hover{
+            color: black;
+        }
     }
 }
+
+.information{
+    
+}
+
+
+
+
 
 
 

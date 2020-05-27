@@ -3,36 +3,45 @@ body {
   font-family: 'Roboto', sans-serif; }
 
 main {
-  max-width: 55%;
+  max-width: 60%;
   margin: 0 auto; }
 
 #entête {
-  margin: 2% 0% 2% 0%; }
+  margin: 2% 0% 2% 0%;
+  display: flex;
+  justify-self: start; }
+  #entête p .home {
+    color: #949494; }
 
 #product {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 518.91px 1fr;
   grid-template-rows: 1fr 0.5fr;
   grid-template-areas: "sac prix" "miniature category"; }
   #product .sac {
-    grid-area: sac; }
+    grid-area: sac;
+    display: flex; }
     #product .sac img {
-      width: 500px;
-      height: 470px; }
+      width: 518.91px;
+      height: 477.25px;
+      align-self: center; }
   #product .prix {
-    grid-area: prix; }
+    grid-area: prix;
+    margin: 5%; }
     #product .prix .star {
-      margin-bottom: 3%; }
+      margin-bottom: 3%;
+      display: flex;
+      justify-content: start; }
       #product .prix .star .checked {
         color: orange; }
       #product .prix .star .NO {
         color: #adadad; }
       #product .prix .star .small {
-        float: right;
-        left: -100px;
         color: #b6b6b6;
         font-size: small;
-        margin-bottom: 3%; }
+        margin-bottom: 3%;
+        margin-bottom: 0;
+        margin-left: 2%; }
     #product .prix .serial-number {
       color: #b6b6b6;
       font-size: small;
@@ -43,6 +52,7 @@ main {
     #product .prix .price {
       color: black;
       margin-bottom: 5%;
+      margin-top: 2%;
       font-size: large; }
       #product .prix .price strike {
         color: #999999; }
@@ -56,40 +66,55 @@ main {
     #product .prix .color {
       display: flex;
       margin-bottom: 5%; }
-      #product .prix .color .blue {
-        background-color: #3131c5;
-        padding: 0px;
-        border-radius: 50%;
+      #product .prix .color .blue a {
+        -webkit-text-fill-color: #5733f5;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: #c2c2c2;
         margin-right: 10px; }
-      #product .prix .color .jaune {
-        background-color: #8a8a12;
-        padding: 0px;
-        border-radius: 50%;
+        #product .prix .color .blue a :hover {
+          -webkit-text-stroke-color: black; }
+      #product .prix .color .jaune a {
+        -webkit-text-fill-color: #f5d133;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: #c2c2c2;
         margin-right: 10px; }
-      #product .prix .color .rose {
-        background-color: #e9788b;
-        padding: 0px;
-        border-radius: 50%;
+        #product .prix .color .jaune a :hover {
+          -webkit-text-stroke-color: black; }
+      #product .prix .color .rose a {
+        -webkit-text-fill-color: #f5336d;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: #c2c2c2;
         margin-right: 10px; }
+        #product .prix .color .rose a :hover {
+          -webkit-text-stroke-color: black; }
     #product .prix .size {
       display: flex;
       margin-bottom: 5%; }
-      #product .prix .size .S {
-        padding: 0px;
-        border-radius: 50%;
+      #product .prix .size .S a {
+        font-size: 12px;
+        text-decoration: none;
+        background-color: #c2c2c2;
+        padding: 1px 5px 1px 5px;
+        border-radius: 45%;
         margin-right: 10px; }
-      #product .prix .size .M {
-        padding: 0px;
-        border-radius: 50%;
+      #product .prix .size .M a {
+        font-size: 12px;
+        text-decoration: none;
+        background-color: #c2c2c2;
+        padding: 1px 5px 1px 5px;
+        border-radius: 45%;
         margin-right: 10px; }
-      #product .prix .size .L {
-        padding: 0px;
-        border-radius: 50%;
+      #product .prix .size .L a {
+        font-size: 12px;
+        text-decoration: none;
+        background-color: #c2c2c2;
+        padding: 1px 5px 1px 5px;
+        border-radius: 45%;
         margin-right: 10px; }
     #product .prix .buy {
       margin-top: 8%;
       margin-bottom: 0%;
-      border-bottom: 2px solid #a8a7a7;
+      padding-bottom: 0%;
       display: grid;
       grid-template-columns: 1fr 3fr 0.5fr;
       grid-template-rows: 40px 40px;
@@ -99,47 +124,98 @@ main {
       #product .prix .buy .quantity {
         grid-area: quantity;
         border: 2px solid grey;
-        display: grid;
-        grid-template-columns: 0.2fr 1fr 0.2fr;
-        grid-template-rows: 40px; }
-        #product .prix .buy .quantity .minus {
-          grid-column: 1;
-          grid-row: 1;
-          text-align: center;
-          padding-top: 4%; }
-        #product .prix .buy .quantity .one {
-          grid-column: 2;
-          grid-row: 1;
-          text-align: center;
-          padding-top: 4%; }
-        #product .prix .buy .quantity .plus {
-          grid-column: 3;
-          grid-row: 1;
-          text-align: center;
-          padding-top: 4%; }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 5%;
+        padding-left: 5%; }
+        #product .prix .buy .quantity .minus a {
+          color: #b4b4b4; }
+          #product .prix .buy .quantity .minus a :hover {
+            color: black; }
+        #product .prix .buy .quantity .plus a {
+          color: #b4b4b4; }
+          #product .prix .buy .quantity .plus a :hover {
+            color: black; }
       #product .prix .buy .add_card {
         grid-area: add_card;
-        text-align: center;
-        padding-top: 4%;
-        background-color: black; }
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
         #product .prix .buy .add_card a {
           color: white;
           text-decoration: none; }
+          #product .prix .buy .add_card a :hover {
+            background-color: #585858; }
       #product .prix .buy .like {
         grid-area: like;
-        border: 2px solid grey; }
+        border: 2px solid grey;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        #product .prix .buy .like a {
+          -webkit-text-fill-color: white;
+          -webkit-text-stroke-width: 1px;
+          -webkit-text-stroke-color: black; }
+          #product .prix .buy .like a :active {
+            -webkit-text-fill-color: black; }
       #product .prix .buy .buy_now {
         grid-area: buy_now;
-        text-align: center;
-        padding-top: 3%;
-        background-color: black; }
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
         #product .prix .buy .buy_now a {
           color: white;
           text-decoration: none; }
+          #product .prix .buy .buy_now a :hover {
+            background-color: #585858; }
   #product .miniature {
     grid-area: miniature;
-    display: flex; }
-    #product .miniature .face .coté .face2 .dos {
-      margin-right: 20px; }
-  #product .category {
+    display: flex;
+    justify-content: space-between;
+    margin: 0% 10% 2% 10%; }
+    #product .miniature img {
+      width: 90px;
+      height: 90px;
+      filter: opacity(50%);
+      -webkit-filter: opacity(50%); }
+      #product .miniature img img:hover {
+        filter: opacity(100%);
+        -webkit-filter: opacity(100%); }
+  #product .HTAG {
+    padding-top: 5%;
+    margin: 0px 5% 5% 5%;
+    border-top: solid 2px #c2c0c0;
     grid-area: category; }
+    #product .HTAG .category {
+      display: flex;
+      justify-content: start;
+      margin-bottom: 3%; }
+      #product .HTAG .category p {
+        margin-left: 2%; }
+    #product .HTAG .tag {
+      display: flex;
+      justify-content: start;
+      margin-bottom: 7%; }
+      #product .HTAG .tag p {
+        margin-left: 2%; }
+    #product .HTAG .reseau {
+      display: flex;
+      justify-self: start; }
+      #product .HTAG .reseau a {
+        margin-right: 2%; }
+        #product .HTAG .reseau a img {
+          width: 20px;
+          height: 20px; }
+
+.bar_menu {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #adadad;
+  border-bottom: 1px solid #adadad;
+  padding: 3% 30% 3% 30%;
+  color: #8d8d8d; }
+  .bar_menu h3 :hover {
+    color: black; }
