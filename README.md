@@ -20,3 +20,7 @@
 * Started styling of the title and tools
 * Styled the products grid
 * Started styling of the sorting options
+
+###### 28 may 2020
+* Finished the styling of the shop page
+* CSS code revision to make it lighter
