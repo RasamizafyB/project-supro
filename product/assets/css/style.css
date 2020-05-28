@@ -86,7 +86,7 @@ main {
 #product {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 0.5fr;
+  grid-template-rows: 1fr 0.4fr;
   grid-template-areas: "sac prix" "miniature category"; }
   #product .sac {
     grid-area: sac;
@@ -104,7 +104,7 @@ main {
       border-radius: 50%;
       background-color: white;
       position: absolute;
-      left: 450px;
+      left: 475px;
       top: 275px; }
     #product .sac img {
       width: 100%;
@@ -131,8 +131,8 @@ main {
           font-size: small;
           margin-bottom: 3%;
           margin-left: 2%;
-          margin-top: 0%;
-          padding-top: 0%; }
+          margin-top: 1.5%;
+          line-height: 0px; }
     #product .prix .serial-number {
       color: #b6b6b6;
       font-size: small;
@@ -226,7 +226,7 @@ main {
       grid-row-gap: 20px; }
       #product .prix .buy .quantity {
         grid-area: quantity;
-        border: 2px solid grey;
+        border: 2px solid #bebebe;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -253,7 +253,7 @@ main {
           text-decoration: none; }
       #product .prix .buy .like {
         grid-area: like;
-        border: 2px solid grey;
+        border: 2px solid #bebebe;
         display: flex;
         justify-content: center;
         align-items: center; }
