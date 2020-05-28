@@ -85,13 +85,14 @@ main {
 
 #product {
   display: grid;
-  grid-template-columns: 518.91px 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 0.5fr;
-  grid-template-areas: "sac prix" "miniature category"; }
+  grid-template-areas: "sac prix" "miniature category"; }
   #product .sac {
     grid-area: sac;
     display: flex;
-    position: relative; }
+    position: relative;
+    margin: 5%; }
     #product .sac .fleche {
       display: flex;
       align-items: center;
@@ -106,8 +107,8 @@ main {
       left: 450px;
       top: 275px; }
     #product .sac img {
-      width: 518.91px;
-      height: 477.25px;
+      width: 100%;
+      height: 100%;
       align-self: center; }
   #product .prix {
     grid-area: prix;
@@ -208,10 +209,11 @@ main {
       margin-top: 8%;
       margin-bottom: 0%;
       padding-bottom: 0%;
+      padding: 0%;
       display: grid;
       grid-template-columns: 1fr 3fr 0.5fr;
       grid-template-rows: 40px 40px;
-      grid-template-areas: "quantity add_card like" "buy_now buy_now buy_now";
+      grid-template-areas: "quantity add_card like" "buy_now buy_now buy_now";
       grid-column-gap: 5px;
       grid-row-gap: 20px; }
       #product .prix .buy .quantity {
@@ -329,7 +331,7 @@ main {
   display: grid;
   grid-template-columns: 2fe 1fr;
   grid-template-rows: 1fr 1fr 0.5fr;
-  grid-template-areas: "introduction shoes" "features shoes" "vide shoes"; }
+  grid-template-areas: "introduction shoes" "features shoes" "vide shoes"; }
   #information .shoes {
     grid-area: shoes; }
   #information .introduction {
@@ -357,7 +359,7 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 0.5fr 1fr 0.1fr 0.2fr 1fr 0.1fr;
-  grid-template-areas: "product product product product" "cotton_sweater glitter embroidered floral" "page page page page" "upsell upsell upsell upsell" "oversize  metallic suede striped" "page2 page2 page2 page2"; }
+  grid-template-areas: "product product product product" "cotton_sweater glitter embroidered floral" "page page page page" "upsell upsell upsell upsell" "oversize  metallic suede striped" "page2 page2 page2 page2"; }
   #related_products .product {
     grid-area: product;
     text-align: center; }
