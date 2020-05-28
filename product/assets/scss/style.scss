@@ -191,175 +191,182 @@ main{
     .prix{
         grid-area: prix;
         margin: 5%;
-        .star{
-            margin-bottom: 3%;
-            display: flex;
-            justify-content: start;
-            .checked {
-                color: orange;
-            } 
-            .NO{
-                color: rgb(173, 173, 173);
-            }
-            .small{
-                @include small();
-                margin-bottom: 0;
-                margin-left: 2%;
-            }
-        }
-        .serial-number{
-            @include small()
-        }
-        h1{
-            font-size: x-large;
-            margin-bottom: 3%;   
-        }  
-        .price{
-            color: black;
-            margin-bottom: 5%;
-            margin-top: 2%;
-            font-size: large;
-            strike{
-                color: $color-strike;
-            }
-        }
-        p{
-            color: rgb(131, 130, 130);
-            margin-bottom: 5%;
-        }
-        h3{
-            color: grey;
-            font-size: medium;
-            margin-bottom: 3%;
-        }
-        .color{
-            display: flex;
-            margin-bottom: 5%;
-            .blue{
-                a{
-                    @include webkit(rgb(87, 51, 245));
-                    @include cercle();
-                    @include hover;
-                }  
-            }     
-            .jaune{
-                a{
-                    @include webkit(rgb(245, 209, 51));
-                    @include cercle();
-                    @include hover;
-                }  
-            }
-            .rose{
-                a{
-                    @include webkit(rgb(245, 51, 109));
-                    @include cercle();
-                    @include hover;
-                } 
-            }
-        }
-        .size{
-            display: flex;
-            margin-bottom: 5%;
-            .S{ 
-                a{
-                    @include size();
-                    &:hover{
-                        border: 1px solid black;
-                    }
-                }
-            }
-            .M{  
-                a{
-                    @include size();
-                    &:hover{
-                        border: 1px solid black;
-                    }
-                }
-            }
-            .L{ 
-                a{
-                    @include size();
-                    &:hover{
-                        border: 1px solid black;
-                    }
-                } 
-            }
-        }
-        .buy{
-            margin-top: 8%;
-            margin-bottom: 0%;
-            padding-bottom: 0%;
-            padding: 0%;
-            display: grid;
-            grid-template-columns: 1fr 3fr 0.5fr;
-            grid-template-rows: 40px 40px;
-            grid-template-areas: 
-                    "quantity add_card like"
-                    "buy_now buy_now buy_now";
-            grid-column-gap: 5px;
-            grid-row-gap: 20px;
-            .quantity{
-                grid-area: quantity;
-                border: 2px solid grey;
+        .container{
+            width: 100%;
+            height: 100%;
+            .star{
+                margin-bottom: 3%;
                 display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding-right: 5%;
-                padding-left: 5%;
-                .minus{
+                justify-content: start;
+                .checked {
+                    color: orange;
+                } 
+                .NO{
+                    color: rgb(173, 173, 173);
+                }
+                .small{
+                    @include small();
+                    margin-bottom: 0;
+                    margin-left: 2%;
+                }
+            }
+            .serial-number{
+                @include small()
+            }
+            h1{
+                font-size: x-large;
+                margin-bottom: 3%;   
+            }  
+            .price{
+                color: black;
+                margin-bottom: 5%;
+                margin-top: 2%;
+                font-size: large;
+                strike{
+                    color: $color-strike;
+                }
+            }
+            p{
+                color: rgb(131, 130, 130);
+                margin-bottom: 5%;
+            }
+            h3{
+                color: grey;
+                font-size: medium;
+                margin-bottom: 3%;
+            }
+            .color{
+                display: flex;
+                margin-bottom: 5%;
+                .blue{
                     a{
-                        color: rgb(180, 180, 180);
-                        :hover{
-                            color: black;
-                        }
+                        @include webkit(rgb(87, 51, 245));
+                        @include cercle();
+                        @include hover;
+                    }  
+                }     
+                .jaune{
+                    a{
+                        @include webkit(rgb(245, 209, 51));
+                        @include cercle();
+                        @include hover;
                     }  
                 }
-                .plus{
+                .rose{
                     a{
-                        color: rgb(180, 180, 180);
-                        :hover{
-                            color: black;
+                        @include webkit(rgb(245, 51, 109));
+                        @include cercle();
+                        @include hover;
+                    } 
+                }
+            }
+            .size{
+                display: flex;
+                margin-bottom: 5%;
+                .S{ 
+                    a{
+                        @include size();
+                        &:hover{
+                            border: 1px solid black;
+                        }
+                    }
+                }
+                .M{  
+                    a{
+                        @include size();
+                        &:hover{
+                            border: 1px solid black;
+                        }
+                    }
+                }
+                .L{ 
+                    a{
+                        @include size();
+                        &:hover{
+                            border: 1px solid black;
                         }
                     } 
                 }
             }
-            .add_card{
-                grid-area: add_card;
-                background-color: black;
-                @include display;
-                &:hover{
-                    background-color: rgb(88, 88, 88);
-                }
-                a{
-                    color: white;
-                    text-decoration: none;          
-                }
-            }
-            .like{
-                grid-area: like;
-                border: 2px solid grey;
-                @include display;
-                a{
-                    -webkit-text-fill-color: white;
-                    -webkit-text-stroke-width: 1px;
-                    -webkit-text-stroke-color: black;
-                    &:hover{
-                        -webkit-text-fill-color: black;
+            .buy{
+                margin-top: 8%;
+                margin-bottom: 0%;
+                padding-bottom: 0%;
+                padding: 0%;
+                display: grid;
+                grid-template-columns: 1fr 3fr 0.5fr;
+                grid-template-rows: 40px 40px;
+                grid-template-areas: 
+                        "quantity add_card like"
+                        "buy_now buy_now buy_now";
+                grid-column-gap: 5px;
+                grid-row-gap: 20px;
+                .quantity{
+                    grid-area: quantity;
+                    border: 2px solid grey;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding-right: 5%;
+                    padding-left: 5%;
+                    .minus{
+                        a{
+                            color: rgb(180, 180, 180);
+                            :hover{
+                                color: black;
+                            }
+                        }  
                     }
-                } 
-            }
-            .buy_now{
-                grid-area: buy_now;
-                background-color: black;
-                @include display;
-                &:hover{
-                    background-color: rgb(88, 88, 88);
+                    .plus{
+                        a{
+                            color: rgb(180, 180, 180);
+                            :hover{
+                                color: black;
+                            }
+                        } 
+                    }
                 }
-                a{
-                    color: white;
-                    text-decoration: none;     
+                .add_card{
+                    grid-area: add_card;
+                    background-color: black;
+                    @include display;
+                    &:hover{
+                        background-color: rgb(88, 88, 88);
+                    }
+                    a{
+                        color: white;
+                        text-decoration: none;          
+                    }
+                }
+                .like{
+                    grid-area: like;
+                    border: 2px solid grey;
+                    @include display;
+                    a{
+                        -webkit-text-fill-color: white;
+                        -webkit-text-stroke-width: 1px;
+                        -webkit-text-stroke-color: black;
+                        &:hover{
+                            -webkit-text-fill-color: black;
+                        }
+                    } 
+                }
+                .buy_now{
+                    margin-bottom: 0px;
+                    padding-bottom: 0px;
+                    grid-area: buy_now;
+                    background-color: black;
+                    @include display;
+                    &:hover{
+                        background-color: rgb(88, 88, 88);
+                    }
+                    a{
+                        color: white;
+                        text-decoration: none;     
+                    }
                 }
             }
+
         }
     }
     .miniature{

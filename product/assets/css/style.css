@@ -113,159 +113,164 @@ main {
   #product .prix {
     grid-area: prix;
     margin: 5%; }
-    #product .prix .star {
-      margin-bottom: 3%;
-      display: flex;
-      justify-content: start; }
-      #product .prix .star .checked {
-        color: orange; }
-      #product .prix .star .NO {
-        color: #adadad; }
-      #product .prix .star .small {
+    #product .prix .container {
+      width: 100%;
+      height: 100%; }
+      #product .prix .container .star {
+        margin-bottom: 3%;
+        display: flex;
+        justify-content: start; }
+        #product .prix .container .star .checked {
+          color: orange; }
+        #product .prix .container .star .NO {
+          color: #adadad; }
+        #product .prix .container .star .small {
+          color: #b6b6b6;
+          font-size: small;
+          margin-bottom: 3%;
+          margin-bottom: 0;
+          margin-left: 2%; }
+      #product .prix .container .serial-number {
         color: #b6b6b6;
         font-size: small;
-        margin-bottom: 3%;
-        margin-bottom: 0;
-        margin-left: 2%; }
-    #product .prix .serial-number {
-      color: #b6b6b6;
-      font-size: small;
-      margin-bottom: 3%; }
-    #product .prix h1 {
-      font-size: x-large;
-      margin-bottom: 3%; }
-    #product .prix .price {
-      color: black;
-      margin-bottom: 5%;
-      margin-top: 2%;
-      font-size: large; }
-      #product .prix .price strike {
-        color: #999999; }
-    #product .prix p {
-      color: #838282;
-      margin-bottom: 5%; }
-    #product .prix h3 {
-      color: grey;
-      font-size: medium;
-      margin-bottom: 3%; }
-    #product .prix .color {
-      display: flex;
-      margin-bottom: 5%; }
-      #product .prix .color .blue a {
-        -webkit-text-fill-color: #5733f5;
-        -webkit-text-stroke-width: 2px;
-        -webkit-text-stroke-color: #c2c2c2;
-        margin-right: 10px; }
-        #product .prix .color .blue a :hover {
-          -webkit-text-stroke-color: black; }
-      #product .prix .color .jaune a {
-        -webkit-text-fill-color: #f5d133;
-        -webkit-text-stroke-width: 2px;
-        -webkit-text-stroke-color: #c2c2c2;
-        margin-right: 10px; }
-        #product .prix .color .jaune a :hover {
-          -webkit-text-stroke-color: black; }
-      #product .prix .color .rose a {
-        -webkit-text-fill-color: #f5336d;
-        -webkit-text-stroke-width: 2px;
-        -webkit-text-stroke-color: #c2c2c2;
-        margin-right: 10px; }
-        #product .prix .color .rose a :hover {
-          -webkit-text-stroke-color: black; }
-    #product .prix .size {
-      display: flex;
-      margin-bottom: 5%; }
-      #product .prix .size .S a {
-        font-size: 12px;
-        text-decoration: none;
-        background-color: #c2c2c2;
-        padding: 1px 5px 1px 5px;
-        border: 1px solid #c2c2c2;
-        border-radius: 45%;
-        margin-right: 10px; }
-        #product .prix .size .S a:hover {
-          border: 1px solid black; }
-      #product .prix .size .M a {
-        font-size: 12px;
-        text-decoration: none;
-        background-color: #c2c2c2;
-        padding: 1px 5px 1px 5px;
-        border: 1px solid #c2c2c2;
-        border-radius: 45%;
-        margin-right: 10px; }
-        #product .prix .size .M a:hover {
-          border: 1px solid black; }
-      #product .prix .size .L a {
-        font-size: 12px;
-        text-decoration: none;
-        background-color: #c2c2c2;
-        padding: 1px 5px 1px 5px;
-        border: 1px solid #c2c2c2;
-        border-radius: 45%;
-        margin-right: 10px; }
-        #product .prix .size .L a:hover {
-          border: 1px solid black; }
-    #product .prix .buy {
-      margin-top: 8%;
-      margin-bottom: 0%;
-      padding-bottom: 0%;
-      padding: 0%;
-      display: grid;
-      grid-template-columns: 1fr 3fr 0.5fr;
-      grid-template-rows: 40px 40px;
-      grid-template-areas: "quantity add_card like" "buy_now buy_now buy_now";
-      grid-column-gap: 5px;
-      grid-row-gap: 20px; }
-      #product .prix .buy .quantity {
-        grid-area: quantity;
-        border: 2px solid grey;
+        margin-bottom: 3%; }
+      #product .prix .container h1 {
+        font-size: x-large;
+        margin-bottom: 3%; }
+      #product .prix .container .price {
+        color: black;
+        margin-bottom: 5%;
+        margin-top: 2%;
+        font-size: large; }
+        #product .prix .container .price strike {
+          color: #999999; }
+      #product .prix .container p {
+        color: #838282;
+        margin-bottom: 5%; }
+      #product .prix .container h3 {
+        color: grey;
+        font-size: medium;
+        margin-bottom: 3%; }
+      #product .prix .container .color {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-right: 5%;
-        padding-left: 5%; }
-        #product .prix .buy .quantity .minus a {
-          color: #b4b4b4; }
-          #product .prix .buy .quantity .minus a :hover {
-            color: black; }
-        #product .prix .buy .quantity .plus a {
-          color: #b4b4b4; }
-          #product .prix .buy .quantity .plus a :hover {
-            color: black; }
-      #product .prix .buy .add_card {
-        grid-area: add_card;
-        background-color: black;
+        margin-bottom: 5%; }
+        #product .prix .container .color .blue a {
+          -webkit-text-fill-color: #5733f5;
+          -webkit-text-stroke-width: 2px;
+          -webkit-text-stroke-color: #c2c2c2;
+          margin-right: 10px; }
+          #product .prix .container .color .blue a :hover {
+            -webkit-text-stroke-color: black; }
+        #product .prix .container .color .jaune a {
+          -webkit-text-fill-color: #f5d133;
+          -webkit-text-stroke-width: 2px;
+          -webkit-text-stroke-color: #c2c2c2;
+          margin-right: 10px; }
+          #product .prix .container .color .jaune a :hover {
+            -webkit-text-stroke-color: black; }
+        #product .prix .container .color .rose a {
+          -webkit-text-fill-color: #f5336d;
+          -webkit-text-stroke-width: 2px;
+          -webkit-text-stroke-color: #c2c2c2;
+          margin-right: 10px; }
+          #product .prix .container .color .rose a :hover {
+            -webkit-text-stroke-color: black; }
+      #product .prix .container .size {
         display: flex;
-        justify-content: center;
-        align-items: center; }
-        #product .prix .buy .add_card:hover {
-          background-color: #585858; }
-        #product .prix .buy .add_card a {
-          color: white;
-          text-decoration: none; }
-      #product .prix .buy .like {
-        grid-area: like;
-        border: 2px solid grey;
-        display: flex;
-        justify-content: center;
-        align-items: center; }
-        #product .prix .buy .like a {
-          -webkit-text-fill-color: white;
-          -webkit-text-stroke-width: 1px;
-          -webkit-text-stroke-color: black; }
-          #product .prix .buy .like a:hover {
-            -webkit-text-fill-color: black; }
-      #product .prix .buy .buy_now {
-        grid-area: buy_now;
-        background-color: black;
-        display: flex;
-        justify-content: center;
-        align-items: center; }
-        #product .prix .buy .buy_now:hover {
-          background-color: #585858; }
-        #product .prix .buy .buy_now a {
-          color: white;
-          text-decoration: none; }
+        margin-bottom: 5%; }
+        #product .prix .container .size .S a {
+          font-size: 12px;
+          text-decoration: none;
+          background-color: #c2c2c2;
+          padding: 1px 5px 1px 5px;
+          border: 1px solid #c2c2c2;
+          border-radius: 45%;
+          margin-right: 10px; }
+          #product .prix .container .size .S a:hover {
+            border: 1px solid black; }
+        #product .prix .container .size .M a {
+          font-size: 12px;
+          text-decoration: none;
+          background-color: #c2c2c2;
+          padding: 1px 5px 1px 5px;
+          border: 1px solid #c2c2c2;
+          border-radius: 45%;
+          margin-right: 10px; }
+          #product .prix .container .size .M a:hover {
+            border: 1px solid black; }
+        #product .prix .container .size .L a {
+          font-size: 12px;
+          text-decoration: none;
+          background-color: #c2c2c2;
+          padding: 1px 5px 1px 5px;
+          border: 1px solid #c2c2c2;
+          border-radius: 45%;
+          margin-right: 10px; }
+          #product .prix .container .size .L a:hover {
+            border: 1px solid black; }
+      #product .prix .container .buy {
+        margin-top: 8%;
+        margin-bottom: 0%;
+        padding-bottom: 0%;
+        padding: 0%;
+        display: grid;
+        grid-template-columns: 1fr 3fr 0.5fr;
+        grid-template-rows: 40px 40px;
+        grid-template-areas: "quantity add_card like" "buy_now buy_now buy_now";
+        grid-column-gap: 5px;
+        grid-row-gap: 20px; }
+        #product .prix .container .buy .quantity {
+          grid-area: quantity;
+          border: 2px solid grey;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-right: 5%;
+          padding-left: 5%; }
+          #product .prix .container .buy .quantity .minus a {
+            color: #b4b4b4; }
+            #product .prix .container .buy .quantity .minus a :hover {
+              color: black; }
+          #product .prix .container .buy .quantity .plus a {
+            color: #b4b4b4; }
+            #product .prix .container .buy .quantity .plus a :hover {
+              color: black; }
+        #product .prix .container .buy .add_card {
+          grid-area: add_card;
+          background-color: black;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          #product .prix .container .buy .add_card:hover {
+            background-color: #585858; }
+          #product .prix .container .buy .add_card a {
+            color: white;
+            text-decoration: none; }
+        #product .prix .container .buy .like {
+          grid-area: like;
+          border: 2px solid grey;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          #product .prix .container .buy .like a {
+            -webkit-text-fill-color: white;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black; }
+            #product .prix .container .buy .like a:hover {
+              -webkit-text-fill-color: black; }
+        #product .prix .container .buy .buy_now {
+          margin-bottom: 0px;
+          padding-bottom: 0px;
+          grid-area: buy_now;
+          background-color: black;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          #product .prix .container .buy .buy_now:hover {
+            background-color: #585858; }
+          #product .prix .container .buy .buy_now a {
+            color: white;
+            text-decoration: none; }
   #product .miniature {
     grid-area: miniature;
     display: flex;
