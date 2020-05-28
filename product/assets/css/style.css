@@ -145,7 +145,7 @@ main {
       margin-bottom: 5%;
       margin-top: 3%;
       font-size: x-large; }
-      #product .prix .price strike {
+      #product .prix .price del {
         color: #999999; }
     #product .prix p {
       color: #838282;
@@ -382,28 +382,28 @@ main {
     #related_products .cotton_sweater h5 {
       margin-top: 5%;
       margin-bottom: 3%; }
-    #related_products .cotton_sweater p strike {
+    #related_products .cotton_sweater p del {
       color: #999999; }
   #related_products .glitter {
     grid-area: glitter; }
     #related_products .glitter h5 {
       margin-top: 5%;
       margin-bottom: 3%; }
-    #related_products .glitter p strike {
+    #related_products .glitter p del {
       color: #999999; }
   #related_products .embroidered {
     grid-area: embroidered; }
     #related_products .embroidered h5 {
       margin-top: 5%;
       margin-bottom: 3%; }
-    #related_products .embroidered p strike {
+    #related_products .embroidered p del {
       color: #999999; }
   #related_products .floral {
     grid-area: floral; }
     #related_products .floral h5 {
       margin-top: 5%;
       margin-bottom: 3%; }
-    #related_products .floral p strike {
+    #related_products .floral p del {
       color: #999999; }
   #related_products .page {
     grid-area: page;
@@ -421,28 +421,28 @@ main {
     #related_products .oversize h5 {
       margin-top: 5%;
       margin-bottom: 3%; }
-    #related_products .oversize p strike {
+    #related_products .oversize p del {
       color: #999999; }
   #related_products .metallic {
     grid-area: metallic; }
     #related_products .metallic h5 {
       margin-top: 5%;
       margin-bottom: 3%; }
-    #related_products .metallic p strike {
+    #related_products .metallic p del {
       color: #999999; }
   #related_products .suede {
     grid-area: suede; }
     #related_products .suede h5 {
       margin-top: 5%;
       margin-bottom: 3%; }
-    #related_products .suede p strike {
+    #related_products .suede p del {
       color: #999999; }
   #related_products .striped {
     grid-area: striped; }
     #related_products .striped h5 {
       margin-top: 5%;
       margin-bottom: 3%; }
-    #related_products .striped p strike {
+    #related_products .striped p del {
       color: #999999; }
   #related_products .page2 {
     grid-area: page2;
