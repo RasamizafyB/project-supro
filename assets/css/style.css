@@ -13,21 +13,6 @@ header {
   background-size: cover;
   height: 90vh;
   position: relative; }
-  header .trio {
-    position: absolute;
-    top: 25vh;
-    right: 0;
-    bottom: 0;
-    left: 65%; }
-  header .logo {
-    position: absolute;
-    top: 5vh;
-    right: 0;
-    bottom: 0;
-    left: 5%;
-    display: block;
-    width: 80px;
-    height: 40px; }
   header .navig {
     position: absolute;
     top: 5vh;
@@ -40,6 +25,15 @@ header {
       align-items: center;
       width: 80px;
       height: 40px; }
+  header .logo {
+    position: absolute;
+    top: 5vh;
+    right: 0;
+    bottom: 0;
+    left: 5%;
+    display: block;
+    width: 80px;
+    height: 40px; }
   header .search {
     position: absolute;
     top: 5vh;
@@ -95,6 +89,11 @@ header {
       header .social-media .social-medias i {
         color: #999; }
   header .trio {
+    position: absolute;
+    top: 25vh;
+    right: 0;
+    bottom: 0;
+    left: 65%;
     width: 20vw; }
     header .trio p {
       color: #f68773;
@@ -114,7 +113,6 @@ header {
   height: 40vh;
   width: 100%; }
   .discover .flex-container {
-    z-index: 1;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -123,17 +121,16 @@ header {
       width: 33.33333%;
       height: 100%; }
   .discover .trio-1, .discover .trio-2, .discover .trio-3 {
-    z-index: 2;
     position: absolute;
     top: 22%;
     right: 0;
     bottom: 0;
     left: 3%;
-    width: 16vw; }
+    width: 14vw; }
     .discover .trio-1 p, .discover .trio-2 p, .discover .trio-3 p {
       font-size: 14px; }
     .discover .trio-1 h4, .discover .trio-2 h4, .discover .trio-3 h4 {
-      font-size: 50px;
+      font-size: 40px;
       color: #222;
       margin: 1vh 0 3vh 0; }
     .discover .trio-1 a, .discover .trio-2 a, .discover .trio-3 a {
@@ -142,13 +139,13 @@ header {
       border-bottom: solid 2px #222;
       font-size: 12px; }
   .discover .trio-2 {
-    text-align: center;
     position: absolute;
     top: 22%;
     right: 0;
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%); }
+    transform: translateX(-50%);
+    text-align: center; }
     .discover .trio-2 p, .discover .trio-2 h4 {
       color: white; }
     .discover .trio-2 a {
@@ -165,7 +162,7 @@ header {
   height: 155vh;
   position: relative; }
   .top h2 {
-    padding: 15vh 0 1vh 40vh;
+    padding: 15vh 0 1vh 20vw;
     font-size: 2em; }
   .top h3 {
     padding-left: 20vw;
@@ -183,13 +180,27 @@ header {
     flex-wrap: wrap; }
     .top .flex-container-1 :nth-child(1), .top .new .flex-container-2 :nth-child(1), .new .top .flex-container-2 :nth-child(1) {
       width: 15vw;
-      height: 15vw;
-      z-index: 1; }
+      height: 15vw; }
     .top .flex-container-1 :nth-child(2), .top .new .flex-container-2 :nth-child(2), .new .top .flex-container-2 :nth-child(2) {
       width: 25vw;
       height: 25vw; }
+  .top .flex-container-2 {
+    position: relative;
+    margin: 10vh 20vw 0;
+    width: 60vw;
+    height: 50vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; }
+    .top .flex-container-2 :nth-child(1) {
+      width: 25vw;
+      height: 25vw;
+      margin-left: 5vw; }
+    .top .flex-container-2 :nth-child(2) {
+      width: 15vw;
+      height: 15vw; }
   .top .trio-1, .top .discover .trio-2, .discover .top .trio-2, .top .discover .trio-3, .discover .top .trio-3 {
-    z-index: 2;
     position: absolute;
     top: 63vh;
     right: 0;
@@ -210,7 +221,6 @@ header {
       border-bottom: solid 2px #222;
       font-size: 12px; }
   .top .trio-2 {
-    z-index: 2;
     position: absolute;
     top: 30vh;
     right: 0;
@@ -231,7 +241,6 @@ header {
       border-bottom: solid 2px #222;
       font-size: 12px; }
   .top .trio-3 {
-    z-index: 2;
     position: absolute;
     top: 90vh;
     right: 0;
@@ -252,7 +261,6 @@ header {
       border-bottom: solid 2px #222;
       font-size: 12px; }
   .top .trio-4 {
-    z-index: 2;
     position: absolute;
     top: 120vh;
     right: 0;
@@ -272,22 +280,6 @@ header {
       color: #222;
       border-bottom: solid 2px #222;
       font-size: 12px; }
-  .top .flex-container-2 {
-    position: relative;
-    margin: 10vh 20vw 0;
-    width: 60vw;
-    height: 50vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap; }
-    .top .flex-container-2 :nth-child(1) {
-      width: 25vw;
-      height: 25vw;
-      margin-left: 5vw; }
-    .top .flex-container-2 :nth-child(2) {
-      width: 15vw;
-      height: 15vw; }
 
 .new h2 {
   padding: 0 0 1vh 20vw;
@@ -325,9 +317,7 @@ header {
   font-weight: bold;
   color: #222;
   border-bottom: solid 2px #222;
-  font-size: 12px; }
-
-.new a {
+  font-size: 12px;
   display: block;
   width: 90px;
   margin: 5vh auto;
@@ -392,8 +382,7 @@ header {
     font-weight: bold;
     color: #222;
     border-bottom: solid 2px #222;
-    font-size: 12px; }
-  .countdown a {
+    font-size: 12px;
     color: black;
     display: block;
     width: 78px;
@@ -404,6 +393,36 @@ header {
   margin-top: 5vh;
   height: 95vh;
   position: relative; }
+  .latest h2 {
+    padding: 10vh 0 1vh 20vw;
+    font-size: 2em; }
+  .latest h3 {
+    padding-left: 20vw;
+    font-size: 1em;
+    font-weight: 300;
+    color: #999; }
+  .latest .flex-container {
+    margin: 5vh 20vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .latest .flex-container div {
+      width: 18vw; }
+      .latest .flex-container div img {
+        width: 18vw; }
+  .latest .more {
+    position: absolute;
+    top: 15vh;
+    right: 0;
+    bottom: 0;
+    left: 73%;
+    font-weight: bold;
+    display: block;
+    width: 85px;
+    height: 15px;
+    color: #222;
+    border-bottom: solid 2px #222;
+    font-size: 12px; }
   .latest .mini-flex {
     width: 400px;
     height: 40px;
@@ -443,36 +462,6 @@ header {
       border: none; }
       .latest .mini-flex input:focus {
         outline: none; }
-  .latest h2 {
-    padding: 10vh 0 1vh 20vw;
-    font-size: 2em; }
-  .latest h3 {
-    padding-left: 20vw;
-    font-size: 1em;
-    font-weight: 300;
-    color: #999; }
-  .latest .more {
-    position: absolute;
-    top: 15vh;
-    right: 0;
-    bottom: 0;
-    left: 73%;
-    font-weight: bold;
-    display: block;
-    width: 85px;
-    height: 15px;
-    color: #222;
-    border-bottom: solid 2px #222;
-    font-size: 12px; }
-  .latest .flex-container {
-    margin: 5vh 20vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; }
-    .latest .flex-container div {
-      width: 18vw; }
-      .latest .flex-container div img {
-        width: 18vw; }
 
 .follow {
   height: 30vh;
@@ -491,20 +480,20 @@ footer {
   align-content: space-between;
   margin: 15vh 20vw 10vh;
   height: 40vh; }
-  footer .big {
-    width: 19vw; }
-  footer .media, footer .card {
-    text-align: center;
-    font-size: 1.5em; }
   footer div {
     width: 10vw; }
-    footer div p, footer div i {
+    footer div a, footer div p, footer div i {
       padding: 10px 0;
       color: #999;
       font-size: 0.9em; }
-      footer div p i, footer div i i {
+      footer div a i, footer div p i, footer div i i {
         padding-right: 15px; }
     footer div h4 {
       padding-bottom: 15px;
       font-size: 16px;
       font-weight: bold; }
+  footer .big {
+    width: 19vw; }
+  footer .media, footer .card {
+    text-align: center;
+    font-size: 1.5em; }

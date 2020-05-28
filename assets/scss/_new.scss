@@ -34,19 +34,14 @@
             color: yellow;
         }
     }
-
     .flex-container-2 {
         @extend .flex-container-1;
-    }
-    
-    @include more();
-
+    }    
     a {
+        @include stylink();
         display: block;
         width: 90px;
         margin: 5vh auto;
         font-size: 14px;
     }
-
-
 }

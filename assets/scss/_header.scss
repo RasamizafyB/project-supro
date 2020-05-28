@@ -4,15 +4,6 @@ header {
     background-size: cover;
     height: 90vh;
     position: relative;
-    .trio {
-        @include position(absolute, 25vh, 0, 0, 65%)
-    }
-    .logo {
-        @include position(absolute, 5vh, 0, 0, 5%)
-        display: block;
-        width: 80px;
-        height: 40px;
-    }
     .navig {
         @include position(absolute, 5vh, 0, 0, 20%)
         p {
@@ -21,6 +12,12 @@ header {
             height: 40px;
         }
     }    
+    .logo {
+        @include position(absolute, 5vh, 0, 0, 5%)
+        display: block;
+        width: 80px;
+        height: 40px;
+    }
     .search {
         @include position(absolute, 5vh, 0, 0, 65%);
         @include flex(inline-flex, center, center)
@@ -63,6 +60,7 @@ header {
         }
     }
     .trio {
+        @include position(absolute, 25vh, 0, 0, 65%)
         width: 20vw;
         p {
             color: $orange;
@@ -73,6 +71,8 @@ header {
             color: $black;
             margin: 1vh 0 5vh 0;
         }
-        @include more
+        a {
+            @include stylink();
+        }
     }
 }

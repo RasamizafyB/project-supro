@@ -2,7 +2,7 @@
     height: 155vh;
     position: relative;
     h2 {
-        padding: 15vh 0 1vh 40vh;
+        padding: 15vh 0 1vh 20vw;
         font-size: 2em;
     }
     h3 {
@@ -21,42 +21,12 @@
         & :nth-child(1) {
             width: 15vw;
             height: 15vw;
-            z-index: 1;
         }
         & :nth-child(2) {
             width: 25vw;
             height: 25vw;
         }
     }
-
-    .trio-1 {
-        z-index: 2;
-        @include position(absolute, 63vh, 0, 0, 22vw);
-        @include triso(20px);
-        width: 15vw;
-    }
-
-    .trio-2 {
-        z-index: 2;
-        @include position(absolute, 30vh, 0, 0, 49vw);
-        @include triso(40px);
-        width: 15vw;
-    }
-
-    .trio-3 {
-        z-index: 2;
-        @include position(absolute, 90vh, 0, 0, 20vw);
-        @include triso(40px);
-        width: 15vw;
-    }
-
-    .trio-4 {
-        z-index: 2;
-        @include position(absolute,120vh, 0, 0, 66vw);
-        @include triso(20px);
-        width: 15vw;
-    }
-    
     .flex-container-2 {
         position: relative;
         margin: 10vh 20vw 0;
@@ -74,4 +44,28 @@
             height: 15vw;
         }
     }    
+    .trio-1 {
+        @include position(absolute, 63vh, 0, 0, 22vw);
+        @include triso(20px);
+        width: 15vw;
+    }
+
+    .trio-2 {
+        @include position(absolute, 30vh, 0, 0, 49vw);
+        @include triso(40px);
+        width: 15vw;
+    }
+
+    .trio-3 {
+        @include position(absolute, 90vh, 0, 0, 20vw);
+        @include triso(40px);
+        width: 15vw;
+    }
+
+    .trio-4 {
+        @include position(absolute,120vh, 0, 0, 66vw);
+        @include triso(20px);
+        width: 15vw;
+    }
+    
 }
