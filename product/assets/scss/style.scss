@@ -211,14 +211,14 @@ main{
             @include small()
         }
         h1{
-            font-size: x-large;
+            font-size: 40px;
             margin-bottom: 3%;   
         }  
         .price{
             color: black;
             margin-bottom: 5%;
-            margin-top: 2%;
-            font-size: large;
+            margin-top: 3%;
+            font-size: x-large;
             strike{
                 color: $color-strike;
             }
@@ -226,6 +226,7 @@ main{
         p{
             color: rgb(131, 130, 130);
             margin-bottom: 5%;
+            line-height: 30px;
         }
         h3{
             color: grey;

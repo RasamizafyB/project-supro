@@ -87,7 +87,7 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 0.5fr;
-  grid-template-areas: "sac prix" "miniature category"; }
+  grid-template-areas: "sac prix" "miniature category"; }
   #product .sac {
     grid-area: sac;
     display: flex;
@@ -132,18 +132,19 @@ main {
       font-size: small;
       margin-bottom: 3%; }
     #product .prix h1 {
-      font-size: x-large;
+      font-size: 40px;
       margin-bottom: 3%; }
     #product .prix .price {
       color: black;
       margin-bottom: 5%;
-      margin-top: 2%;
-      font-size: large; }
+      margin-top: 3%;
+      font-size: x-large; }
       #product .prix .price strike {
         color: #999999; }
     #product .prix p {
       color: #838282;
-      margin-bottom: 5%; }
+      margin-bottom: 5%;
+      line-height: 30px; }
     #product .prix h3 {
       color: grey;
       font-size: medium;
@@ -213,7 +214,7 @@ main {
       display: grid;
       grid-template-columns: 1fr 3fr 0.5fr;
       grid-template-rows: 40px 40px;
-      grid-template-areas: "quantity add_card like" "buy_now buy_now buy_now";
+      grid-template-areas: "quantity add_card like" "buy_now buy_now buy_now";
       grid-column-gap: 5px;
       grid-row-gap: 20px; }
       #product .prix .buy .quantity {
@@ -331,7 +332,7 @@ main {
   display: grid;
   grid-template-columns: 2fe 1fr;
   grid-template-rows: 1fr 1fr 0.5fr;
-  grid-template-areas: "introduction shoes" "features shoes" "vide shoes"; }
+  grid-template-areas: "introduction shoes" "features shoes" "vide shoes"; }
   #information .shoes {
     grid-area: shoes; }
   #information .introduction {
@@ -359,7 +360,7 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 0.5fr 1fr 0.1fr 0.2fr 1fr 0.1fr;
-  grid-template-areas: "product product product product" "cotton_sweater glitter embroidered floral" "page page page page" "upsell upsell upsell upsell" "oversize  metallic suede striped" "page2 page2 page2 page2"; }
+  grid-template-areas: "product product product product" "cotton_sweater glitter embroidered floral" "page page page page" "upsell upsell upsell upsell" "oversize  metallic suede striped" "page2 page2 page2 page2"; }
   #related_products .product {
     grid-area: product;
     text-align: center; }
