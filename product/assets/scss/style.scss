@@ -166,7 +166,7 @@ main{
         grid-area: sac; 
         display: flex; 
         position: relative;
-        margin: 5%;
+        margin: 5% 0% 5% 0%;
         .fleche{
             display: flex;
             align-items: center;
@@ -191,21 +191,29 @@ main{
     .prix{
         grid-area: prix;
         margin: 5%;
-        .star{
-            margin-bottom: 3%;
-            display: flex;
-            justify-content: start;
-            .checked {
-                color: orange;
-            } 
-            .NO{
-                color: rgb(173, 173, 173);
+        .container{
+            width: 100%;
+            height: 100%;
+            .star{
+                padding-top: 2%;
+                height: 15px;
+                margin-bottom: 3%;
+                display: flex;
+                justify-content: start;
+                .checked {
+                    color: orange;
+                } 
+                .NO{
+                    color: rgb(173, 173, 173);
+                }
+                .small{
+                    @include small();
+                    margin-left: 2%;
+                    margin-top: 0%;
+                    padding-top: 0%;
+                }
             }
-            .small{
-                @include small();
-                margin-bottom: 0;
-                margin-left: 2%;
-            }
+        
         }
         .serial-number{
             @include small()
@@ -227,6 +235,7 @@ main{
             color: rgb(131, 130, 130);
             margin-bottom: 5%;
             line-height: 30px;
+            font-size: 20px;
         }
         h3{
             color: grey;
@@ -235,28 +244,28 @@ main{
         }
         .color{
             display: flex;
-            margin-bottom: 5%;
+            margin-bottom: 7%;
             .blue{
                 a{
                     @include webkit(rgb(87, 51, 245));
                     @include cercle();
                     @include hover;
-                }  
-            }     
+                    }  
+                }     
             .jaune{
                 a{
                     @include webkit(rgb(245, 209, 51));
                     @include cercle();
                     @include hover;
-                }  
-            }
+                    }  
+                }
             .rose{
                 a{
                     @include webkit(rgb(245, 51, 109));
                     @include cercle();
                     @include hover;
-                } 
-            }
+                    } 
+                }
         }
         .size{
             display: flex;
@@ -295,8 +304,8 @@ main{
             grid-template-columns: 1fr 3fr 0.5fr;
             grid-template-rows: 40px 40px;
             grid-template-areas: 
-                    "quantity add_card like"
-                    "buy_now buy_now buy_now";
+                        "quantity add_card like"
+                        "buy_now buy_now buy_now";
             grid-column-gap: 5px;
             grid-row-gap: 20px;
             .quantity{
@@ -311,7 +320,7 @@ main{
                     a{
                         color: rgb(180, 180, 180);
                         :hover{
-                            color: black;
+                             color: black;
                         }
                     }  
                 }
@@ -350,6 +359,8 @@ main{
                 } 
             }
             .buy_now{
+                margin-bottom: 0px;
+                padding-bottom: 0px;
                 grid-area: buy_now;
                 background-color: black;
                 @include display;
@@ -362,7 +373,9 @@ main{
                 }
             }
         }
-    }
+
+     }
+
     .miniature{
         grid-area: miniature;
         display: flex;
@@ -427,7 +440,6 @@ main{
         }
     }
 }
-
 .bar_menu{
     display: flex;
     justify-content: space-between;
