@@ -25,6 +25,7 @@ $color-strike: rgb(153, 153, 153);
     text-decoration: none;
     background-color: rgb(194, 194, 194);
     padding: 1px 5px 1px 5px;
+    border: 1px solid rgb(194, 194, 194);
     border-radius: 45%;
     @include cercle();
 }
@@ -51,6 +52,10 @@ $color-strike: rgb(153, 153, 153);
     -webkit-text-fill-color: $fill-color;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color:  rgb(194, 194, 194);
+}
+@mixin page {
+    text-align: center;
+    margin-top: 2%;
 }
 $black: #222;
 $grey: #999;
@@ -90,11 +95,13 @@ header {
     .navig {
         @include position(absolute, 5vh, 0, 0, 22%);
         p {
-            text-decoration: none;
-            color: black; 
             @include flex(inline-flex, center, center);
             width: 80px;
-            height: 40px;  
+            height: 40px;
+            a{
+                text-decoration: none;
+                color: black; 
+            }  
         }
     }    
     .search {
@@ -107,7 +114,7 @@ header {
             height: 40px;
             border-radius: 25px;
             padding: 0 40px 0 15px;
-            border: none;
+            border: 1px solid black;
             &:focus {
                 outline: none;
             }
@@ -141,8 +148,11 @@ main{
     h4{
         color: rgb(148, 148, 148);       
     }
-    p{
-        margin-left: 2%;
+    ul{
+        li{
+            list-style-type: disc;
+            margin-left: 30px;
+        }  
     } 
 }
 #product{
@@ -155,6 +165,22 @@ main{
     .sac{
         grid-area: sac; 
         display: flex; 
+        position: relative;
+        .fleche{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0%;
+            padding: 0%;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: white;
+            position: absolute;
+            left: 450px;
+            top: 275px;
+
+        }
         img{
             width: 518.91px;
             height: 477.25px;
@@ -168,14 +194,12 @@ main{
             margin-bottom: 3%;
             display: flex;
             justify-content: start;
-
             .checked {
                 color: orange;
             } 
             .NO{
                 color: rgb(173, 173, 173);
             }
-
             .small{
                 @include small();
                 margin-bottom: 0;
@@ -198,18 +222,15 @@ main{
                 color: $color-strike;
             }
         }
-
         p{
             color: rgb(131, 130, 130);
             margin-bottom: 5%;
         }
-
         h3{
             color: grey;
             font-size: medium;
             margin-bottom: 3%;
         }
-
         .color{
             display: flex;
             margin-bottom: 5%;
@@ -219,8 +240,7 @@ main{
                     @include cercle();
                     @include hover;
                 }  
-            }          
-               
+            }     
             .jaune{
                 a{
                     @include webkit(rgb(245, 209, 51));
@@ -236,28 +256,34 @@ main{
                 } 
             }
         }
-
         .size{
             display: flex;
             margin-bottom: 5%;
-           .S{ 
+            .S{ 
                 a{
                     @include size();
+                    &:hover{
+                        border: 1px solid black;
+                    }
                 }
             }
             .M{  
                 a{
-
                     @include size();
+                    &:hover{
+                        border: 1px solid black;
+                    }
                 }
             }
             .L{ 
                 a{
                     @include size();
+                    &:hover{
+                        border: 1px solid black;
+                    }
                 } 
             }
         }
-
         .buy{
             margin-top: 8%;
             margin-bottom: 0%;
@@ -299,12 +325,12 @@ main{
                 grid-area: add_card;
                 background-color: black;
                 @include display;
+                &:hover{
+                    background-color: rgb(88, 88, 88);
+                }
                 a{
                     color: white;
-                    text-decoration: none;
-                    :hover{
-                        background-color: rgb(88, 88, 88);
-                    }
+                    text-decoration: none;          
                 }
             }
             .like{
@@ -315,7 +341,7 @@ main{
                     -webkit-text-fill-color: white;
                     -webkit-text-stroke-width: 1px;
                     -webkit-text-stroke-color: black;
-                    :hover{
+                    &:hover{
                         -webkit-text-fill-color: black;
                     }
                 } 
@@ -324,12 +350,12 @@ main{
                 grid-area: buy_now;
                 background-color: black;
                 @include display;
+                &:hover{
+                    background-color: rgb(88, 88, 88);
+                }
                 a{
                     color: white;
-                    text-decoration: none;
-                    :hover{
-                        background-color: rgb(88, 88, 88);
-                    }
+                    text-decoration: none;     
                 }
             }
         }
@@ -339,15 +365,17 @@ main{
         display: flex;
         justify-content: space-between;
         margin: 0% 10% 2% 10%;
-        img{ 
-            width: 90px;
-            height: 90px;
-            filter: opacity(50%); 
-            -webkit-filter: opacity(50%);
-            :hover{ 
-                filter: opacity(100%);
-                -webkit-filter: opacity(100%); 
-            }
+        .face{ 
+            img{
+                width: 90px;
+                height: 90px;
+                filter: opacity(50%); 
+                -webkit-filter: opacity(50%);
+                &:hover{ 
+                    filter: opacity(100%);
+                    -webkit-filter: opacity(100%); 
+                }
+            }   
         }
     }  
     .HTAG{
@@ -379,6 +407,18 @@ main{
                 img{
                     width: 20px;
                     height: 20px;
+                    filter: grayscale(100%);
+                    -webkit-filter: grayscale(100%);
+                    -moz-filter: grayscale(100%);
+                    -ms-filter: grayscale(100%);
+                    -o-filter: grayscale(100%);
+                    &:hover{
+                        filter: grayscale(0%);
+                        -webkit-filter: grayscale(0%);
+                        -moz-filter: grayscale(0%);
+                        -ms-filter: grayscale(0%);
+                        -o-filter: grayscale(0%);
+                    }
                 }
             }   
         }
@@ -393,7 +433,7 @@ main{
     padding: 3% 30% 3% 30%;
     color: rgb(141, 141, 141);
     h3{
-        :hover{
+        &:hover{
             color: black;
         }
     }
@@ -473,9 +513,7 @@ main{
     }
     .page{
         grid-area: page;
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
+        @include page();
     }
     .upsell{
         grid-area: upsell;
@@ -499,9 +537,42 @@ main{
     }
     .page2{
         grid-area: page2;
+        @include page();
     }
 }
 
+//footer
+
+footer {
+    @include flex(flex, space-between, flex-start);
+    flex-wrap: wrap;
+    align-content: space-between;
+    margin: 15vh 20vw 10vh;
+    height: 40vh;
+    .big {
+        width: 19vw;
+    }
+    .media, .card {
+        text-align: center;
+        font-size: 1.5em;
+    }
+    div {
+        width: 10vw;
+        p, i {
+            padding: 10px 0;
+            color: $grey;
+            font-size: 0.9em;
+            i {
+                padding-right: 15px;
+            }
+        }
+        h4 {
+            padding-bottom: 15px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+    }
+}
 
 
 

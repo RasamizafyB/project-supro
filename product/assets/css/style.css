@@ -21,13 +21,14 @@ header {
     bottom: 0;
     left: 22%; }
     header .navig p {
-      text-decoration: none;
-      color: black;
       display: inline-flex;
       justify-content: center;
       align-items: center;
       width: 80px;
       height: 40px; }
+      header .navig p a {
+        text-decoration: none;
+        color: black; }
   header .search {
     position: absolute;
     top: 5vh;
@@ -44,7 +45,7 @@ header {
       height: 40px;
       border-radius: 25px;
       padding: 0 40px 0 15px;
-      border: none; }
+      border: 1px solid black; }
       header .search input:focus {
         outline: none; }
     header .search i {
@@ -78,8 +79,9 @@ main {
   justify-self: start; }
   #entête h4 {
     color: #949494; }
-  #entête p {
-    margin-left: 2%; }
+  #entête ul li {
+    list-style-type: disc;
+    margin-left: 30px; }
 
 #product {
   display: grid;
@@ -88,7 +90,21 @@ main {
   grid-template-areas: "sac prix" "miniature category"; }
   #product .sac {
     grid-area: sac;
-    display: flex; }
+    display: flex;
+    position: relative; }
+    #product .sac .fleche {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0%;
+      padding: 0%;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: white;
+      position: absolute;
+      left: 450px;
+      top: 275px; }
     #product .sac img {
       width: 518.91px;
       height: 477.25px;
@@ -163,22 +179,31 @@ main {
         text-decoration: none;
         background-color: #c2c2c2;
         padding: 1px 5px 1px 5px;
+        border: 1px solid #c2c2c2;
         border-radius: 45%;
         margin-right: 10px; }
+        #product .prix .size .S a:hover {
+          border: 1px solid black; }
       #product .prix .size .M a {
         font-size: 12px;
         text-decoration: none;
         background-color: #c2c2c2;
         padding: 1px 5px 1px 5px;
+        border: 1px solid #c2c2c2;
         border-radius: 45%;
         margin-right: 10px; }
+        #product .prix .size .M a:hover {
+          border: 1px solid black; }
       #product .prix .size .L a {
         font-size: 12px;
         text-decoration: none;
         background-color: #c2c2c2;
         padding: 1px 5px 1px 5px;
+        border: 1px solid #c2c2c2;
         border-radius: 45%;
         margin-right: 10px; }
+        #product .prix .size .L a:hover {
+          border: 1px solid black; }
     #product .prix .buy {
       margin-top: 8%;
       margin-bottom: 0%;
@@ -211,11 +236,11 @@ main {
         display: flex;
         justify-content: center;
         align-items: center; }
+        #product .prix .buy .add_card:hover {
+          background-color: #585858; }
         #product .prix .buy .add_card a {
           color: white;
           text-decoration: none; }
-          #product .prix .buy .add_card a :hover {
-            background-color: #585858; }
       #product .prix .buy .like {
         grid-area: like;
         border: 2px solid grey;
@@ -226,7 +251,7 @@ main {
           -webkit-text-fill-color: white;
           -webkit-text-stroke-width: 1px;
           -webkit-text-stroke-color: black; }
-          #product .prix .buy .like a :hover {
+          #product .prix .buy .like a:hover {
             -webkit-text-fill-color: black; }
       #product .prix .buy .buy_now {
         grid-area: buy_now;
@@ -234,22 +259,22 @@ main {
         display: flex;
         justify-content: center;
         align-items: center; }
+        #product .prix .buy .buy_now:hover {
+          background-color: #585858; }
         #product .prix .buy .buy_now a {
           color: white;
           text-decoration: none; }
-          #product .prix .buy .buy_now a :hover {
-            background-color: #585858; }
   #product .miniature {
     grid-area: miniature;
     display: flex;
     justify-content: space-between;
     margin: 0% 10% 2% 10%; }
-    #product .miniature img {
+    #product .miniature .face img {
       width: 90px;
       height: 90px;
       filter: opacity(50%);
       -webkit-filter: opacity(50%); }
-      #product .miniature img :hover {
+      #product .miniature .face img:hover {
         filter: opacity(100%);
         -webkit-filter: opacity(100%); }
   #product .HTAG {
@@ -276,7 +301,18 @@ main {
         margin-right: 2%; }
         #product .HTAG .reseau a img {
           width: 20px;
-          height: 20px; }
+          height: 20px;
+          filter: grayscale(100%);
+          -webkit-filter: grayscale(100%);
+          -moz-filter: grayscale(100%);
+          -ms-filter: grayscale(100%);
+          -o-filter: grayscale(100%); }
+          #product .HTAG .reseau a img:hover {
+            filter: grayscale(0%);
+            -webkit-filter: grayscale(0%);
+            -moz-filter: grayscale(0%);
+            -ms-filter: grayscale(0%);
+            -o-filter: grayscale(0%); }
 
 .bar_menu {
   display: flex;
@@ -285,7 +321,7 @@ main {
   border-bottom: 1px solid #adadad;
   padding: 3% 30% 3% 30%;
   color: #8d8d8d; }
-  .bar_menu h3 :hover {
+  .bar_menu h3:hover {
     color: black; }
 
 #information {
@@ -359,9 +395,8 @@ main {
       color: #999999; }
   #related_products .page {
     grid-area: page;
-    display: flex;
-    justify-content: center;
-    flex-direction: row; }
+    text-align: center;
+    margin-top: 2%; }
   #related_products .upsell {
     grid-area: upsell;
     text-align: center; }
@@ -398,4 +433,32 @@ main {
     #related_products .striped p strike {
       color: #999999; }
   #related_products .page2 {
-    grid-area: page2; }
+    grid-area: page2;
+    text-align: center;
+    margin-top: 2%; }
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  align-content: space-between;
+  margin: 15vh 20vw 10vh;
+  height: 40vh; }
+  footer .big {
+    width: 19vw; }
+  footer .media, footer .card {
+    text-align: center;
+    font-size: 1.5em; }
+  footer div {
+    width: 10vw; }
+    footer div p, footer div i {
+      padding: 10px 0;
+      color: #999;
+      font-size: 0.9em; }
+      footer div p i, footer div i i {
+        padding-right: 15px; }
+    footer div h4 {
+      padding-bottom: 15px;
+      font-size: 16px;
+      font-weight: bold; }
