@@ -1,8 +1,8 @@
 header {
     padding: 5vh; 
-    background-image: url(../images/abc.jpg);
+    background-image: url(./resourse/abc.jpg);
     background-size: cover;
-    height: 20px;
+    height: 90vh;
     position: relative;
     .logo {
         @include position(absolute, 5vh, 0, 0, 5%);
@@ -50,6 +50,34 @@ header {
             -webkit-text-stroke-color: black;
         }
     }
+    .social-media {
+        @include position(absolute, 50vh, 0, 0, 3%);
+        transform: translateY(-30%);
+        .social-medias {
+            @include flex(flex, center, center);
+            width: 40px;
+            height: 30px;
+            i {
+                color: $grey;
+            }
+        }
+    }
+    .trio {
+        @include position(absolute, 25vh, 0, 0, 65%);
+        width: 20vw;
+        p {
+            color: $orange;
+            font-size: 14px;
+        }
+        h4 {
+            font-size: 90px;
+            color: $black;
+            margin: 1vh 0 5vh 0;
+        }
+        a {
+            @include stylink();
+        }
+    }
 }
 
 @media (max-width: 768px) {
@@ -72,6 +100,27 @@ header {
                 padding: 0 25px;
             }
         }
+        .social-media {
+            @include position(absolute, 75vh, 0, 0, 50%);
+            transform: translateX(-50%);
+            @include flex(flex, center, center);     
+        }
+        .trio {
+            @include position(absolute, 25vh, 0, 0, 15%);
+            width: 20vw;
+            p {
+                color: $orange;
+                font-size: 14px;
+            }
+            h4 {
+                font-size: 90px;
+                color: $black;
+                margin: 1vh 0 5vh 0;
+            }
+            a {
+                @include stylink();
+            }
+        }
     }
 }
 
@@ -87,6 +136,22 @@ header {
             .icons {
                 font-size: 1em;
                 padding: 0 15px;
+            }
+        }
+        .trio {
+            @include position(absolute, 25vh, 0, 0, 15%);
+            width: 30vw;
+            p {
+                color: $orange;
+                font-size: 14px;
+            }
+            h4 {
+                font-size: 70px;
+                color: $black;
+                margin: 1vh 0 5vh 0;
+            }
+            a {
+                @include stylink();
             }
         }
     }

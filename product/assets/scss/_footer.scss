@@ -1,5 +1,5 @@
 footer {
-    @include flex(flex, space-between, flex-start)
+    @include flex(flex, space-between, flex-start);
     flex-wrap: wrap;
     align-content: space-between;
     margin: 15vh 20vw 10vh;
@@ -32,7 +32,7 @@ footer {
 @media (max-width: 500px) {
     footer {
         margin: 5vh 10vh;
-        @include flex(flex, space-between, flex-start)
+        @include flex(flex, space-between, flex-start);
         flex-wrap: wrap;
         align-content: space-between;
         margin: 15vh 15vw 10vh;

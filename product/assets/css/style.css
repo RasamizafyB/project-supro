@@ -1,9 +1,9 @@
 @charset "UTF-8";
 header {
   padding: 5vh;
-  background-image: url(../images/abc.jpg);
+  background-image: url(./resourse/abc.jpg);
   background-size: cover;
-  height: 20px;
+  height: 90vh;
   position: relative; }
   header .logo {
     position: absolute;
@@ -68,6 +68,40 @@ header {
       -webkit-text-fill-color: transparent;
       -webkit-text-stroke-width: 1px;
       -webkit-text-stroke-color: black; }
+  header .social-media {
+    position: absolute;
+    top: 50vh;
+    right: 0;
+    bottom: 0;
+    left: 3%;
+    transform: translateY(-30%); }
+    header .social-media .social-medias {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 30px; }
+      header .social-media .social-medias i {
+        color: #999; }
+  header .trio {
+    position: absolute;
+    top: 25vh;
+    right: 0;
+    bottom: 0;
+    left: 65%;
+    width: 20vw; }
+    header .trio p {
+      color: #f68773;
+      font-size: 14px; }
+    header .trio h4 {
+      font-size: 90px;
+      color: #222;
+      margin: 1vh 0 5vh 0; }
+    header .trio a {
+      font-weight: bold;
+      color: #222;
+      border-bottom: solid 2px #222;
+      font-size: 12px; }
 
 @media (max-width: 768px) {
   header {
@@ -92,7 +126,36 @@ header {
       left: 65%; }
       header .icon .icons {
         font-size: 1.7em;
-        padding: 0 25px; } }
+        padding: 0 25px; }
+    header .social-media {
+      position: absolute;
+      top: 75vh;
+      right: 0;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    header .trio {
+      position: absolute;
+      top: 25vh;
+      right: 0;
+      bottom: 0;
+      left: 15%;
+      width: 20vw; }
+      header .trio p {
+        color: #f68773;
+        font-size: 14px; }
+      header .trio h4 {
+        font-size: 90px;
+        color: #222;
+        margin: 1vh 0 5vh 0; }
+      header .trio a {
+        font-weight: bold;
+        color: #222;
+        border-bottom: solid 2px #222;
+        font-size: 12px; } }
 
 @media (max-width: 500px) {
   header .logo {
@@ -106,7 +169,26 @@ header {
     left: auto; }
     header .icon .icons {
       font-size: 1em;
-      padding: 0 15px; } }
+      padding: 0 15px; }
+  header .trio {
+    position: absolute;
+    top: 25vh;
+    right: 0;
+    bottom: 0;
+    left: 15%;
+    width: 30vw; }
+    header .trio p {
+      color: #f68773;
+      font-size: 14px; }
+    header .trio h4 {
+      font-size: 70px;
+      color: #222;
+      margin: 1vh 0 5vh 0; }
+    header .trio a {
+      font-weight: bold;
+      color: #222;
+      border-bottom: solid 2px #222;
+      font-size: 12px; } }
 
 footer {
   display: flex;
