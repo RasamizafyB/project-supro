@@ -1,4 +1,9 @@
 
+@import "variables";
+@import "mixin";
+@import "header";
+@import "footer";
+
 $color-small: rgb(110, 110, 110);
 $color-strike: rgb(153, 153, 153);
 
@@ -61,10 +66,7 @@ $color-strike: rgb(153, 153, 153);
     text-align: center;
     margin-top: 2%;
 }
-@import "variables";
-@import "mixin";
-@import "header";
-@import "footer";
+
 body{
     font-family: 'Roboto', sans-serif;
     width: 100%;
