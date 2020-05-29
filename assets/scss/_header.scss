@@ -1,0 +1,60 @@
+header {
+    padding: 2vh; 
+    height: 10vh;
+    position: relative;
+    .navig {
+        @include position(absolute, 3vh, 0, 0, 20%)
+        p {
+            @include flex(inline-flex, center, center)
+            width: 80px;
+            height: 40px;
+
+            a{
+                text-decoration: none;
+                color: $grey;
+            }
+            
+        }
+    }    
+    .logo {
+        @include position(absolute, 3vh, 0, 0, 5%)
+        display: block;
+        width: 80px;
+        height: 40px;
+
+    }
+    .search {
+        @include position(absolute, 3vh, 0, 0, 65%);
+        @include flex(inline-flex, center, center)
+        width: 200px;
+        height: 40px;
+        input {
+            width: 200px;
+            height: 40px;
+            border-radius: 25px;
+            padding: 0 40px 0 15px;
+            border: none;
+            &:focus {
+                outline: none;
+            }
+        }
+        i {
+            @include position(absolute, 50%, 0, 0, 85%);
+            transform: translateY(-30%);
+            font-size: 0.8em;
+        }
+    }
+    .icon {
+        @include position(absolute, 3vh, 0, 0, 85%)
+        .icons {
+            @include flex(inline-flex, center, center)
+            width: 40px;
+            height: 40px;
+        
+                a{
+                    color: $grey;
+                }
+        
+        }
+    }    
+}

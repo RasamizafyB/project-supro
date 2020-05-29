@@ -1,18 +1,26 @@
 @import "node_modules/bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import 'variables';
+@import 'mixin';
+@import 'header';
+@import 'footer';
 
 $graytext: #999;
 $red: #f68773;
 $black: #222;
-
-
 
 body{
 	font-family: 'Roboto', sans-serif;
 }
 
 section{
-	margin-top: 5%;
-	margin-bottom: 5%;
+	margin-top: 8%;
+	margin-bottom: 8%;
+}
+
+hr{
+	border: 1px;
+	border-top: 1.5px solid rgba(0, 0, 0, 0.1);
 }
 
 .jumbotron{
@@ -37,19 +45,6 @@ section{
 	ul{
 		padding-inline-start: 27px;
 	}
-
-}
-
-.valeur{
-	 display: flex;
-	 align-items: center;
-	 justify-content: space-between;
-	 font-size: 0.7em;
-
-	 p:last-child{
-		color: $graytext;
-	}
-	
 }
 
 .positionright{
@@ -88,6 +83,15 @@ section{
 	}
 }
 
+.section1{
+	width: 37em;
+	margin-left: 5%;
+	
+	position: relative;
+	left: 165px;
+    
+}
+
 .position{
 	 display: flex;
 	 align-items: center;
@@ -98,24 +102,57 @@ section{
 	 }
 }
 
-.section1{
-	width: 37em;
-	margin-left: 5%;
-	
-	position: relative;
-	left: 165px;
-    
-}
-
 .positiontext{
 	display: flex;
 	flex-direction: column;
 	width: 50%;
+	height: 100%;
+	position: relative;
+	top: 20px;
 
+	i{
+		position: relative; 
+		top: -24px;
+		z-index: 0;
+		opacity: 0.3;
+		color: $graytext;
+		font-style: italic;
+	}
+
+	blockquote{
+		font-style: italic;
+	}
+
+	hr{
+		width: 10%;
+		margin: 20px 0 0 0;
+	}
 }
 
-.gray{
-	color: $graytext;
+.quotePosition{
+	position: relative;
+	top: -67px;
+	left: 5px;
+	z-index: 1;
+}
+
+.blockquote{
+	font-size: 1.8rem;
+	margin-bottom: 1.5em;
+	height: 8em;
+
+	footer{
+		font-size: 40%;
+		font-style: normal;
+		height: 4em;
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.name{
+	text-transform: uppercase;
+	color: $red;
 }
 
 .textsection3{
@@ -126,45 +163,113 @@ section{
 	p{
 		color: $graytext;
 	}
+
+	h1{
+		margin-bottom: 0.6em;
+	}
 }
 
 .historique{
 	display: flex;
 	flex-direction: column;
 	width: 40%;
-
-
 }
 
 .historiqueFirst{
 	display: flex;
 	justify-content: space-between;
 
+	p:first-child{
+		margin: 0;
+	}
+
 	p:last-child{
 		color: $graytext;
 	}
-}
 
-.historiqueFirst div{
-	width: 50%;
-	
+	div{
+		width: 50%;
+	}
 }
 
 .historiqueEnd{
 	display: flex;
 	justify-content: space-between;
 
+	p:first-child{
+		margin: 0;
+	}
+
 	p:last-child{
+		color: $graytext;
+	}
+
+	div{
+		width: 50%;
+	}
+}
+
+.textVideo{
+	position: relative;
+	top: 13em;
+	z-index: 1;
+	text-align: center;
+
+	p{
+		font-size: 1.5em;
+		margin: 0;
+		color: white;
+		font-weight: normal;
+	}
+
+	span{
+		font-size: 2.5em;
+		line-height: 75%;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+	img{
+		position: relative;
+		top: 4em;
+	}
+}
+
+.video{
+	position: relative;
+	top: -90px;
+	left: 0px;
+	z-index: 0;
+	width: 100%;
+}
+
+.sectionVideo{
+	height: 35em;
+}
+
+.valeur{
+	 display: flex;
+	 align-items: center;
+	 justify-content: space-between;
+	 font-size: 0.7em;
+
+	 p:last-child{
 		color: $graytext;
 	}
 }
 
-.historiqueEnd div{
-	width: 50%;
+.icon{
+	display: flex;
+	width: 12%;
+
+	i{
+		padding-top: 20%;
+	}
 }
 
-.container p{
-	margin: 0;
+.positionIcon{
+	margin-right: 12%;
+	color: $red;
 }
 
 .section6{
@@ -186,7 +291,6 @@ section{
 
 	 p{
 		width: 48%;
-
 	}
 }
 
@@ -197,46 +301,66 @@ section{
 		margin-top: 5%;
 		margin-bottom: 5%;
 	}
-
 }
 
 .members{
  display: flex;
  justify-content: space-between;
-
 }
-.imgLeader{
-	width: 30%;
+
+.imgLeader:hover{
+		opacity: 0.5;
+}
+
+.hover{
+	position: relative;
+}
+
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px 0 20px 0;
+  text-align: center;
+ }
+
+.hover:hover .overlay {
+  opacity: 1;
 }
 
 .partenair{
 	display: flex;
  	justify-content: space-between;
- 	height: 50px;
+ 	align-items: center;
+ 	margin-top: 10%;
+ 	background-color: #F8F8F8;
+ 	padding: 8% 44%;
+ 	width: 200%;
+ 	height: 16em;
+ 	position: relative;
+ 	right: 50%;
 
  	img{
- 		padding: 3%;
+ 		margin: 3.5em 2em;
+ 		width: 8em;
+ 		height: 2em;
+ 	}
+
+ 	span{
+ 		width: 12em;
+ 		height: 9em;
+ 		background-color: white;
  	}
 }
 
-.blockquote{
-	font-size: 1.8rem;
 
-	footer{
-		font-size: 40%;
-
-	}
-}
-
-.name{
-	text-transform: uppercase;
-	color: $red;
-}
-
-.fonction{
+.gray{
 	color: $graytext;
-}
-
-.video{
-	width: 100%;
 }
