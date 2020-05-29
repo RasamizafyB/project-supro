@@ -1,9 +1,17 @@
 @charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: black;
+  font-family: "Roboto", Arial, Helvetica, sans-serif; }
+
 header {
   padding: 5vh;
-  background-image: url(./resourse/abc.jpg);
+  background-image: url(../images/abc.jpg);
   background-size: cover;
-  height: 90vh;
+  height: 20px;
   position: relative; }
   header .logo {
     position: absolute;
@@ -103,7 +111,7 @@ header {
       border-bottom: solid 2px #222;
       font-size: 12px; }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   header {
     background-position-y: right;
     background-repeat: no-repeat; }
@@ -260,14 +268,14 @@ main {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 0.1fr 1fr 0.4fr;
   grid-template-areas: "tête tête"  "sac prix" "miniature category"; }
-  #product #entête {
+  #product .entête {
     grid-area: tête;
     margin: 40px 0% 2% 0%;
     display: flex;
     justify-self: start; }
-    #product #entête h4 {
+    #product .entête h4 {
       color: #949494; }
-    #product #entête ul li {
+    #product .entête ul li {
       list-style-type: disc;
       margin-left: 30px; }
   #product .sac {
@@ -694,7 +702,7 @@ main {
     grid-column-gap: 30px;
     grid-row-gap: 20px; } }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   main {
     max-width: 90%;
     margin-left: 5%;
@@ -742,7 +750,7 @@ main {
       margin-top: 5%;
       margin-bottom: 5%; } }
 
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
   main {
     max-width: 100%;
     margin: 0px; }
@@ -751,6 +759,8 @@ main {
     grid-template-columns: 1fr;
     grid-template-rows: 0.1fr 0.5fr 0.2fr 1fr 0.4fr;
     grid-template-areas: "tête" "sac" "miniature" "prix" "category"; }
+    #product .entête {
+      margin-left: 5%; }
     #product .sac {
       display: flex;
       justify-content: center; }
@@ -777,11 +787,11 @@ main {
       margin-left: auto;
       margin-right: auto; }
     #information .introduction {
-      margin-right: 2%;
-      margin-left: 2%; }
+      margin-right: 5%;
+      margin-left: 5%; }
     #information .features {
-      margin-right: 2%;
-      margin-left: 2%; }
+      margin-right: 5%;
+      margin-left: 5%; }
   #related_products {
     display: grid;
     grid-template-columns: 1fr;
