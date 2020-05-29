@@ -1,0 +1,93 @@
+header {
+    padding: 5vh; 
+    background-image: url(../images/abc.jpg);
+    background-size: cover;
+    height: 20px;
+    position: relative;
+    .logo {
+        @include position(absolute, 5vh, 0, 0, 5%);
+        display: block;
+        width: 80px;
+        height: 40px;
+    }
+    .navig {
+        @include position(absolute, 5vh, 0, 0, 20%);
+        p {
+            @include flex(inline-flex, center, center);
+            width: 80px;
+            height: 40px;
+        }
+    }    
+    .search {
+        @include position(absolute, 5vh, 0, 0, 65%);
+        @include flex(inline-flex, center, center);
+        width: 200px;
+        height: 40px;
+        input {
+            width: 200px;
+            height: 40px;
+            border-radius: 25px;
+            padding: 0 40px 0 15px;
+            border: none;
+            &:focus {
+                outline: none;
+            }
+        }
+        i {
+            @include position(absolute, 50%, 0, 0, 85%);
+            transform: translateY(-30%);
+            font-size: 0.8em;
+        }
+    }
+    .icon {
+        @include position(absolute, 5vh, 0, 0, 85%);
+        .icons {
+            @include flex(inline-flex, center, center);
+            width: 40px;
+            height: 40px;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        background-position-y: right;
+        background-repeat: no-repeat;
+        .navig, .search {
+            display: none;
+        }
+        .logo {
+            @include position(absolute, 5vh, 0, 0, 5%);
+            display: block;
+            width: 120px;
+            height: 60px;
+        }
+        .icon {
+            @include position(absolute, 6vh, 0, 0, 65%);
+            .icons {
+                font-size: 1.7em;
+                padding: 0 25px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 500px) {
+    header {
+        .logo {
+            width: 80px;
+            height: 40px;
+        }
+        .icon {
+            @include position(absolute, 4.5vh, 5vw, auto, auto);
+            .icons {
+                font-size: 1em;
+                padding: 0 15px;
+            }
+        }
+    }
+}

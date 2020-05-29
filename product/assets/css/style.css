@@ -1,14 +1,9 @@
 @charset "UTF-8";
-body {
-  font-family: 'Roboto', sans-serif;
-  width: 100%;
-  margin: 0%; }
-
 header {
   padding: 5vh;
-  background-image: url(./resourse/abc.jpg);
+  background-image: url(../images/abc.jpg);
   background-size: cover;
-  height: 25px;
+  height: 20px;
   position: relative; }
   header .logo {
     position: absolute;
@@ -31,9 +26,6 @@ header {
       align-items: center;
       width: 80px;
       height: 40px; }
-      header .navig p a {
-        text-decoration: none;
-        color: black; }
   header .search {
     position: absolute;
     top: 5vh;
@@ -50,7 +42,7 @@ header {
       height: 40px;
       border-radius: 25px;
       padding: 0 40px 0 15px;
-      border: 1px solid black; }
+      border: none; }
       header .search input:focus {
         outline: none; }
     header .search i {
@@ -76,6 +68,106 @@ header {
       -webkit-text-fill-color: transparent;
       -webkit-text-stroke-width: 1px;
       -webkit-text-stroke-color: black; }
+
+@media (max-width: 768px) {
+  header {
+    background-position-y: right;
+    background-repeat: no-repeat; }
+    header .navig, header .search {
+      display: none; }
+    header .logo {
+      position: absolute;
+      top: 5vh;
+      right: 0;
+      bottom: 0;
+      left: 5%;
+      display: block;
+      width: 120px;
+      height: 60px; }
+    header .icon {
+      position: absolute;
+      top: 6vh;
+      right: 0;
+      bottom: 0;
+      left: 65%; }
+      header .icon .icons {
+        font-size: 1.7em;
+        padding: 0 25px; } }
+
+@media (max-width: 500px) {
+  header .logo {
+    width: 80px;
+    height: 40px; }
+  header .icon {
+    position: absolute;
+    top: 4.5vh;
+    right: 5vw;
+    bottom: auto;
+    left: auto; }
+    header .icon .icons {
+      font-size: 1em;
+      padding: 0 15px; } }
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  align-content: space-between;
+  margin: 15vh 20vw 10vh;
+  height: 40vh; }
+  footer div {
+    width: 10vw; }
+    footer div a, footer div p, footer div i {
+      padding: 10px 0;
+      color: #999;
+      font-size: 0.9em; }
+      footer div a i, footer div p i, footer div i i {
+        padding-right: 15px; }
+    footer div h4 {
+      padding-bottom: 15px;
+      font-size: 16px;
+      font-weight: bold; }
+  footer .big {
+    width: 19vw; }
+  footer .media, footer .card {
+    text-align: center;
+    font-size: 1.5em; }
+
+@media (max-width: 500px) {
+  footer {
+    margin: 5vh 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    align-content: space-between;
+    margin: 15vh 15vw 10vh;
+    height: 40vh; }
+    footer div {
+      width: 30vw;
+      text-align: center; }
+      footer div a, footer div p, footer div i {
+        padding: 10px 0;
+        color: #999;
+        font-size: 0.9em; }
+        footer div a i, footer div p i, footer div i i {
+          padding-right: 15px; }
+      footer div h4 {
+        padding-bottom: 15px;
+        font-size: 16px;
+        font-weight: bold; }
+    footer .big, footer .disap {
+      display: none; }
+    footer .spr, footer .cpr {
+      padding: 5vh 0;
+      width: 80vw;
+      display: block; } }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+  margin: 0%; }
 
 main {
   margin-left: 20%;
@@ -482,32 +574,6 @@ main {
     text-align: center;
     margin-top: 2%; }
 
-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  align-content: space-between;
-  margin: 15vh 20vw 10vh;
-  height: 40vh; }
-  footer div {
-    width: 10vw; }
-    footer div a, footer div p, footer div i {
-      padding: 10px 0;
-      color: #999;
-      font-size: 0.9em; }
-      footer div a i, footer div p i, footer div i i {
-        padding-right: 15px; }
-    footer div h4 {
-      padding-bottom: 15px;
-      font-size: 16px;
-      font-weight: bold; }
-  footer .big {
-    width: 19vw; }
-  footer .media, footer .card {
-    text-align: center;
-    font-size: 1.5em; }
-
 @media screen and (min-width: 1450px) and (max-width: 1700px) {
   #related_products {
     overflow: hidden;
@@ -546,35 +612,11 @@ footer {
     grid-column-gap: 30px;
     grid-row-gap: 20px; } }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
   main {
     max-width: 90%;
     margin-left: 5%;
     margin-right: 5%; }
-  header {
-    height: 50px;
-    background-position-y: right;
-    background-repeat: no-repeat; }
-    header .navig, header .search {
-      display: none; }
-    header .logo {
-      position: absolute;
-      top: 5vh;
-      right: 0;
-      bottom: 0;
-      left: 5%;
-      display: block;
-      width: 120px;
-      height: 60px; }
-    header .icon {
-      position: absolute;
-      top: 6vh;
-      right: 0;
-      bottom: 0;
-      left: 65%; }
-      header .icon .icons {
-        font-size: 1.7em;
-        padding: 0 25px; }
   #product {
     display: grid;
     grid-template-columns: 1fr;
@@ -622,18 +664,6 @@ footer {
   main {
     max-width: 100%;
     margin: 0px; }
-  header .logo {
-    width: 80px;
-    height: 40px; }
-  header .icon {
-    position: absolute;
-    top: 4.5vh;
-    right: 5vw;
-    bottom: auto;
-    left: auto; }
-    header .icon .icons {
-      font-size: 1em;
-      padding: 0 15px; }
   #product {
     display: grid;
     grid-template-columns: 1fr;
@@ -676,32 +706,4 @@ footer {
     grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr 0.1fr 0.2fr 1fr 1fr 1fr 1fr 0.1fr;
     grid-template-areas: "product " "cotton_sweater" "glitter" "embroidered" "floral" "page" "upsell" "oversize" "metallic" "suede" "striped" "page2";
     grid-column-gap: 30px;
-    grid-row-gap: 20px; }
-  footer {
-    margin: 5vh 10vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    align-content: space-between;
-    margin: 15vh 15vw 10vh;
-    height: 40vh; }
-    footer div {
-      width: 30vw;
-      text-align: center; }
-      footer div a, footer div p, footer div i {
-        padding: 10px 0;
-        color: #999;
-        font-size: 0.9em; }
-        footer div a i, footer div p i, footer div i i {
-          padding-right: 15px; }
-      footer div h4 {
-        padding-bottom: 15px;
-        font-size: 16px;
-        font-weight: bold; }
-    footer .big, footer .disap {
-      display: none; }
-    footer .spr, footer .cpr {
-      padding: 5vh 0;
-      width: 80vw;
-      display: block; } }
+    grid-row-gap: 20px; } }
