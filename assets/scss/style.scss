@@ -9,8 +9,25 @@ $graytext: #999;
 $red: #f68773;
 $black: #222;
 
-body{
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  }
+body {
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 	font-family: 'Roboto', sans-serif;
+}
+
+header{
+	font-size: 1vw;
 }
 
 section{
@@ -21,6 +38,12 @@ section{
 hr{
 	border: 1px;
 	border-top: 1.5px solid rgba(0, 0, 0, 0.1);
+}
+
+
+p{
+	font-size: 0.9em;
+
 }
 
 .jumbotron{
@@ -34,7 +57,7 @@ hr{
 .root{
 	display: flex;
 	background-color: #F2EDE9;
-	font-size: 16px;
+	font-size: 1vh;
 	font-weight: 300;
 	padding: 1% 1% 1% 15%;
 
@@ -59,7 +82,7 @@ hr{
 	
 
 	h1{
-		font-size: 15px;
+		font-size: 50%;
 		font-weight: 400;
 		color: $red;
 		text-transform: uppercase;
@@ -98,7 +121,7 @@ hr{
 	 justify-content: space-between;
 
 	 img{
-	 	width: 35%;
+	 	width: 48%;
 	 }
 }
 
@@ -137,7 +160,7 @@ hr{
 }
 
 .blockquote{
-	font-size: 1.8rem;
+	font-size: 1.5em;
 	margin-bottom: 1.5em;
 	height: 8em;
 
@@ -166,6 +189,7 @@ hr{
 
 	h1{
 		margin-bottom: 0.6em;
+		font-size: 2em;
 	}
 }
 
@@ -181,6 +205,7 @@ hr{
 
 	p:first-child{
 		margin: 0;
+		font-weight: bold;
 	}
 
 	p:last-child{
@@ -198,6 +223,7 @@ hr{
 
 	p:first-child{
 		margin: 0;
+		font-weight: bold;
 	}
 
 	p:last-child{
@@ -211,7 +237,7 @@ hr{
 
 .textVideo{
 	position: relative;
-	top: 13em;
+	top: 10em;
 	z-index: 1;
 	text-align: center;
 
@@ -223,7 +249,7 @@ hr{
 	}
 
 	span{
-		font-size: 2.5em;
+		font-size: 2em;
 		line-height: 75%;
 		text-transform: uppercase;
 		font-weight: bold;
@@ -231,7 +257,8 @@ hr{
 
 	img{
 		position: relative;
-		top: 4em;
+		top: 1em;
+		left: 47%;
 	}
 }
 
@@ -243,9 +270,6 @@ hr{
 	width: 100%;
 }
 
-.sectionVideo{
-	height: 35em;
-}
 
 .valeur{
 	 display: flex;
@@ -260,7 +284,10 @@ hr{
 
 .icon{
 	display: flex;
-	width: 12%;
+	width: 20%;
+
+	p{
+		margin: 0;	}
 
 	i{
 		padding-top: 20%;
@@ -270,6 +297,8 @@ hr{
 .positionIcon{
 	margin-right: 12%;
 	color: $red;
+	
+	
 }
 
 .section6{
@@ -278,8 +307,8 @@ hr{
 }
 
 .titlesection6{
-	font-size: 25px;
-	padding: 0 20%;
+	font-size: 1.4em;
+	padding: 0 18%;
 	margin-top: 5%;
 	margin-bottom: 5%;
 }
@@ -300,6 +329,7 @@ hr{
 	h1{
 		margin-top: 5%;
 		margin-bottom: 5%;
+		font-size: 2em;
 	}
 }
 
@@ -326,7 +356,6 @@ hr{
   transition: .5s ease;
   opacity:0;
   color: white;
-  font-size: 20px;
   padding: 20px 0 20px 0;
   text-align: center;
  }
@@ -343,24 +372,64 @@ hr{
  	background-color: #F8F8F8;
  	padding: 8% 44%;
  	width: 200%;
- 	height: 16em;
  	position: relative;
  	right: 50%;
 
  	img{
  		margin: 3.5em 2em;
- 		width: 8em;
- 		height: 2em;
+ 		width: 4em;
+ 		height: 1.5em;
  	}
 
  	span{
- 		width: 12em;
- 		height: 9em;
  		background-color: white;
  	}
 }
 
-
 .gray{
 	color: $graytext;
 }
+
+
+// Extra small devices (portrait phones, less than 576px)
+// @media (max-width: 575.98px) { 
+// 	body{
+// 		display: flex;
+// 		flex-direction: column;
+// 	}
+
+// 	footer{
+// 		display: flex;
+// 		flex-direction: column;
+// 	}
+// }
+
+// // Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) and (max-width: 767.98px) {
+// 	body{
+// 		background-color: blue;
+// 	}
+
+
+// }
+
+// // Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) and (max-width: 991.98px) {
+// 	body{
+// 		background-color: yellow;
+// 	}
+// }
+
+// // Large devices (desktops, 992px and up)
+// @media (min-width: 992px) and (max-width: 1199.98px) {
+// 	body{
+// 		background-color: gray;
+// 	}
+// }
+
+// // Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) {
+// 	body{
+// 		background-color: white;
+// 	}
+// }

@@ -8,12 +8,10 @@ header {
             @include flex(inline-flex, center, center)
             width: 80px;
             height: 40px;
-
             a{
                 text-decoration: none;
                 color: $grey;
             }
-            
         }
     }    
     .logo {
@@ -50,11 +48,9 @@ header {
             @include flex(inline-flex, center, center)
             width: 40px;
             height: 40px;
-        
-                a{
-                    color: $grey;
-                }
-        
+            a{
+                color: $grey;
+            }
         }
     }    
 }
