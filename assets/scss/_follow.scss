@@ -6,3 +6,19 @@
         height: 30vh;
     }
 }
+
+@media (max-width: 768px) {
+    .follow {
+        height: 15vh;
+        img {
+            height: 15vh;
+            width: 20vw;
+        }
+        & :nth-child(1) {
+            display: none;
+        }
+        & :nth-child(2) {
+            display: none;
+        }
+    }
+}

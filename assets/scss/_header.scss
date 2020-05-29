@@ -4,6 +4,12 @@ header {
     background-size: cover;
     height: 90vh;
     position: relative;
+    .logo {
+        @include position(absolute, 5vh, 0, 0, 5%)
+        display: block;
+        width: 80px;
+        height: 40px;
+    }
     .navig {
         @include position(absolute, 5vh, 0, 0, 20%)
         p {
@@ -12,12 +18,6 @@ header {
             height: 40px;
         }
     }    
-    .logo {
-        @include position(absolute, 5vh, 0, 0, 5%)
-        display: block;
-        width: 80px;
-        height: 40px;
-    }
     .search {
         @include position(absolute, 5vh, 0, 0, 65%);
         @include flex(inline-flex, center, center)
@@ -45,6 +45,9 @@ header {
             @include flex(inline-flex, center, center)
             width: 40px;
             height: 40px;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
         }
     }
     .social-media {
@@ -73,6 +76,83 @@ header {
         }
         a {
             @include stylink();
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        background-position-y: right;
+        background-repeat: no-repeat;
+        .navig, .search {
+            display: none;
+        }
+        .logo {
+            @include position(absolute, 5vh, 0, 0, 5%)
+            display: block;
+            width: 120px;
+            height: 60px;
+        }
+        .icon {
+            @include position(absolute, 6vh, 0, 0, 65%)
+            .icons {
+                font-size: 1.7em;
+                padding: 0 25px;
+            }
+        }
+        .social-media {
+            @include position(absolute, 75vh, 0, 0, 50%);
+            transform: translateX(-50%);
+            @include flex(flex, center, center);     
+        }
+        .trio {
+            @include position(absolute, 25vh, 0, 0, 15%)
+            width: 20vw;
+            p {
+                color: $orange;
+                font-size: 14px;
+            }
+            h4 {
+                font-size: 90px;
+                color: $black;
+                margin: 1vh 0 5vh 0;
+            }
+            a {
+                @include stylink();
+            }
+        }
+    }
+}
+
+
+@media (max-width: 500px) {
+    header {
+        .logo {
+            width: 80px;
+            height: 40px;
+        }
+        .icon {
+            @include position(absolute, 4.5vh, 5vw, auto, auto)
+            .icons {
+                font-size: 1em;
+                padding: 0 15px;
+            }
+        }
+        .trio {
+            @include position(absolute, 25vh, 0, 0, 15%)
+            width: 30vw;
+            p {
+                color: $orange;
+                font-size: 14px;
+            }
+            h4 {
+                font-size: 70px;
+                color: $black;
+                margin: 1vh 0 5vh 0;
+            }
+            a {
+                @include stylink();
+            }
         }
     }
 }

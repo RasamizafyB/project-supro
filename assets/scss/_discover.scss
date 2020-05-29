@@ -40,3 +40,71 @@
         @include position(absolute, 22%, 0, 0, 85%)
     }
 }
+
+
+@media (max-width: 768px) {
+    .discover {
+        height: 90vh;
+        width: 100vw;
+        .flex-container {
+            @include flex(flex, stretch, stretch)
+            flex-direction: column;
+            img {
+                width: 100%;
+                height: 30vh;
+            }
+        }
+        .trio-1 {
+            @include position(absolute, 7%, 0, 0, 13%);
+        }
+        .trio-2 {
+            width: 260px;
+            @include position(absolute, 40%, 0, 0, 50%);
+        }
+        .trio-3 {
+            @include position(absolute, 74%, 0, 0, 63%);
+        }
+    }
+}
+
+
+@media (max-width: 500px) {
+    .discover {
+        position: relative;
+        height: auto;
+        width: 100%;
+        .flex-container {
+            @include flex(flex, stretch, stretch)
+            flex-direction: column;
+            img {
+                width: 100%;
+                height: 30vh;
+            }
+        }
+        .trio-1 {
+            @include position(absolute, 8%, 0, 0, 17%);
+            width: 150px;
+            p {
+                font-size: 14px;
+            }
+            h4 {
+                font-size: 20px;
+            }
+        }
+        .trio-2 {
+            @include position(absolute, 40%, 0, 0, 50%)
+            transform: translateX(-50%);
+        }
+        .trio-3 {
+            @include position(absolute, 70%, 0, 0, 60%);
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .discover {
+        .trio-3 {
+            @include position(absolute, 65%, 0, 0, 60%);
+        }
+    }
+}

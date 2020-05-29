@@ -67,5 +67,95 @@
         @include triso(20px);
         width: 15vw;
     }
-    
 }
+
+
+
+@media (max-width: 768px) {
+    .top {
+        height: auto;
+        h2 {
+            padding: 15vh 0 1vh 5vw;
+        }
+        h3 {
+            padding-left: 5vw;
+        }
+        .flex-container-1 {
+            height: 75vh;
+            & :nth-child(1) {
+                display: none;
+            }
+            & :nth-child(2) {
+                width: 65vw;
+                height: 65vw;
+            }
+        }
+        .flex-container-2 {
+            height: 75vh;
+            padding-bottom: 10vh;
+
+            & :nth-child(1) {
+                width: 65vw; 
+                height: 65vw;
+                margin: 0;
+            }
+            & :nth-child(2) {
+                display: none;
+            }
+        }    
+        .trio-1, .trio-3 {
+            display: none;
+        }
+    
+        .trio-2 {
+            @include position(absolute, 30vh, 0, 0, 9vw);
+            @include triso(40px);
+            width: 15vw;
+        }
+    
+        .trio-4 {
+            @include position(absolute, 115vh, 0, 0, 9vw);
+            @include triso(40px);
+            width: 15vw;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .top {
+        height: auto;
+        h2 {
+            padding: 0 0 1vh 5vw;
+        }
+        h3 {
+            padding-left: 5vw;
+        }
+        .flex-container-1 {
+            height: 50vh;
+            & :nth-child(1) {
+                display: none;
+            }
+            & :nth-child(2) {
+                width: 65vw;
+                height: 65vw;
+            }
+        }
+        .flex-container-2 {
+            height: 50vh;
+            padding-bottom: 10vh; 
+        }
+    
+        .trio-2 {
+            @include position(absolute, 15vh, 0, 0, 9vw);
+            @include triso(20px);
+            width: 15vw;
+        }
+    
+        .trio-4 {
+            @include position(absolute, 65vh, 0, 0, 9vw);
+            @include triso(20px);
+            width: 15vw;
+        }
+    }
+}
+

@@ -68,3 +68,23 @@
         margin: 6vh 0;
     }
 }
+
+
+@media (max-width: 768px) {
+    .countdown {
+        background-image: url(../images/deals_image.jpg);
+        background-size: cover;
+        background-size: 100vh 100vw;
+    }
+}
+
+@media (max-width: 500px) {
+    .countdown {
+        height: auto;
+        padding-left: 8vw;
+        padding-bottom: 5vh;
+        h4 {
+            font-size: 1.7em;
+        }
+    }
+}

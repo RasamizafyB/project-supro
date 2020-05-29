@@ -45,3 +45,31 @@
         font-size: 14px;
     }
 }
+
+
+@media (max-width: 768px) {
+    .new {
+            h2 {
+                padding: 0 0 1vh 5vw;
+            }
+            h3 {
+                padding-left: 5vw;
+                }
+            .flex-container-1 {
+                @include flex(flex, space-between, center)
+                width: 60vw;
+                margin: 10vh auto;
+                & :nth-child(2) {
+                    display: none;
+                }
+                img {
+                    width: 20vw;
+                }
+            .flex-container-2 {
+                & :nth-child(2) {
+                    display: none;
+                }
+            }    
+        }
+    }    
+}
