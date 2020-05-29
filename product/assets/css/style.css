@@ -1,25 +1,30 @@
 @charset "UTF-8";
 body {
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+  margin: 0%; }
 
 header {
   padding: 5vh;
+  background-image: url(./resourse/abc.jpg);
+  background-size: cover;
   height: 25px;
-  border-bottom: 0.5px solid #c5c5c5;
   position: relative; }
   header .logo {
     position: absolute;
-    top: 5.5vh;
+    top: 5vh;
     right: 0;
     bottom: 0;
     left: 5%;
-    display: block; }
+    display: block;
+    width: 80px;
+    height: 40px; }
   header .navig {
     position: absolute;
     top: 5vh;
     right: 0;
     bottom: 0;
-    left: 22%; }
+    left: 20%; }
     header .navig p {
       display: inline-flex;
       justify-content: center;
@@ -67,27 +72,30 @@ header {
       justify-content: center;
       align-items: center;
       width: 40px;
-      height: 40px; }
+      height: 40px;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: black; }
 
 main {
-  max-width: 60%;
-  margin: 0 auto; }
-
-#entête {
-  margin: 40px 0% 2% 0%;
-  display: flex;
-  justify-self: start; }
-  #entête h4 {
-    color: #949494; }
-  #entête ul li {
-    list-style-type: disc;
-    margin-left: 30px; }
+  margin-left: 20%;
+  margin-right: 20%; }
 
 #product {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 0.4fr;
-  grid-template-areas: "sac prix" "miniature category"; }
+  grid-template-rows: 0.1fr 1fr 0.4fr;
+  grid-template-areas: "tête tête"  "sac prix" "miniature category"; }
+  #product #entête {
+    grid-area: tête;
+    margin: 40px 0% 2% 0%;
+    display: flex;
+    justify-self: start; }
+    #product #entête h4 {
+      color: #949494; }
+    #product #entête ul li {
+      list-style-type: disc;
+      margin-left: 30px; }
   #product .sac {
     grid-area: sac;
     display: flex;
@@ -105,10 +113,13 @@ main {
       background-color: white;
       position: absolute;
       left: 475px;
-      top: 275px; }
+      top: 294px; }
+      #product .sac .fleche:hover {
+        background-color: black;
+        -webkit-text-fill-color: white; }
     #product .sac img {
-      width: 100%;
-      height: 100%;
+      max-width: 650px;
+      max-height: 588px;
       align-self: center; }
   #product .prix {
     grid-area: prix;
@@ -127,14 +138,14 @@ main {
         #product .prix .container .star .NO {
           color: #adadad; }
         #product .prix .container .star .small {
-          color: #b6b6b6;
+          color: #6e6e6e;
           font-size: small;
           margin-bottom: 3%;
           margin-left: 2%;
           margin-top: 1.5%;
           line-height: 0px; }
     #product .prix .serial-number {
-      color: #b6b6b6;
+      color: #6e6e6e;
       font-size: small;
       margin-bottom: 3%; }
     #product .prix h1 {
@@ -184,6 +195,8 @@ main {
       display: flex;
       margin-bottom: 5%; }
       #product .prix .size .S a {
+        color: #6e6e6e;
+        font-weight: 800;
         font-size: 12px;
         text-decoration: none;
         background-color: #c2c2c2;
@@ -194,6 +207,8 @@ main {
         #product .prix .size .S a:hover {
           border: 1px solid black; }
       #product .prix .size .M a {
+        color: #6e6e6e;
+        font-weight: 800;
         font-size: 12px;
         text-decoration: none;
         background-color: #c2c2c2;
@@ -204,6 +219,8 @@ main {
         #product .prix .size .M a:hover {
           border: 1px solid black; }
       #product .prix .size .L a {
+        color: #6e6e6e;
+        font-weight: 800;
         font-size: 12px;
         text-decoration: none;
         background-color: #c2c2c2;
@@ -339,7 +356,7 @@ main {
 #information {
   margin-top: 10%;
   display: grid;
-  grid-template-columns: 2fe 1fr;
+  grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 1fr 0.5fr;
   grid-template-areas: "introduction shoes" "features shoes" "vide shoes"; }
   #information .shoes {
@@ -378,28 +395,36 @@ main {
       margin-top: 5%;
       margin-bottom: 2%; }
   #related_products .cotton_sweater {
-    grid-area: cotton_sweater; }
+    grid-area: cotton_sweater;
+    margin-left: auto;
+    margin-right: auto; }
     #related_products .cotton_sweater h5 {
       margin-top: 5%;
       margin-bottom: 3%; }
     #related_products .cotton_sweater p del {
       color: #999999; }
   #related_products .glitter {
-    grid-area: glitter; }
+    grid-area: glitter;
+    margin-left: auto;
+    margin-right: auto; }
     #related_products .glitter h5 {
       margin-top: 5%;
       margin-bottom: 3%; }
     #related_products .glitter p del {
       color: #999999; }
   #related_products .embroidered {
-    grid-area: embroidered; }
+    grid-area: embroidered;
+    margin-left: auto;
+    margin-right: auto; }
     #related_products .embroidered h5 {
       margin-top: 5%;
       margin-bottom: 3%; }
     #related_products .embroidered p del {
       color: #999999; }
   #related_products .floral {
-    grid-area: floral; }
+    grid-area: floral;
+    margin-left: auto;
+    margin-right: auto; }
     #related_products .floral h5 {
       margin-top: 5%;
       margin-bottom: 3%; }
@@ -417,28 +442,36 @@ main {
       margin-top: 5%;
       margin-bottom: 2%; }
   #related_products .oversize {
-    grid-area: oversize; }
+    grid-area: oversize;
+    margin-left: auto;
+    margin-right: auto; }
     #related_products .oversize h5 {
       margin-top: 5%;
       margin-bottom: 3%; }
     #related_products .oversize p del {
       color: #999999; }
   #related_products .metallic {
-    grid-area: metallic; }
+    grid-area: metallic;
+    margin-left: auto;
+    margin-right: auto; }
     #related_products .metallic h5 {
       margin-top: 5%;
       margin-bottom: 3%; }
     #related_products .metallic p del {
       color: #999999; }
   #related_products .suede {
-    grid-area: suede; }
+    grid-area: suede;
+    margin-left: auto;
+    margin-right: auto; }
     #related_products .suede h5 {
       margin-top: 5%;
       margin-bottom: 3%; }
     #related_products .suede p del {
       color: #999999; }
   #related_products .striped {
-    grid-area: striped; }
+    grid-area: striped;
+    margin-left: auto;
+    margin-right: auto; }
     #related_products .striped h5 {
       margin-top: 5%;
       margin-bottom: 3%; }
@@ -457,20 +490,218 @@ footer {
   align-content: space-between;
   margin: 15vh 20vw 10vh;
   height: 40vh; }
-  footer .big {
-    width: 19vw; }
-  footer .media, footer .card {
-    text-align: center;
-    font-size: 1.5em; }
   footer div {
     width: 10vw; }
-    footer div p, footer div i {
+    footer div a, footer div p, footer div i {
       padding: 10px 0;
       color: #999;
       font-size: 0.9em; }
-      footer div p i, footer div i i {
+      footer div a i, footer div p i, footer div i i {
         padding-right: 15px; }
     footer div h4 {
       padding-bottom: 15px;
       font-size: 16px;
       font-weight: bold; }
+  footer .big {
+    width: 19vw; }
+  footer .media, footer .card {
+    text-align: center;
+    font-size: 1.5em; }
+
+@media screen and (min-width: 1450px) and (max-width: 1700px) {
+  #related_products {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr 0.1fr 0.2fr 1fr 1fr 0.1fr;
+    grid-template-areas: "product product product" "cotton_sweater glitter embroidered" "floral floral floral" "page page page" "upsell upsell upsell" "oversize  metallic suede" "striped striped striped" "page2 page2 page2"; }
+    #related_products .floral {
+      margin: 0% auto; }
+    #related_products .striped {
+      margin: 0% auto; } }
+
+@media screen and (max-width: 1449px) {
+  #product .sac .fleche {
+    left: 270px;
+    top: 250px; }
+  #product .sac img {
+    width: 500px;
+    height: 500px; }
+  #product .prix .buy {
+    margin-top: 8%;
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+    padding: 0%;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    grid-template-rows: 40px 40px;
+    grid-template-areas: "quantity like" "add_card add_card" "buy_now buy_now";
+    grid-column-gap: 5px;
+    grid-row-gap: 20px; }
+  #related_products {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.3fr 1fr 1fr 0.1fr 0.2fr 1fr 1fr 0.1fr;
+    grid-template-areas: "product product" "cotton_sweater glitter" "embroidered floral" "page page" "upsell upsell" "oversize  metallic" "suede striped" "page2 page2";
+    grid-column-gap: 30px;
+    grid-row-gap: 20px; } }
+
+@media screen and (max-width: 1024px) {
+  main {
+    max-width: 90%;
+    margin-left: 5%;
+    margin-right: 5%; }
+  header {
+    height: 50px;
+    background-position-y: right;
+    background-repeat: no-repeat; }
+    header .navig, header .search {
+      display: none; }
+    header .logo {
+      position: absolute;
+      top: 5vh;
+      right: 0;
+      bottom: 0;
+      left: 5%;
+      display: block;
+      width: 120px;
+      height: 60px; }
+    header .icon {
+      position: absolute;
+      top: 6vh;
+      right: 0;
+      bottom: 0;
+      left: 65%; }
+      header .icon .icons {
+        font-size: 1.7em;
+        padding: 0 25px; }
+  #product {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 1fr 0.2fr 1fr 0.4fr;
+    grid-template-areas: "tête"  "sac" "miniature" "prix" "category"; }
+    #product .sac {
+      display: flex;
+      justify-content: center; }
+      #product .sac .fleche {
+        top: 300px;
+        left: 500px; }
+    #product .prix .buy {
+      margin-top: 8%;
+      margin-bottom: 0%;
+      padding-bottom: 0%;
+      padding: 0%;
+      display: grid;
+      grid-template-columns: 1fr 3fr 0.5fr;
+      grid-template-rows: 40px 40px 40px;
+      grid-template-areas: "quantity add_card like" "buy_now buy_now buy_now";
+      grid-column-gap: 5px;
+      grid-row-gap: 20px; }
+  .bar_menu {
+    padding: 3% 10% 3% 10%; }
+  #information {
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.2fr 0.2fr;
+    grid-template-areas: "shoes"  "introduction" "features"; }
+    #information .shoes {
+      display: flex;
+      justify-content: center; }
+    #information .introduction {
+      margin-right: 0%;
+      margin-top: 5%; }
+      #information .introduction p {
+        text-align: justify; }
+    #information .features {
+      margin-right: 0%;
+      margin-top: 5%;
+      margin-bottom: 5%; } }
+
+@media (max-width: 500px) {
+  main {
+    max-width: 100%;
+    margin: 0px; }
+  header .logo {
+    width: 80px;
+    height: 40px; }
+  header .icon {
+    position: absolute;
+    top: 4.5vh;
+    right: 5vw;
+    bottom: auto;
+    left: auto; }
+    header .icon .icons {
+      font-size: 1em;
+      padding: 0 15px; }
+  #product {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 0.5fr 0.2fr 1fr 0.4fr;
+    grid-template-areas: "tête" "sac" "miniature" "prix" "category"; }
+    #product .sac {
+      display: flex;
+      justify-content: center; }
+      #product .sac .fleche {
+        left: 275px;
+        top: 125px; }
+      #product .sac img {
+        width: 300px;
+        height: 300px; }
+    #product .miniature {
+      display: flex;
+      flex-wrap: wrap; }
+  .bar_menu {
+    padding: 3% 10% 3% 10%; }
+  #information {
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.2fr 0.2fr;
+    grid-template-areas: "shoes"  "introduction" "features"; }
+    #information .shoes img {
+      width: 300px;
+      height: 300px;
+      margin-left: auto;
+      margin-right: auto; }
+    #information .introduction {
+      margin-right: 2%;
+      margin-left: 2%; }
+    #information .features {
+      margin-right: 2%;
+      margin-left: 2%; }
+  #related_products {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr 0.1fr 0.2fr 1fr 1fr 1fr 1fr 0.1fr;
+    grid-template-areas: "product " "cotton_sweater" "glitter" "embroidered" "floral" "page" "upsell" "oversize" "metallic" "suede" "striped" "page2";
+    grid-column-gap: 30px;
+    grid-row-gap: 20px; }
+  footer {
+    margin: 5vh 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    align-content: space-between;
+    margin: 15vh 15vw 10vh;
+    height: 40vh; }
+    footer div {
+      width: 30vw;
+      text-align: center; }
+      footer div a, footer div p, footer div i {
+        padding: 10px 0;
+        color: #999;
+        font-size: 0.9em; }
+        footer div a i, footer div p i, footer div i i {
+          padding-right: 15px; }
+      footer div h4 {
+        padding-bottom: 15px;
+        font-size: 16px;
+        font-weight: bold; }
+    footer .big, footer .disap {
+      display: none; }
+    footer .spr, footer .cpr {
+      padding: 5vh 0;
+      width: 80vw;
+      display: block; } }

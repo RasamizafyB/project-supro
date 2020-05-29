@@ -1,5 +1,5 @@
 
-$color-small: rgb(182, 182, 182);
+$color-small: rgb(110, 110, 110);
 $color-strike: rgb(153, 153, 153);
 
 @mixin display {
@@ -21,6 +21,8 @@ $color-strike: rgb(153, 153, 153);
     }
 }
 @mixin size {
+    color: $color-small;
+    font-weight: 800;
     font-size: 12px;
     text-decoration: none;
     background-color: rgb(194, 194, 194);
@@ -30,6 +32,8 @@ $color-strike: rgb(153, 153, 153);
     @include cercle();
 }
 @mixin articlele {
+    margin-left: auto;
+    margin-right: auto;
     h5{
         margin-top: 5%;
         margin-bottom: 3%;
@@ -74,34 +78,39 @@ $banner-top: #F2EDE9;
     right: $right;
     bottom: $bottom;
     left: $left;
-}
+};
+
 
 body{
     font-family: 'Roboto', sans-serif;
+    width: 100%;
+    margin: 0%;
 }
 
 //header
 
 header {
     padding: 5vh; 
+    background-image: url(./resourse/abc.jpg);
+    background-size: cover;
     height: 25px;
-    border-bottom: 0.5px solid rgb(197, 197, 197);
     position: relative;
     .logo {
-        @include position(absolute, 5.5vh, 0, 0, 5%);
+        @include position(absolute, 5vh, 0, 0, 5%);
         display: block;
-
+        width: 80px;
+        height: 40px;
     }
     .navig {
-        @include position(absolute, 5vh, 0, 0, 22%);
+        @include position(absolute, 5vh, 0, 0, 20%);
         p {
             @include flex(inline-flex, center, center);
             width: 80px;
             height: 40px;
             a{
                 text-decoration: none;
-                color: black; 
-            }  
+                color: black;
+            }
         }
     }    
     .search {
@@ -131,6 +140,9 @@ header {
             @include flex(inline-flex, center, center);
             width: 40px;
             height: 40px;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
         }
     }
 }
@@ -138,30 +150,33 @@ header {
 // main
 
 main{
-    max-width: 60%;
-    margin: 0 auto;
+    margin-left: 20%;
+    margin-right: 20%;
 }
-#entête{
-    margin: 40px 0% 2% 0%;
-    display: flex;
-    justify-self: start;
-    h4{
-        color: rgb(148, 148, 148);       
-    }
-    ul{
-        li{
-            list-style-type: disc;
-            margin-left: 30px;
-        }  
-    } 
-}
+
 #product{
     display: grid;
-    grid-template-columns: 1fr 1fr; //518.91px;
-    grid-template-rows: 1fr 0.4fr;
-    grid-template-areas: 
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.1fr 1fr 0.4fr;
+    grid-template-areas:
+            "tête tête" 
             "sac prix"
             "miniature category";
+    #entête{
+        grid-area: tête ;
+        margin: 40px 0% 2% 0%;
+        display: flex;
+        justify-self: start;
+        h4{
+        color: rgb(148, 148, 148);       
+        }
+        ul{
+            li{
+                list-style-type: disc;
+                margin-left: 30px;
+            }  
+        } 
+    }
     .sac{
         grid-area: sac; 
         display: flex; 
@@ -179,12 +194,16 @@ main{
             background-color: white;
             position: absolute;
             left: 475px;
-            top: 275px;
+            top: 294px;
+            &:hover{
+                background-color: black;
+                -webkit-text-fill-color: white;
+            }
 
         }
         img{
-            width: 100%; //518.91px;
-            height: 100%; //477.25px;
+            max-width: 650px;
+            max-height: 588px;
             align-self: center;
         }
     }
@@ -374,7 +393,7 @@ main{
             }
         }
 
-     }
+    }
 
     .miniature{
         grid-area: miniature;
@@ -457,7 +476,7 @@ main{
 #information{
     margin-top: 10%;
     display: grid;
-    grid-template-columns: 2fe 1fr;
+    grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr 0.5fr;
     grid-template-areas: 
             "introduction shoes"
@@ -490,7 +509,7 @@ main{
             margin-left: 5%;
             line-height: 30px;
             color: rgb(130, 130, 130);
-        }
+        } 
     }
 }
 
@@ -564,16 +583,9 @@ footer {
     align-content: space-between;
     margin: 15vh 20vw 10vh;
     height: 40vh;
-    .big {
-        width: 19vw;
-    }
-    .media, .card {
-        text-align: center;
-        font-size: 1.5em;
-    }
     div {
         width: 10vw;
-        p, i {
+        a, p, i {
             padding: 10px 0;
             color: $grey;
             font-size: 0.9em;
@@ -587,11 +599,318 @@ footer {
             font-weight: bold;
         }
     }
+    .big {
+        width: 19vw;
+    }
+    .media, .card {
+        text-align: center;
+        font-size: 1.5em;
+    }
 }
 
 
 
+//Responsive 
+
+@media screen and (min-width: 1450px) and (max-width: 1700px){
+
+    #related_products{
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.5fr 1fr 1fr 0.1fr 0.2fr 1fr 1fr 0.1fr;
+        grid-template-areas: 
+            "product product product"
+            "cotton_sweater glitter embroidered"
+            "floral floral floral"
+            "page page page"
+            "upsell upsell upsell"
+            "oversize  metallic suede"
+            "striped striped striped"
+            "page2 page2 page2";
+        .floral{
+            margin: 0% auto;
+        }
+        .striped{
+            margin: 0% auto;
+        }
+    }
+}
+
+@media screen and (max-width: 1449px){
+    
+    #product{
+        .sac{
+            .fleche{
+                left: 270px;
+                top: 250px;
+            }
+            img{
+                width: 500px;
+                height: 500px;
+            }
+        }
+        .prix{
+            .buy{
+                margin-top: 8%;
+                margin-bottom: 0%;
+                padding-bottom: 0%;
+                padding: 0%;
+                display: grid;
+                grid-template-columns: 1fr 0.5fr;
+                grid-template-rows: 40px 40px;
+                grid-template-areas: 
+                            "quantity like"
+                            "add_card add_card"
+                            "buy_now buy_now";
+                grid-column-gap: 5px;
+                grid-row-gap: 20px;
+            }
+        }
+    }
+    #related_products{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.3fr 1fr 1fr 0.1fr 0.2fr 1fr 1fr 0.1fr;
+        grid-template-areas: 
+                "product product"
+                "cotton_sweater glitter"
+                "embroidered floral"
+                "page page"
+                "upsell upsell"
+                "oversize  metallic"
+                "suede striped"
+                "page2 page2";
+        grid-column-gap: 30px;
+        grid-row-gap: 20px;
+    }
+}
 
 
+//Responsive Tablette
+
+@media screen and (max-width: 1024px){
+    main{
+        max-width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        
+    }
+    header {
+        height: 50px;
+        background-position-y: right;
+        background-repeat: no-repeat;
+        .navig, .search {
+            display: none;
+        }
+        .logo {
+            @include position(absolute, 5vh, 0, 0, 5%);
+            display: block;
+            width: 120px;
+            height: 60px;
+        }
+        .icon {
+            @include position(absolute, 6vh, 0, 0, 65%);
+            .icons {
+                font-size: 1.7em;
+                padding: 0 25px;
+            }
+        }
+    }
+    #product{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 1fr 0.2fr 1fr 0.4fr;
+        grid-template-areas:
+                "tête" 
+                "sac"
+                "miniature"
+                "prix"
+                "category";
+        .sac{
+            display: flex;
+            justify-content: center;
+            .fleche{
+                top: 300px;
+                left: 500px;
+            }
+        }
+        .prix{
+            .buy{
+                margin-top: 8%;
+                margin-bottom: 0%;
+                padding-bottom: 0%;
+                padding: 0%;
+                display: grid;
+                grid-template-columns: 1fr 3fr 0.5fr;
+                grid-template-rows: 40px 40px 40px;
+                grid-template-areas: 
+                            "quantity add_card like"
+                            "buy_now buy_now buy_now";
+                grid-column-gap: 5px;
+                grid-row-gap: 20px;
+            }
+        }
+    }
+    .bar_menu{
+        padding: 3% 10% 3% 10%;
+    }
+    #information{
+        margin-top: 10%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.2fr 0.2fr;
+        grid-template-areas:
+                "shoes" 
+                "introduction"
+                "features";
+        .shoes{
+            display: flex;
+            justify-content: center;
+        }
+        .introduction{
+            margin-right: 0%;
+            margin-top: 5%;
+            p{
+                text-align: justify;
+            }
+        }
+        .features{
+            margin-right: 0%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+    }
+
+}
+
+@media (max-width: 500px){
+    main{
+        max-width: 100%;
+        margin: 0px;
+    }
+    header {
+        .logo {
+            width: 80px;
+            height: 40px;
+        }
+        .icon {
+            @include position(absolute, 4.5vh, 5vw, auto, auto);
+            .icons {
+                font-size: 1em;
+                padding: 0 15px;
+            }
+        }
+    }
+    #product{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 0.5fr 0.2fr 1fr 0.4fr;
+        grid-template-areas: 
+                "tête"
+                "sac"
+                "miniature"
+                "prix"
+                "category";
+        .sac{
+            display: flex;
+            justify-content: center;
+            .fleche{
+                left: 275px;
+                top: 125px;
+            }
+            img{
+                width: 300px;
+                height: 300px;
+            }
+        }
+        .miniature{
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+    .bar_menu{
+        padding: 3% 10% 3% 10%;
+    }
+    #information{
+        margin-top: 10%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.2fr 0.2fr;
+        grid-template-areas:
+                "shoes" 
+                "introduction"
+                "features";
+        .shoes{
+            img{
+                width: 300px;
+                height: 300px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        .introduction{
+            margin-right: 2%;
+            margin-left: 2%;
+        }
+        .features{
+            margin-right: 2%;
+            margin-left: 2%;
+        }
+    }
+    #related_products{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr 0.1fr 0.2fr 1fr 1fr 1fr 1fr 0.1fr;
+        grid-template-areas: 
+                "product "
+                "cotton_sweater"
+                "glitter"
+                "embroidered"
+                "floral"
+                "page"
+                "upsell"
+                "oversize"
+                "metallic"
+                "suede"
+                "striped"
+                "page2";
+        grid-column-gap: 30px;
+        grid-row-gap: 20px;
+    }
+    footer {
+        margin: 5vh 10vh;
+        @include flex(flex, space-between, flex-start);
+        flex-wrap: wrap;
+        align-content: space-between;
+        margin: 15vh 15vw 10vh;
+        height: 40vh;
+        div {
+            width: 30vw;
+            text-align: center;
+            a, p, i {
+                padding: 10px 0;
+                color: $grey;
+                font-size: 0.9em;
+                i {
+                    padding-right: 15px;
+                }
+            }
+            h4 {
+                padding-bottom: 15px;
+                font-size: 16px;
+                font-weight: bold;
+            }
+        }
+        .big, .disap {
+            display: none;
+        }
+        .spr, .cpr {
+            padding: 5vh 0;
+            width: 80vw;
+            display: block;
+        }
+    } 
+}
 
 
