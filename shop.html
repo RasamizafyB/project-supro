@@ -3,14 +3,62 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
+		<meta content="width=device-width, initial-scale=1" name="viewport">
 		<link href="assets/css/style.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<title>
+			Shop
+		</title>
 	</head>
 
 	<body>
 		<!-- Header part -->
 		<header>
+			<img class="logo" src="assets/images/logo.png" alt="Logo">
+
+        	<div class="navig">
+            	<p class="nav">
+            		<a href="#">Home</a>
+            	</p>
+            	<p class="nav">
+            		<a href="#">Shop</a>
+            	</p>
+            	<p class="nav">
+            		<a href="#">Products</a>
+            	</p>
+            	<p class="nav">
+            		<a href="#">Pages</a>
+            	</p>
+            	<p class="nav">
+            		<a href="#">Blog</a>
+            	</p>
+            	<p class="nav">
+            		<a href="#">Contact</a>
+            	</p>
+        	</div>
+        
+        	<div class="search">
+            	<input type="search" placeholder="Start searching...">
+            	<i class="fas fa-search"></i>
+        	</div>
+
+        	<div class="icon">
+            	<p class="icons">
+            		<i class="fas fa-user"></i>
+            	</p>
+            	<p class="icons">
+            		<i class="fas fa-heart"></i>
+            	</p>
+            	<p class="icons">
+            		<i class="fas fa-shopping-cart"></i>
+            	</p>
+            	<p class="icons">
+            		<i class="fas fa-cog"></i>
+            	</p>
+        	</div>
 		</header>
 
 
@@ -37,32 +85,41 @@
 
 
 			<section class="shop_content">
+
 				<!-- Left part of the page -->
 				<section class="left_part">
+
 					<!-- Title and toolbar -->
 					<section class="nav_bar">
 						<h1>
 							Shoes
 						</h1>
-						<p>
-							Items 1-12 of 36
-						</p>
-						<p>
-							Sort by <span>Position</span>
-						</p>
-						<figure class="expand">
-							<img src="assets/icons/expand_more-black-18dp.svg" alt="Expand more" title="Expand more">
-						</figure>
-						<figure class="up">
-							<img src="assets/icons/arrow_upward-black-18dp.svg" alt="" title="">
-						</figure>
-						<figure class="grid_display">
-							<img src="assets/icons/apps-black-18dp.svg" alt="" title="">
-						</figure>
-						<figure class="list_display">
-							<img src="assets/icons/format_list_bulleted-black-18dp.svg" alt="List format" title="Display list format">
-						</figure>
+						<div>
+							<p>
+								Items 1-12 of 36
+							</p>
+							<p>
+								Sort by <span>Position</span>
+							</p>
+							<div>
+								<figure class="expand">
+									<img src="assets/icons/expand_more-black-18dp.svg" alt="Expand more" title="Expand more">
+								</figure>
+								<figure class="up">
+									<img src="assets/icons/arrow_upward-black-18dp.svg" alt="" title="">
+								</figure>
+							</div>
+							<div>
+								<figure class="grid_display">
+									<img src="assets/icons/apps-black-18dp.svg" alt="" title="">
+								</figure>
+								<figure class="list_display">
+									<img src="assets/icons/format_list_bulleted-black-18dp.svg" alt="List format" title="Display list format">
+								</figure>
+							</div>
+						</div>
 					</section>
+					
 
 					<!-- 1st line of products -->
 					<section class="first_line">
@@ -99,8 +156,11 @@
 								$59.00
 							</p>
 							<div>
-							</div>
-							<div>
+								<div>
+								</div>
+								
+								<div>
+								</div>
 							</div>
 						</section>
 
@@ -129,12 +189,14 @@
 							<h3>
 								Brown Jacket
 							</h3>
-							<p>
-								$89.00
-							</p>
-							<p>
-								$80.00
-							</p>
+							<div>
+								<p>
+									$89.00
+								</p>
+								<p>
+									$80.00
+								</p>
+							</div>
 						</section>
 
 						<!-- 2nd product of 2nd line -->
@@ -148,15 +210,17 @@
 							<p>
 								$95.00
 							</p>
-							<p>
-								M
-							</p>
-							<p>
-								XS
-							</p>
+							<div>
+								<p>
+									M
+								</p>
+								<p>
+									XS
+								</p>
+							</div>
 						</section>
 
-						<!-- 3rd product of 2ns line -->
+						<!-- 3rd product of 2nd line -->
 						<section class="second_line-third_product">
 							<figure>
 								<img src="assets/images/prd_01_1_1_1.jpg" alt="Cuffed Beanie" title="Cuffed Beanie">
@@ -293,24 +357,26 @@
 						</h3>
 						<div>
 							<div>
+								<div class="black_icon">
+								</div>
+								<p>
+									Black
+								</p>
 							</div>
-							<p>
-								Black
-							</p>
-						</div>
-						<div>
 							<div>
+								<div class="blue_icon">
+								</div>
+								<p>
+									Blue
+								</p>
 							</div>
-							<p>
-								Blue>
-							</p>
-						</div>
-						<div>
 							<div>
+								<div class="brown_icon">
+								</div>
+								<p>
+									Brown
+								</p>
 							</div>
-							<p>
-								Brown
-							</p>
 						</div>
 					</section>
 
@@ -319,15 +385,17 @@
 						<h3>
 							SIZE
 						</h3>
-						<p>
-							XS
-						</p>
-						<p>
-							S
-						</p>
-						<p>
-							M
-						</p>
+						<div>
+							<p>
+								XS
+							</p>
+							<p>
+								S
+							</p>
+							<p>
+								M
+							</p>
+						</div>
 					</section>
 
 					<!-- Price section -->
@@ -336,7 +404,7 @@
 							PRICE
 						</h3>
 						<figure>
-							<img src="" alt="" title="">
+							<img src="assets/images/price.png" alt="Price selector" title="Price selector">
 						</figure>
 					</section>
 
@@ -369,7 +437,7 @@
 
 
 			<!-- Page selection -->
-			<section>
+			<section class="page_selection">
 				<p>
 					01
 				</p>
@@ -380,7 +448,7 @@
 					03
 				</p>
 				<figure>
-					<img src="" alt="" title="">
+					<img src="assets/icons/chevron_right-black-18dp.svg" alt="Right arrow" title="Next">
 				</figure>
 			</section>
 		</main>
@@ -388,6 +456,41 @@
 
 		<!-- Footer -->
 		<footer>
+			<section class="social_networks">
+				<p>
+					<a href="#">FACEBOOK</a>
+				</p>
+				<p>
+					<a href="#">TWITTER</a>
+				</p>
+				<p>
+					<a href="#">GOOGLE</a>
+				</p>
+				<p>
+					<a href="#">YOUTUBE</a>
+				</p>
+				<p>
+					<a href="#">INSTAGRAM</a>
+				</p>
+			</section>
+
+			<section class="payment">
+				<figure>
+					<a href="#"><img src="assets/images/payment1.png" alt="VISA" title="VISA"></a>
+				</figure>
+				<figure>
+					<a href="#"><img src="assets/images/payment2.png" alt="PayPal" title="PayPal"></a>
+				</figure>
+				<figure>
+					<a href="#"><img src="assets/images/payment3.png" alt="Master Card" title="Master Card"></a>
+				</figure>
+				<figure>
+					<a href="#"><img src="assets/images/payment4.png" alt="Discover" title="Discover"></a>
+				</figure>
+				<figure>
+					<a href="#"><img src="assets/images/payment5.png" alt="AMEX" title="AMEX"></a>
+				</figure>
+			</section>
 		</footer>
 	</body>
 </html>
