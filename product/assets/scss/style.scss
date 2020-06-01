@@ -266,7 +266,7 @@ main{
                 .minus{
                     a{
                         color: rgb(180, 180, 180);
-                        :hover{
+                        &:hover{
                              color: black;
                         }
                     }  
@@ -274,8 +274,8 @@ main{
                 .plus{
                     a{
                         color: rgb(180, 180, 180);
-                        :hover{
-                            color: black;
+                        &:hover{
+                            color: black; 
                         }
                     } 
                 }
@@ -552,7 +552,7 @@ main{
                 padding: 0%;
                 display: grid;
                 grid-template-columns: 1fr 0.5fr;
-                grid-template-rows: 40px 40px;
+                grid-template-rows: 40px 40px 40px;
                 grid-template-areas: 
                             "quantity like"
                             "add_card add_card"

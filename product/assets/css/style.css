@@ -433,11 +433,11 @@ main {
         padding-left: 5%; }
         #product .prix .buy .quantity .minus a {
           color: #b4b4b4; }
-          #product .prix .buy .quantity .minus a :hover {
+          #product .prix .buy .quantity .minus a:hover {
             color: black; }
         #product .prix .buy .quantity .plus a {
           color: #b4b4b4; }
-          #product .prix .buy .quantity .plus a :hover {
+          #product .prix .buy .quantity .plus a:hover {
             color: black; }
       #product .prix .buy .add_card {
         grid-area: add_card;
@@ -690,7 +690,7 @@ main {
     padding: 0%;
     display: grid;
     grid-template-columns: 1fr 0.5fr;
-    grid-template-rows: 40px 40px;
+    grid-template-rows: 40px 40px 40px;
     grid-template-areas: "quantity like" "add_card add_card" "buy_now buy_now";
     grid-column-gap: 5px;
     grid-row-gap: 20px; }
