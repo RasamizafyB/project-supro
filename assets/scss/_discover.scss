@@ -103,8 +103,9 @@
 
 @media (max-width: 400px) {
     .discover {
+        
         .trio-3 {
-            @include position(absolute, 65%, 0, 0, 60%);
+            @include position(absolute, 72%, 0, 0, 60%);
         }
     }
 }

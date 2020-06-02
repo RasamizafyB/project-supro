@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,7 +10,6 @@
 <body>
     <header>
         <img class="logo" src="assets/images/logo.png" alt="Logo">
-
         
         <div class="navig">
             <p class="nav"><a href="#">Home</a></p>
@@ -20,18 +20,29 @@
             <p class="nav"><a href="#">Contact</a></p>
         </div>
         
-       <div class="search">
+        <div class="nav-hamburger">
+            <p class="close-hamburger"><a href="#"><i class="far fa-times-circle"></i></a></p>
+            <p class="nav"><a href="#">Home</a></p>
+            <p class="nav"><a href="#">Shop</a></p>
+            <p class="nav"><a href="#">Products</a></p>
+            <p class="nav"><a href="#">Pages</a></p>
+            <p class="nav"><a href="#">Blog</a></p>
+            <p class="nav"><a href="#">Contact</a></p>
+        </div>
+        
+        <div class="search">
             <input type="search" placeholder="Start searching...">
             <i class="fas fa-search"></i>
-       </div>
-
+        </div>
+        
         <div class="icon">
             <p class="icons"><a href="#"><i class="fas fa-user"></i></a></p>
             <p class="icons"><a href="#"><i class="fas fa-heart"></i></a></p>
             <p class="icons"><a href="#"><i class="fas fa-shopping-cart"></i></a></p>
             <p class="icons"><a href="#"><i class="fas fa-cog"></i></a></p>
+            <p class="icons open-hamburger"><a href="#"><i class="fas fa-bars"></i></a></p>
         </div>
-    
+        
         
         <div class="social-media">
             <p class="social-medias"><a href="#"><i class="fab fa-facebook-f"></i></a></p>
@@ -41,42 +52,42 @@
         </div>
         
         <div class="trio">
-            <p>New Collection Preview</p>
+            <p id="open">New Collection Preview</p>
             <h4>Woman Shoes</h4>
             <a href="#">Discover More</a>
         </div>
     </header>
-
+    
     <section class="discover">
         <div class="flex-container">
             <img src="assets/images/banner_h1_1.jpg" alt="banner_h1_1">
             <img src="assets/images/banner_h1_2.jpg" alt="banner_h1_2">
             <img src="assets/images/banner_h1_3.jpg" alt="banner_h1_3">
         </div>
-
+        
         <div class="trio-1">
-            <p>New Item</p>
+            <p id="open">New Item</p>
             <h4>Hairband Collection</h4>
             <a href="#">Discover More</a>
         </div>
-
+        
         <div class="trio-2">
             <p>Mini Studded</p>
             <h4>Split suede bag</h4>
             <a href="#">Discover More</a>
         </div>
-
+        
         <div class="trio-3">
             <p>Special price</p>
             <h4>Corduroy Culottes</h4>
             <a href="#">Discover More</a>
         </div>
     </section>
-
+    
     <section class="top">
         <h2>Top Sellers</h2>
         <h3>Browse the huge variety of our products</h3>
-
+        
         <div class="flex-container-1">
             <img src="assets/images/bsl1.jpg" alt="Product image1">
             <img src="assets/images/bsl2.jpg" alt="Product image2">
@@ -85,19 +96,19 @@
             <img src="assets/images/bsl3.jpg" alt="Product image3">
             <img src="assets/images/bsl4.jpg" alt="Product image4">
         </div>
-
+        
         <div class="trio-1">
             <p>Leather Shop Bags</p>
             <h4>$89.90</h4>
             <a href="#">Shop Now</a>
         </div>
-
+        
         <div class="trio-2">
             <p>Flower Design Blouse</p>
             <h4>$59.90</h4>
             <a href="#">Shop Now</a>
         </div>
-
+        
         <div class="trio-3">
             <p>Glitter Decorate Shoes</p>
             <h4>$89.90</h4>
@@ -110,11 +121,11 @@
             <a href="#">Shop Now</a>
         </div>
     </section>
-
+    
     <section class="new">
         <h2>New Arrival</h2>
         <h3>Browse the huge variety of our products</h3>
-
+        
         <div class="flex-container-1">
             <div class="quadri">
                 <img src="assets/images/prd_04_1_1.jpg" alt="Product Pic">
@@ -126,7 +137,7 @@
                 <i class="y fas fa-star"></i>
                 <i class="y fas fa-star"></i>
             </div>
-    
+            
             <div class="quadri">
                 <img src="assets/images/prd_05_1_2.jpg" alt="Product Pic">
                 <p>Beebay Denim Full Length</p>
@@ -137,7 +148,7 @@
                 <i class="y fas fa-star"></i>
                 <i class="fas fa-star"></i>
             </div>
-    
+            
             <div class="quadri">
                 <img src="assets/images/prd_06_1_2.jpg" alt="Product Pic">
                 <p>Pinky baggy</p>
@@ -149,7 +160,7 @@
                 <i class="fas fa-star"></i>
             </div>
         </div>
-    
+        
         <div class="flex-container-2">
             <div class="quadri">
                 <img src="assets/images/prd_07_1_2.jpg" alt="Product Pic">
@@ -161,7 +172,7 @@
                 <i class="y fas fa-star"></i>
                 <i class="fas fa-star"></i>
             </div>
-    
+            
             <div class="quadri">
                 <img src="assets/images/prd_08_1_6.jpg" alt="Product Pic">
                 <p>Contour Skinny</p>
@@ -172,7 +183,7 @@
                 <i class="y fas fa-star"></i>
                 <i class="fas fa-star"></i>
             </div>
-    
+            
             <div class="quadri">
                 <img src="assets/images/prd_09_1_1_5.jpg" alt="Product Pic">
                 <p>Top Pullover</p>
@@ -184,20 +195,20 @@
                 <i class="fas fa-star"></i>
             </div>
         </div>
-
+        
         <a href="#">Discover More</a>
     </section>
-
+    
     <section class="countdown">
         <p class="deal">Deal of the day</p>
-
+        
         <h4>Hobo Shoppper Bag</h4>
-
+        
         <p class="price">$39.90<span>$79.90</span></p>
-
+        
         <p class="discount">Save 50%</p>
         <p class="stock">In Stock</p>
-
+        
         <div class="numbers">
             <p class="hours">99</p>
             <p class="minutes">99</p>
@@ -208,48 +219,48 @@
             <p>Minutes</p>
             <p>Seconds</p>
         </div>
-
+        
         <a href="#">Discover More</a>
     </section>
-
+    
     <section class="latest">
         <h2>Latest News</h2>
         <h3>Our recent articles about fashion ideas & products</h3>
         <a class="more" href="#">See More News</a>
-
-       <div class="flex-container">
+        
+        <div class="flex-container">
             <div class="down big quadri">
                 <img src="assets/images/blog5_1.jpg" alt="Blog pic">
                 <p>Miracle Morning</p>
                 <h4>5 Minutes</h4>
                 <a href="#">Read More</a>
             </div>
-    
+            
             <div class="down quadri">
                 <img src="assets/images/blog8.jpg" alt="Blog pic">
                 <p>Water Detox</p>
                 <h4>10 days</h4>
                 <a href="#">Read More</a>
             </div>
-                
+            
             <div class="down quadri">
                 <img src="assets/images/blog9.jpg" alt="Blog pic">
                 <p>Vitamin C check</p>
                 <h4>Lifetime</h4>
                 <a href="#">Read More</a>
             </div>
-       </div>
-
+        </div>
+        
         <h2 class="abs-1">Keep Connected</h2>
         <h3 class="abs-2">Get updates by subscribe our weekly newsletter</h3>
-
+        
         <div class="mini-flex">
             <p class="mail"><i class="far fa-envelope"></i></p>
             <input type="email" placeholder="Your email here">
             <p>SUBSCRIBE</p>
         </div>
     </section>
-
+    
     <section class="follow">
         <img src="assets/images/follow-1.png" alt="Random Pic">
         <img src="assets/images/follow-2.png" alt="Random Pic">
@@ -259,7 +270,7 @@
         <img src="assets/images/follow-6.png" alt="Random Pic">
         <img src="assets/images/follow-7.png" alt="Random Pic">
     </section>
-
+    
     <footer>
         <div class="big spr">
             <img class="logo" src="assets/images/logo.png" alt="Logo">
@@ -267,14 +278,14 @@
             <p><a href="#"><i class="fas fa-envelope"></i>contact@company.com</a></p>        
             <p><a href="#"><i class="fas fa-phone"></i>+001 2233 456</a></p>
         </div>
-
+        
         <div class="disap">
             <h4>Help & Information</h4>
             <p><a href="#">Track Order</a></p>
             <p><a href="#">Premier Delivery</a></p>
             <p><a href="#">Student Discount</a></p>
         </div>
-
+        
         <div>
             <h4>About Supro</h4>
             <p><a href="#">About Us</a></p>
@@ -282,7 +293,7 @@
             <p><a href="#">Corporate</a></p>
             <p><a href="#">Investors</a></p>
         </div>
-
+        
         <div>
             <h4>Online Shop</h4>
             <p><a href="#">Shoes</a></p>
@@ -290,20 +301,20 @@
             <p><a href="#">Wallets</a></p>
             <p><a href="#">Belts</a></p>
         </div>
-
+        
         <div class="big cpr">
             <p class="copyright"><i class="far fa-copyright"></i>2018 <strong>Supro.</strong> All rights reserved.</p>
         </div>
-
         
-       <div class="big media">
+        
+        <div class="big media">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
             <a href="#"><i class="fab fa-google-plus-g"></i></a>
             <a href="#"><i class="fab fa-pinterest-p"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
         </div>
-
+        
         <div class="big card">
             <a href="#"><i class="fab fa-cc-visa"></i></a>
             <a href="#"><i class="fab fa-cc-mastercard"></i></a>
@@ -312,6 +323,7 @@
             <a href="#"><i class="fab fa-cc-discover"></i></a>
         </div>
     </footer>
-
+    
+    <script src="assets/app.js"></script>
 </body>
 </html>

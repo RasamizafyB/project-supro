@@ -34,6 +34,8 @@ header {
       align-items: center;
       width: 80px;
       height: 40px; }
+  header .nav-hamburger {
+    display: none; }
   header .search {
     position: absolute;
     top: 5vh;
@@ -76,6 +78,8 @@ header {
       -webkit-text-fill-color: transparent;
       -webkit-text-stroke-width: 1px;
       -webkit-text-stroke-color: black; }
+    header .icon .open-hamburger {
+      opacity: 0; }
   header .social-media {
     position: absolute;
     top: 50vh;
@@ -117,6 +121,24 @@ header {
     background-repeat: no-repeat; }
     header .navig, header .search {
       display: none; }
+    header .nav-hamburger {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: -5vh;
+      flex-direction: column;
+      width: 100vw;
+      height: 105vh;
+      background-color: white;
+      opacity: 0;
+      position: fixed;
+      z-index: -2; }
+      header .nav-hamburger p {
+        padding: 3vh;
+        font-size: 40px; }
+      header .nav-hamburger .close-hamburger {
+        padding: 5vh;
+        font-size: 60px; }
     header .logo {
       position: absolute;
       top: 5vh;
@@ -131,10 +153,12 @@ header {
       top: 6vh;
       right: 0;
       bottom: 0;
-      left: 65%; }
+      left: 60%; }
       header .icon .icons {
         font-size: 1.7em;
         padding: 0 25px; }
+      header .icon .open-hamburger {
+        opacity: 1; }
     header .social-media {
       position: absolute;
       top: 75vh;
@@ -178,6 +202,11 @@ header {
     header .icon .icons {
       font-size: 1em;
       padding: 0 15px; }
+  header .nav-hamburger p {
+    font-size: 25px; }
+  header .nav-hamburger .close-hamburger {
+    padding: 3vh;
+    font-size: 50px; }
   header .trio {
     position: absolute;
     top: 25vh;
@@ -321,7 +350,7 @@ header {
 @media (max-width: 400px) {
   .discover .trio-3 {
     position: absolute;
-    top: 65%;
+    top: 72%;
     right: 0;
     bottom: 0;
     left: 60%; } }
@@ -519,7 +548,7 @@ header {
   .top {
     height: auto; }
     .top h2 {
-      padding: 0 0 1vh 5vw; }
+      padding: 5vh 0 1vh 5vw; }
     .top h3 {
       padding-left: 5vw; }
     .top .flex-container-1, .top .new .flex-container-2, .new .top .flex-container-2 {
@@ -534,7 +563,7 @@ header {
       padding-bottom: 10vh; }
     .top .trio-2 {
       position: absolute;
-      top: 15vh;
+      top: 20vh;
       right: 0;
       bottom: 0;
       left: 9vw;
@@ -554,7 +583,7 @@ header {
         font-size: 12px; }
     .top .trio-4 {
       position: absolute;
-      top: 65vh;
+      top: 70vh;
       right: 0;
       bottom: 0;
       left: 9vw;
