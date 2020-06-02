@@ -36,8 +36,6 @@ function refresh() {
     minute.innerHTML = minutesGap;
     second.innerHTML = secondsGap;
 
-    console.log(hour.textContent)
-
     if (hour.textContent<10) {
         hour.textContent = "0" + hour.textContent;
     }
