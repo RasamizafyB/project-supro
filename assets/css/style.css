@@ -657,9 +657,16 @@ header {
     .new .flex-container-1 :nth-child(2), .new .flex-container-2 :nth-child(2) {
       display: none; }
     .new .flex-container-1 img, .new .flex-container-2 img {
-      width: 20vw; }
+      width: 25vw; }
     .new .flex-container-1 .flex-container-2 :nth-child(2), .new .flex-container-2 .flex-container-2 :nth-child(2) {
       display: none; } }
+
+@media (max-width: 500px) {
+  .new .flex-container-1, .new .flex-container-2 {
+    width: 80vw;
+    margin: 10vh auto; }
+    .new .flex-container-1 img, .new .flex-container-2 img {
+      width: 30vw; } }
 
 .countdown {
   padding-left: 20vw;

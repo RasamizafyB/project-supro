@@ -63,13 +63,25 @@
                     display: none;
                 }
                 img {
-                    width: 20vw;
+                    width: 25vw;
                 }
             .flex-container-2 {
                 & :nth-child(2) {
                     display: none;
                 }
             }    
+        }
+    }    
+}
+
+@media (max-width: 500px) {
+    .new {
+            .flex-container-1 {
+                width: 80vw;
+                margin: 10vh auto;
+                img {
+                    width: 30vw;
+                } 
         }
     }    
 }
