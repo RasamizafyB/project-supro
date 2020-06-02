@@ -4,7 +4,6 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  color: black;
   font-family: "Roboto", Arial, Helvetica, sans-serif; }
 
 header {
@@ -34,6 +33,8 @@ header {
       align-items: center;
       width: 80px;
       height: 40px; }
+      header .navig p a {
+        color: black; }
   header .search {
     position: absolute;
     top: 5vh;
@@ -48,9 +49,9 @@ header {
     header .search input {
       width: 200px;
       height: 40px;
+      border: 1px solid black;
       border-radius: 25px;
-      padding: 0 40px 0 15px;
-      border: none; }
+      padding: 0 40px 0 15px; }
       header .search input:focus {
         outline: none; }
     header .search i {
@@ -214,6 +215,10 @@ footer {
       font-size: 0.9em; }
       footer div a i, footer div p i, footer div i i {
         padding-right: 15px; }
+      footer div a:hover, footer div p:hover, footer div i:hover {
+        color: black; }
+      footer div a .big cpr, footer div p .big cpr, footer div i .big cpr {
+        color: #999; }
     footer div h4 {
       padding-bottom: 15px;
       font-size: 16px;
@@ -319,6 +324,8 @@ main {
           color: orange; }
         #product .prix .container .star .NO {
           color: #adadad; }
+          #product .prix .container .star .NO:hover {
+            color: orange; }
         #product .prix .container .star .small {
           color: #6e6e6e;
           font-size: small;

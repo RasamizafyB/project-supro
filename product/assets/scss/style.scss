@@ -152,6 +152,9 @@ main{
                 } 
                 .NO{
                     color: rgb(173, 173, 173);
+                    &:hover{
+                        color: orange;
+                    }
                 }
                 .small{
                     @include small();
@@ -267,7 +270,7 @@ main{
                     a{
                         color: rgb(180, 180, 180);
                         &:hover{
-                             color: black;
+                            color: black;
                         }
                     }  
                 }

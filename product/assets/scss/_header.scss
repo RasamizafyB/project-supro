@@ -5,30 +5,33 @@ header {
     height: 20px;
     position: relative;
     .logo {
-        @include position(absolute, 5vh, 0, 0, 5%)
+        @include position(absolute, 5vh, 0, 0, 5%);
         display: block;
         width: 80px;
         height: 40px;
     }
     .navig {
-        @include position(absolute, 5vh, 0, 0, 20%)
+        @include position(absolute, 5vh, 0, 0, 20%);
         p {
-            @include flex(inline-flex, center, center)
+            @include flex(inline-flex, center, center);
             width: 80px;
             height: 40px;
+            a{
+                color: black;
+            }
         }
     }    
     .search {
         @include position(absolute, 5vh, 0, 0, 65%);
-        @include flex(inline-flex, center, center)
+        @include flex(inline-flex, center, center);
         width: 200px;
-        height: 40px;
+        height: 40px; 
         input {
             width: 200px;
             height: 40px;
+            border: 1px solid black;
             border-radius: 25px;
             padding: 0 40px 0 15px;
-            border: none;
             &:focus {
                 outline: none;
             }
@@ -40,9 +43,9 @@ header {
         }
     }
     .icon {
-        @include position(absolute, 5vh, 0, 0, 85%)
+        @include position(absolute, 5vh, 0, 0, 85%);
         .icons {
-            @include flex(inline-flex, center, center)
+            @include flex(inline-flex, center, center);;
             width: 40px;
             height: 40px;
             -webkit-text-fill-color: transparent;
@@ -54,7 +57,7 @@ header {
         @include position(absolute, 50vh, 0, 0, 3%);
         transform: translateY(-30%);
         .social-medias {
-            @include flex(flex, center, center)
+            @include flex(flex, center, center);
             width: 40px;
             height: 30px;
             i {
@@ -63,7 +66,7 @@ header {
         }
     }
     .trio {
-        @include position(absolute, 25vh, 0, 0, 65%)
+        @include position(absolute, 25vh, 0, 0, 65%);
         width: 20vw;
         p {
             color: $orange;
@@ -88,13 +91,13 @@ header {
             display: none;
         }
         .logo {
-            @include position(absolute, 5vh, 0, 0, 5%)
+            @include position(absolute, 5vh, 0, 0, 5%);
             display: block;
             width: 120px;
             height: 60px;
         }
         .icon {
-            @include position(absolute, 6vh, 0, 0, 65%)
+            @include position(absolute, 6vh, 0, 0, 65%);
             .icons {
                 font-size: 1.7em;
                 padding: 0 25px;
@@ -106,7 +109,7 @@ header {
             @include flex(flex, center, center);     
         }
         .trio {
-            @include position(absolute, 25vh, 0, 0, 15%)
+            @include position(absolute, 25vh, 0, 0, 15%);
             width: 20vw;
             p {
                 color: $orange;
@@ -132,14 +135,14 @@ header {
             height: 40px;
         }
         .icon {
-            @include position(absolute, 4.5vh, 5vw, auto, auto)
+            @include position(absolute, 4.5vh, 5vw, auto, auto);
             .icons {
                 font-size: 1em;
                 padding: 0 15px;
             }
         }
         .trio {
-            @include position(absolute, 25vh, 0, 0, 15%)
+            @include position(absolute, 25vh, 0, 0, 15%);
             width: 30vw;
             p {
                 color: $orange;
