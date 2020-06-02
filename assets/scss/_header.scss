@@ -1,28 +1,29 @@
 header {
-    padding: 2vh; 
-    height: 10vh;
+    padding: 5vh; 
+    background-image: url(image/images/abc.jpg);
+    background-size: cover;
+    height: 12vh;
     position: relative;
+    .logo {
+        @include position(absolute, 5vh, 0, 0, 5%)
+        display: block;
+        width: 80px;
+        height: 40px;
+    }
     .navig {
-        @include position(absolute, 3vh, 0, 0, 20%)
+        @include position(absolute, 5vh, 0, 0, 20%)
         p {
             @include flex(inline-flex, center, center)
             width: 80px;
             height: 40px;
+
             a{
-                text-decoration: none;
                 color: $grey;
             }
         }
     }    
-    .logo {
-        @include position(absolute, 3vh, 0, 0, 5%)
-        display: block;
-        width: 80px;
-        height: 40px;
-
-    }
     .search {
-        @include position(absolute, 3vh, 0, 0, 65%);
+        @include position(absolute, 5vh, 0, 0, 65%);
         @include flex(inline-flex, center, center)
         width: 200px;
         height: 40px;
@@ -43,14 +44,124 @@ header {
         }
     }
     .icon {
-        @include position(absolute, 3vh, 0, 0, 85%)
+        @include position(absolute, 5vh, 0, 0, 85%)
+        width: 14vw;
         .icons {
             @include flex(inline-flex, center, center)
             width: 40px;
             height: 40px;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+
             a{
                 color: $grey;
             }
         }
-    }    
+    }
+    .social-media {
+        @include position(absolute, 50vh, 0, 0, 3%);
+        transform: translateY(-30%);
+        .social-medias {
+            @include flex(flex, center, center)
+            width: 40px;
+            height: 30px;
+            i {
+                color: $grey;
+            }
+        }
+    }
+    .trio {
+        @include position(absolute, 25vh, 0, 0, 65%)
+        width: 20vw;
+        p {
+            color: $orange;
+            font-size: 14px;
+        }
+        h4 {
+            font-size: 90px;
+            color: $black;
+            margin: 1vh 0 5vh 0;
+        }
+        a {
+            @include stylink();
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        background-position-y: right;
+        background-repeat: no-repeat;
+        .navig, .search {
+            display: none;
+        }
+        .logo {
+            @include position(absolute, 5vh, 0, 0, 5%)
+            display: block;
+            width: 120px;
+            height: 60px;
+        }
+        .icon {
+            @include position(absolute, 6vh, 0, 0, 65%)
+            .icons {
+                font-size: 1.7em;
+                padding: 0 25px;
+            }
+        }
+        .social-media {
+            @include position(absolute, 75vh, 0, 0, 50%);
+            transform: translateX(-50%);
+            @include flex(flex, center, center);     
+        }
+        .trio {
+            @include position(absolute, 25vh, 0, 0, 15%)
+            width: 20vw;
+            p {
+                color: $orange;
+                font-size: 14px;
+            }
+            h4 {
+                font-size: 90px;
+                color: $black;
+                margin: 1vh 0 5vh 0;
+            }
+            a {
+                @include stylink();
+            }
+        }
+    }
+}
+
+
+@media (max-width: 500px) {
+    header {
+        .logo {
+            width: 80px;
+            height: 40px;
+        }
+        .icon {
+            @include position(absolute, 4.5vh, 5vw, auto, auto)
+            .icons {
+                font-size: 1em;
+                padding: 0 15px;
+            }
+        }
+        .trio {
+            @include position(absolute, 25vh, 0, 0, 15%)
+            width: 30vw;
+            p {
+                color: $orange;
+                font-size: 14px;
+            }
+            h4 {
+                font-size: 70px;
+                color: $black;
+                margin: 1vh 0 5vh 0;
+            }
+            a {
+                @include stylink();
+            }
+        }
+    }
 }
