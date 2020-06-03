@@ -37,13 +37,15 @@ body{
     margin: 0 auto;
 }
 .locator{
-    height: 150px;
-    color: white;    background-color: rgb(80, 79, 79);
+    height: 144px;
+    color: white;    
+    background-color: #3C3C3C;
     display: flex;
     justify-content: center;
     h1{
         color: white;
-        font-size: x-large;
+        font-size: 40px;
+        font-weight: 800;
         align-self: center;
     }
 }

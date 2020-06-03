@@ -9,7 +9,7 @@ header {
   padding: 5vh;
   background-image: url(../images/abc.jpg);
   background-size: cover;
-  height: 25px;
+  height: 12vh;
   position: relative; }
   header .logo {
     position: absolute;
@@ -286,14 +286,15 @@ body {
   margin: 0 auto; }
 
 .locator {
-  height: 150px;
+  height: 144px;
   color: white;
-  background-color: #504f4f;
+  background-color: #3C3C3C;
   display: flex;
   justify-content: center; }
   .locator h1 {
     color: white;
-    font-size: x-large;
+    font-size: 40px;
+    font-weight: 800;
     align-self: center; }
 
 #container {
@@ -312,7 +313,7 @@ body {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 30px 100px 100px 50px;
-      grid-template-areas: "area area" "contry state" "city zipcode" "search search"; }
+      grid-template-areas: "area area" "contry state" "city zipcode" "search search"; }
       #container .area .contain .title {
         grid-area: area;
         border-bottom: 1px solid #c9c9c9; }
@@ -363,7 +364,7 @@ body {
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: 30px 100px 100px 50px;
-      grid-template-areas: "distance" "location" "radius" "search"; }
+      grid-template-areas: "distance" "location" "radius" "search"; }
       #container .distance .contain .title {
         grid-area: distance;
         border-bottom: 1px solid #c9c9c9; }
@@ -442,7 +443,7 @@ body {
         display: grid;
         grid-template-columns: 0.5fr 1fr;
         grid-template-rows: 1fr 50px;
-        grid-template-areas: "img info" "vide maps";
+        grid-template-areas: "img info" "vide maps";
         grid-column-gap: 5%; }
         #container .list .contain .panda .img_panda {
           grid-area: img; }
@@ -460,7 +461,7 @@ body {
         display: grid;
         grid-template-columns: 0.5fr 1fr;
         grid-template-rows: 1fr 50px;
-        grid-template-areas: "img info" "vide maps";
+        grid-template-areas: "img info" "vide maps";
         grid-column-gap: 5%; }
         #container .list .contain .curabitur .img_curabitur {
           grid-area: img; }
@@ -478,7 +479,7 @@ body {
         display: grid;
         grid-template-columns: 0.5fr 1fr;
         grid-template-rows: 1fr 50px;
-        grid-template-areas: "img info" "vide maps";
+        grid-template-areas: "img info" "vide maps";
         grid-column-gap: 5%; }
         #container .list .contain .tandem .img_tandem {
           grid-area: img; }
@@ -496,7 +497,7 @@ body {
         display: grid;
         grid-template-columns: 0.5fr 1fr;
         grid-template-rows: 1fr 50px;
-        grid-template-areas: "img info" "vide maps";
+        grid-template-areas: "img info" "vide maps";
         grid-column-gap: 5%; }
         #container .list .contain .panda2 .img_panda {
           grid-area: img; }
@@ -514,7 +515,7 @@ body {
         display: grid;
         grid-template-columns: 0.5fr 1fr;
         grid-template-rows: 1fr 50px;
-        grid-template-areas: "img info" "vide maps";
+        grid-template-areas: "img info" "vide maps";
         grid-column-gap: 5%; }
         #container .list .contain .curabitur2 .img_curabitur {
           grid-area: img; }
@@ -532,7 +533,7 @@ body {
         display: grid;
         grid-template-columns: 0.5fr 1fr;
         grid-template-rows: 1fr 50px;
-        grid-template-areas: "img info" "vide maps";
+        grid-template-areas: "img info" "vide maps";
         grid-column-gap: 5%; }
         #container .list .contain .tandem2 .img_tandem {
           grid-area: img; }
@@ -550,12 +551,15 @@ body {
     text-align: right; }
 
 @media (max-width: 768px) {
+  body {
+    margin-left: 0%;
+    margin-right: 0%; }
   #container {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 0.475fr 0.475fr 2fr 2fr;
     grid-gap: 20px;
-    grid-template-areas: "area" "distance" "list" "maps"; }
+    grid-template-areas: "area" "distance" "list" "maps"; }
     #container .area {
       grid-area: area; }
     #container .distance {

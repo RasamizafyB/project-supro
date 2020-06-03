@@ -2,7 +2,7 @@ header {
     padding: 5vh; 
     background-image: url(../images/abc.jpg);
     background-size: cover;
-    height: 25px;
+    height: 12vh;
     position: relative;
     .logo {
         @include position(absolute, 5vh, 0, 0, 5%);
