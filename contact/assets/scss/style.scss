@@ -21,7 +21,7 @@
     height: 125px;
     display: grid;
     grid-template-columns: 0.5fr 1fr;
-    grid-template-rows: 1fr 50px;
+    grid-template-rows: 1fr 35%;
     grid-template-areas: 
                         "img info"
                         "vide maps";
@@ -30,7 +30,7 @@
 @mixin p {
     margin-top: 5%;
     font-size: small;
-    line-height: 20px;
+    line-height: 160%;
 }
 body{
     width: 100%;
@@ -54,8 +54,8 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 0.475fr 2fr;
-    grid-column-gap: 20px;
-    grid-row-gap: 50px;
+    grid-column-gap: 2%;
+    grid-row-gap: 5%;
     
     .area{
         
@@ -81,8 +81,8 @@ body{
                 margin-top: 5%;
                 select{
                     margin-top: 5%;
-                    width: 200px;
-                    height: 35px;
+                    width: 80%;
+                    height: 40%;
                     border:1px solid rgb(201, 201, 201);
                 }
             }
@@ -90,19 +90,19 @@ body{
                 grid-area: state;
                 margin-top: 5%;
                 input{
-                    @include input(200px, 35px, 5%);
+                    @include input(80%, 40%, 5%);
                 }
             }
             .city{
                 grid-area: city;
                 input{
-                    @include input(200px, 35px, 5%);
+                    @include input(80%, 40%, 5%);
                 }
             }
             .zipcode{
                 grid-area: zipcode;
                 input{
-                    @include input(200px, 35px, 5%);
+                    @include input(80%, 40%, 5%);
                 }
             }
             .search{
@@ -140,13 +140,13 @@ body{
                 grid-area: location;
                 margin-top: 2%;
                 input{
-                    @include input(100%, 35px, 3%);
+                    @include input(100%, 40%, 3%);
                 }
             }
             .radius{
                 grid-area: radius;
                 input{
-                    @include input(100%, 35px, 3%);
+                    @include input(100%, 40%, 3%);
                 }
             }
             .search{
@@ -165,8 +165,8 @@ body{
         grid-column: 1;
         grid-row: 2;
         .contain{
-            width: 365px;
-            height: 600px;
+            width: 65%;
+            height: 90%;
             padding: 3%;
             border:1px solid rgb(201, 201, 201);
             .store_list{
@@ -201,11 +201,11 @@ body{
             }
             .scroll{
                 overflow: auto;
-                height: 530px;
+                height: 60ch;
             }
             img{
-                width: 100px;
-                height: 100px;                  
+                width: 100%;
+                height: 100%;                  
             }
             .view_map{
                 display: flex;
@@ -325,7 +325,7 @@ body{
 
 //responsive tablette
 
-@media (max-width: 768px){
+@media (max-width: 1024px){
     body{
         margin-left: 0%;
         margin-right: 0%;
@@ -333,7 +333,7 @@ body{
     #container{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 0.475fr 0.475fr 2fr 2fr;
+        grid-template-rows: 0.475fr 0.475fr 1fr 1fr;
         grid-gap: 20px;
         grid-template-areas: 
                 "area"
@@ -348,9 +348,46 @@ body{
         }
         .list{
             grid-area: list;
+            width: 154%;
+            height: 105%;
+            
+            .scroll{
+               padding-left: 20%;
+               
+            }
         }
         .maps{
             grid-area: maps;
         }
     }
 }
+
+//responsive telephone
+
+@media (max-width: 500px){
+    #container{
+        margin-left: 2%;
+        margin-right: 2%;
+        .area{
+            .contain{
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 30px 100px 100px 100px 100px 50px;
+                grid-template-areas: 
+                        "area"
+                        "contry"
+                        "state"
+                        "city"
+                        "zipcode"
+                        "search";
+            }
+        }
+        .list{ 
+            height: 65%;        
+            .scroll{
+               padding-left: 5%;   
+            }
+        }
+    }
+}
+    

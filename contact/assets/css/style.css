@@ -302,8 +302,8 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 0.475fr 2fr;
-  grid-column-gap: 20px;
-  grid-row-gap: 50px; }
+  grid-column-gap: 2%;
+  grid-row-gap: 5%; }
   #container .area {
     grid-column: 1;
     grid-row: 1; }
@@ -322,29 +322,29 @@ body {
         margin-top: 5%; }
         #container .area .contain .contry select {
           margin-top: 5%;
-          width: 200px;
-          height: 35px;
+          width: 80%;
+          height: 40%;
           border: 1px solid #c9c9c9; }
       #container .area .contain .state {
         grid-area: state;
         margin-top: 5%; }
         #container .area .contain .state input {
-          width: 200px;
-          height: 35px;
+          width: 80%;
+          height: 40%;
           margin-top: 5%;
           border: 1px solid #c9c9c9; }
       #container .area .contain .city {
         grid-area: city; }
         #container .area .contain .city input {
-          width: 200px;
-          height: 35px;
+          width: 80%;
+          height: 40%;
           margin-top: 5%;
           border: 1px solid #c9c9c9; }
       #container .area .contain .zipcode {
         grid-area: zipcode; }
         #container .area .contain .zipcode input {
-          width: 200px;
-          height: 35px;
+          width: 80%;
+          height: 40%;
           margin-top: 5%;
           border: 1px solid #c9c9c9; }
       #container .area .contain .search {
@@ -373,14 +373,14 @@ body {
         margin-top: 2%; }
         #container .distance .contain .location input {
           width: 100%;
-          height: 35px;
+          height: 40%;
           margin-top: 3%;
           border: 1px solid #c9c9c9; }
       #container .distance .contain .radius {
         grid-area: radius; }
         #container .distance .contain .radius input {
           width: 100%;
-          height: 35px;
+          height: 40%;
           margin-top: 3%;
           border: 1px solid #c9c9c9; }
       #container .distance .contain .search {
@@ -395,8 +395,8 @@ body {
     grid-column: 1;
     grid-row: 2; }
     #container .list .contain {
-      width: 365px;
-      height: 600px;
+      width: 65%;
+      height: 90%;
       padding: 3%;
       border: 1px solid #c9c9c9; }
       #container .list .contain .store_list {
@@ -424,10 +424,10 @@ body {
           top: -7px; }
       #container .list .contain .scroll {
         overflow: auto;
-        height: 530px; }
+        height: 60ch; }
       #container .list .contain img {
-        width: 100px;
-        height: 100px; }
+        width: 100%;
+        height: 100%; }
       #container .list .contain .view_map {
         display: flex; }
         #container .list .contain .view_map a {
@@ -442,7 +442,7 @@ body {
         height: 125px;
         display: grid;
         grid-template-columns: 0.5fr 1fr;
-        grid-template-rows: 1fr 50px;
+        grid-template-rows: 1fr 35%;
         grid-template-areas: "img info" "vide maps";
         grid-column-gap: 5%; }
         #container .list .contain .panda .img_panda {
@@ -452,7 +452,7 @@ body {
           #container .list .contain .panda .info p {
             margin-top: 5%;
             font-size: small;
-            line-height: 20px; }
+            line-height: 160%; }
         #container .list .contain .panda .view_map {
           grid-area: maps; }
       #container .list .contain .curabitur {
@@ -460,7 +460,7 @@ body {
         height: 125px;
         display: grid;
         grid-template-columns: 0.5fr 1fr;
-        grid-template-rows: 1fr 50px;
+        grid-template-rows: 1fr 35%;
         grid-template-areas: "img info" "vide maps";
         grid-column-gap: 5%; }
         #container .list .contain .curabitur .img_curabitur {
@@ -470,7 +470,7 @@ body {
           #container .list .contain .curabitur .info p {
             margin-top: 5%;
             font-size: small;
-            line-height: 20px; }
+            line-height: 160%; }
         #container .list .contain .curabitur .view_map {
           grid-area: maps; }
       #container .list .contain .tandem {
@@ -478,7 +478,7 @@ body {
         height: 125px;
         display: grid;
         grid-template-columns: 0.5fr 1fr;
-        grid-template-rows: 1fr 50px;
+        grid-template-rows: 1fr 35%;
         grid-template-areas: "img info" "vide maps";
         grid-column-gap: 5%; }
         #container .list .contain .tandem .img_tandem {
@@ -488,7 +488,7 @@ body {
           #container .list .contain .tandem .info p {
             margin-top: 5%;
             font-size: small;
-            line-height: 20px; }
+            line-height: 160%; }
         #container .list .contain .tandem .view_map {
           grid-area: maps; }
       #container .list .contain .panda2 {
@@ -496,7 +496,7 @@ body {
         height: 125px;
         display: grid;
         grid-template-columns: 0.5fr 1fr;
-        grid-template-rows: 1fr 50px;
+        grid-template-rows: 1fr 35%;
         grid-template-areas: "img info" "vide maps";
         grid-column-gap: 5%; }
         #container .list .contain .panda2 .img_panda {
@@ -506,7 +506,7 @@ body {
           #container .list .contain .panda2 .info p {
             margin-top: 5%;
             font-size: small;
-            line-height: 20px; }
+            line-height: 160%; }
         #container .list .contain .panda2 .view_map {
           grid-area: maps; }
       #container .list .contain .curabitur2 {
@@ -514,7 +514,7 @@ body {
         height: 125px;
         display: grid;
         grid-template-columns: 0.5fr 1fr;
-        grid-template-rows: 1fr 50px;
+        grid-template-rows: 1fr 35%;
         grid-template-areas: "img info" "vide maps";
         grid-column-gap: 5%; }
         #container .list .contain .curabitur2 .img_curabitur {
@@ -524,7 +524,7 @@ body {
           #container .list .contain .curabitur2 .info p {
             margin-top: 5%;
             font-size: small;
-            line-height: 20px; }
+            line-height: 160%; }
         #container .list .contain .curabitur2 .view_map {
           grid-area: maps; }
       #container .list .contain .tandem2 {
@@ -532,7 +532,7 @@ body {
         height: 125px;
         display: grid;
         grid-template-columns: 0.5fr 1fr;
-        grid-template-rows: 1fr 50px;
+        grid-template-rows: 1fr 35%;
         grid-template-areas: "img info" "vide maps";
         grid-column-gap: 5%; }
         #container .list .contain .tandem2 .img_tandem {
@@ -542,7 +542,7 @@ body {
           #container .list .contain .tandem2 .info p {
             margin-top: 5%;
             font-size: small;
-            line-height: 20px; }
+            line-height: 160%; }
         #container .list .contain .tandem2 .view_map {
           grid-area: maps; }
   #container .maps {
@@ -550,14 +550,14 @@ body {
     grid-row: 2;
     text-align: right; }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   body {
     margin-left: 0%;
     margin-right: 0%; }
   #container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.475fr 0.475fr 2fr 2fr;
+    grid-template-rows: 0.475fr 0.475fr 1fr 1fr;
     grid-gap: 20px;
     grid-template-areas: "area" "distance" "list" "maps"; }
     #container .area {
@@ -565,6 +565,24 @@ body {
     #container .distance {
       grid-area: distance; }
     #container .list {
-      grid-area: list; }
+      grid-area: list;
+      width: 154%;
+      height: 105%; }
+      #container .list .scroll {
+        padding-left: 20%; }
     #container .maps {
       grid-area: maps; } }
+
+@media (max-width: 500px) {
+  #container {
+    margin-left: 2%;
+    margin-right: 2%; }
+    #container .area .contain {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 30px 100px 100px 100px 100px 50px;
+      grid-template-areas: "area" "contry" "state" "city" "zipcode" "search"; }
+    #container .list {
+      height: 65%; }
+      #container .list .scroll {
+        padding-left: 5%; } }
