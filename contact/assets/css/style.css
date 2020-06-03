@@ -277,7 +277,8 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 0.475fr 2fr;
-  grid-gap: 20px; }
+  grid-column-gap: 20px;
+  grid-row-gap: 50px; }
   #container .area {
     grid-column: 1;
     grid-row: 1; }
