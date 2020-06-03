@@ -22,4 +22,4 @@ Pour la realisation du projet Supro, je vais travailler sur le html et css des p
 
 * Making the structure of the shop page
 * Styling the shop page in CSS/SASS once the HTML is done
-* Provide help to team mates whenever necessary
+* Provide help to team mates whenever necessary 

@@ -1,0 +1,792 @@
+
+@import "reset"; 
+@import "variables";
+@import "mixin";
+@import "header"; 
+@import "footer";
+
+
+$color-small: rgb(110, 110, 110);
+$color-strike: rgb(153, 153, 153);
+
+@mixin display {
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+}
+@mixin small {
+    color: $color-small;
+    font-size: small;
+    margin-bottom: 3%;  
+}
+@mixin cercle {
+    margin-right: 10px; 
+}
+@mixin hover {
+    :hover{
+        -webkit-text-stroke-color: black;  
+    }
+}
+@mixin size { 
+    color: $color-small;
+    font-weight: 800;
+    font-size: 12px;
+    text-decoration: none;
+    background-color: rgb(194, 194, 194);
+    padding: 1px 5px 1px 5px;
+    border: 1px solid rgb(194, 194, 194);
+    border-radius: 45%;
+    @include cercle();
+}
+@mixin articlele {
+    margin-left: auto;
+    margin-right: auto;
+    h5{
+        margin-top: 5%;
+        margin-bottom: 3%;
+    }
+    p{
+        del{
+            color: $color-strike;
+        }
+    }
+}
+@mixin transition($width, $height, $opacity) {
+    max-width: $width;
+            max-height: $height;
+            align-self: center;
+            position: relative;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+            .transition{
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                opacity: 0;
+                transition: opacity 1s ease;
+                &:hover{
+                    opacity: $opacity;
+                }
+            }
+}
+@mixin title_article {
+    text-align: center;
+    h2{
+        font-size: 25px;
+        margin-top: 5%;
+        margin-bottom: 2%;
+    }
+}
+@mixin webkit($fill-color) {
+    -webkit-text-fill-color: $fill-color;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color:  rgb(194, 194, 194);
+}
+@mixin page {
+    text-align: center;
+    margin-top: 2%;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    margin: 0%;
+}
+
+// main
+
+main{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+#product{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.1fr 1fr 0.4fr;
+    grid-template-areas:
+            "tête tête" 
+            "sac prix"
+            "miniature category";
+    .entête{
+        grid-area: tête ;
+        margin: 40px 0% 2% 0%;
+        display: flex;
+        justify-self: start;
+        h4{
+        color: rgb(148, 148, 148);       
+        }
+        ul{
+            li{
+                list-style-type: disc;
+                margin-left: 30px;
+            }  
+        } 
+    }
+    .sac{
+        grid-area: sac; 
+        display: flex; 
+        position: relative;
+        margin: 5% 0% 5% 0%;
+        .fleche{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0%;
+            padding: 0%;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: white;
+            position: absolute;
+            left: 475px;
+            top: 294px;
+            &:hover{
+                background-color: black;
+                -webkit-text-fill-color: white;
+            }
+
+        }  
+        img{
+            max-width: 650px;
+            max-height: 588px;
+            align-self: center;
+        }
+    }
+        
+    
+    .prix{
+        grid-area: prix;
+        margin: 5%;
+        .container{
+            width: 100%;
+            height: 100%;
+            .star{
+                padding-top: 2%;
+                height: 15px;
+                margin-bottom: 3%;
+                display: flex;
+                justify-content: start;
+                .checked {
+                    color: orange;
+                } 
+                .NO{
+                    color: rgb(173, 173, 173);
+                    &:hover{
+                        color: orange;
+                    }
+                }
+                .small{
+                    @include small();
+                    margin-left: 2%;
+                    margin-top: 1.5%;
+                    line-height: 0px;
+                }
+            }
+        
+        }
+        .serial-number{
+            @include small()
+        }
+        h1{
+            font-size: 40px;
+            margin-bottom: 3%;   
+        }  
+        .price{
+            color: black;
+            margin-bottom: 5%;
+            margin-top: 3%;
+            font-size: x-large;
+            del{
+                color: $color-strike;
+            }
+        }
+        p{
+            color: rgb(131, 130, 130);
+            margin-bottom: 5%;
+            line-height: 30px;
+            font-size: 20px;
+        }
+        h3{
+            color: grey;
+            font-size: medium;
+            margin-bottom: 3%;
+        }
+        .color{
+            display: flex;
+            margin-bottom: 7%;
+            .blue{
+                a{
+                    @include webkit(rgb(87, 51, 245));
+                    @include cercle();
+                    @include hover;
+                    }  
+                }     
+            .jaune{
+                a{
+                    @include webkit(rgb(245, 209, 51));
+                    @include cercle();
+                    @include hover;
+                    }  
+                }
+            .rose{
+                a{
+                    @include webkit(rgb(245, 51, 109));
+                    @include cercle();
+                    @include hover;
+                    } 
+                }
+        }
+        .size{
+            display: flex;
+            margin-bottom: 5%;
+            .S{ 
+                a{
+                    @include size();
+                    &:hover{
+                        border: 1px solid black;
+                    }
+                }
+            }
+            .M{  
+                a{
+                    @include size();
+                    &:hover{
+                        border: 1px solid black;
+                    }
+                }
+            }
+            .L{ 
+                a{
+                    @include size();
+                    &:hover{
+                        border: 1px solid black;
+                    }
+                } 
+            }
+        }
+        .buy{
+            margin-top: 8%;
+            margin-bottom: 0%;
+            padding-bottom: 0%;
+            padding: 0%;
+            display: grid;
+            grid-template-columns: 1fr 3fr 0.5fr;
+            grid-template-rows: 40px 40px;
+            grid-template-areas: 
+                        "quantity add_card like"
+                        "buy_now buy_now buy_now";
+            grid-column-gap: 5px;
+            grid-row-gap: 20px;
+            .quantity{
+                grid-area: quantity;
+                border: 2px solid rgb(190, 190, 190);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-right: 5%;
+                padding-left: 5%;
+                .minus{
+                    a{
+                        color: rgb(180, 180, 180);
+                        &:hover{
+                            color: black;
+                        }
+                    }  
+                }
+                .plus{
+                    a{
+                        color: rgb(180, 180, 180);
+                        &:hover{
+                            color: black; 
+                        }
+                    } 
+                }
+            }
+            .add_card{
+                grid-area: add_card;
+                background-color: black;
+                @include display;
+                &:hover{
+                    background-color: rgb(88, 88, 88);
+                }
+                a{
+                    color: white;
+                    text-decoration: none;          
+                }
+            }
+            .like{
+                grid-area: like;
+                border: 2px solid rgb(190, 190, 190);
+                @include display;
+                a{
+                    -webkit-text-fill-color: white;
+                    -webkit-text-stroke-width: 1px;
+                    -webkit-text-stroke-color: black;
+                    &:hover{
+                        -webkit-text-fill-color: black;
+                    }
+                } 
+            }
+            .buy_now{
+                margin-bottom: 0px;
+                padding-bottom: 0px;
+                grid-area: buy_now;
+                background-color: black;
+                @include display;
+                &:hover{
+                    background-color: rgb(88, 88, 88);
+                }
+                a{
+                    color: white;
+                    text-decoration: none;     
+                }
+            }
+        }
+
+    }
+
+    .miniature{
+        grid-area: miniature;
+        display: flex;
+        justify-content: space-between;
+        margin: 0% 10% 2% 10%;
+        .face{ 
+            img{
+                width: 90px;
+                height: 90px;
+                filter: opacity(50%); 
+                -webkit-filter: opacity(50%);
+                &:hover{ 
+                    filter: opacity(100%);
+                    -webkit-filter: opacity(100%); 
+                }
+            }   
+        }
+    }  
+    .HTAG{
+        padding-top: 5%;
+        margin: 0px 5% 5% 5%;
+        border-top: solid 2px rgb(194, 192, 192);
+        grid-area: category;
+        .category{
+            display: flex;
+            justify-content: start;
+            margin-bottom: 3%;
+            p{
+                margin-left: 2%;
+            }
+        }
+        .tag{
+            display: flex;
+            justify-content: start;
+            margin-bottom: 7%;
+            p{
+                margin-left: 2%;
+            }
+        }
+        .reseau{
+            display: flex;
+            justify-self: start;
+            a{
+                margin-right: 2%;
+                img{
+                    width: 20px;
+                    height: 20px;
+                    filter: grayscale(100%);
+                    -webkit-filter: grayscale(100%);
+                    -moz-filter: grayscale(100%);
+                    -ms-filter: grayscale(100%);
+                    -o-filter: grayscale(100%);
+                    &:hover{
+                        filter: grayscale(0%);
+                        -webkit-filter: grayscale(0%);
+                        -moz-filter: grayscale(0%);
+                        -ms-filter: grayscale(0%);
+                        -o-filter: grayscale(0%);
+                    }
+                }
+            }   
+        }
+    }
+}
+.bar_menu{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgb(173, 173, 173);
+    border-bottom: 1px solid rgb(173, 173, 173);
+    padding: 3% 30% 3% 30%;
+    
+    a{
+        color: rgb(141, 141, 141);
+        &:hover{
+            color: black;
+        }
+    }
+}
+
+#information{
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr 0.5fr;
+    grid-template-areas: 
+            "introduction shoes"
+            "features shoes"
+            "vide shoes";
+    .shoes{
+        grid-area: shoes;
+    }
+    .introduction{
+        grid-area: introduction;
+        margin-right: 10%;
+        h2{
+            font-size: 25px;
+            margin-bottom: 3%;
+        }
+        p{
+            line-height: 30px;
+            color: rgb(130, 130, 130);
+        }
+    }
+    .features{
+        grid-area: features;
+        margin-right: 10%;
+        h2{
+            font-size: 25px;
+            margin-bottom: 3%;
+        }
+        ul{
+            list-style: disc;
+            margin-left: 5%;
+            line-height: 30px;
+            color: rgb(130, 130, 130);
+        } 
+    }
+}
+
+#related_products{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 0.1fr 0.2fr 1fr 0.1fr;
+    grid-template-areas: 
+            "product product product product"
+            "cotton_sweater glitter embroidered floral"
+            "page page page page"
+            "upsell upsell upsell upsell"
+            "oversize  metallic suede striped"
+            "page2 page2 page2 page2";
+    .product{
+        grid-area: product;
+        @include title_article();
+    }
+    .cotton_sweater{
+        grid-area: cotton_sweater;
+        @include articlele();
+        .cotton1{
+            @include transition(270px, 270px, 1)
+        }
+    }
+    .glitter{
+        grid-area: glitter;
+        @include articlele();
+        .glitter1{
+            @include transition(270px, 270px, 1)
+        }
+    }
+    .embroidered{
+        grid-area: embroidered;
+        @include articlele();
+        .embroidered1{
+            @include transition(270px, 270px, 1)
+        }
+    }
+    .floral{
+        grid-area: floral;
+        @include articlele();
+        .floral1{
+            @include transition(270px, 270px, 1)
+        }
+    }
+    .page{
+        grid-area: page;
+        @include page();
+    }
+    .upsell{
+        grid-area: upsell;
+        @include title_article();
+    }
+    .oversize{
+        grid-area: oversize;
+        @include articlele();
+        .oversize1{
+            @include transition(270px, 270px, 1)
+        }
+    }
+    .metallic{
+        grid-area: metallic;
+        @include articlele();
+        .metallic1{
+            @include transition(270px, 270px, 1)
+        }
+    }
+    .suede{
+        grid-area: suede;
+        @include articlele();
+        .suede1{
+            @include transition(270px, 270px, 1)
+        }
+    }
+    .striped{
+        grid-area: striped;
+        @include articlele();
+        .striped1{
+            @include transition(270px, 270px, 1)
+        }
+    }
+    .page2{
+        grid-area: page2;
+        @include page();
+    }
+}
+
+
+//Responsive 
+
+@media screen and (min-width: 1450px) and (max-width: 1700px){
+
+    #related_products{
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.5fr 1fr 1fr 0.1fr 0.2fr 1fr 1fr 0.1fr;
+        grid-template-areas: 
+            "product product product"
+            "cotton_sweater glitter embroidered"
+            "floral floral floral"
+            "page page page"
+            "upsell upsell upsell"
+            "oversize  metallic suede"
+            "striped striped striped"
+            "page2 page2 page2";
+        .floral{
+            margin: 0% auto;
+        }
+        .striped{
+            margin: 0% auto;
+        }
+    }
+}
+
+@media screen and (max-width: 1449px){
+    
+    #product{
+        .sac{
+            .fleche{
+                left: 270px;
+                top: 250px;
+            }
+            img{
+                width: 500px;
+                height: 500px;
+            }
+        }
+        .prix{
+            .buy{
+                margin-top: 8%;
+                margin-bottom: 0%;
+                padding-bottom: 0%;
+                padding: 0%;
+                display: grid;
+                grid-template-columns: 1fr 0.5fr;
+                grid-template-rows: 40px 40px 40px;
+                grid-template-areas: 
+                            "quantity like"
+                            "add_card add_card"
+                            "buy_now buy_now";
+                grid-column-gap: 5px;
+                grid-row-gap: 20px;
+            }
+        }
+    }
+    #related_products{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.3fr 1fr 1fr 0.1fr 0.2fr 1fr 1fr 0.1fr;
+        grid-template-areas: 
+                "product product"
+                "cotton_sweater glitter"
+                "embroidered floral"
+                "page page"
+                "upsell upsell"
+                "oversize  metallic"
+                "suede striped"
+                "page2 page2";
+        grid-column-gap: 30px;
+        grid-row-gap: 20px;
+    }
+}
+
+
+//Responsive Tablette
+
+@media screen and (max-width: 1024px){
+    main{
+        max-width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }   
+    #product{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 1fr 0.2fr 1fr 0.4fr;
+        grid-template-areas:
+                "tête" 
+                "sac"
+                "miniature"
+                "prix"
+                "category";
+        .sac{
+            display: flex;
+            justify-content: center;
+            .fleche{
+                top: 300px;
+                left: 500px;
+            }
+        }
+        .prix{
+            .buy{
+                margin-top: 8%;
+                margin-bottom: 0%;
+                padding-bottom: 0%;
+                padding: 0%;
+                display: grid;
+                grid-template-columns: 1fr 3fr 0.5fr;
+                grid-template-rows: 40px 40px 40px;
+                grid-template-areas: 
+                            "quantity add_card like"
+                            "buy_now buy_now buy_now";
+                grid-column-gap: 5px;
+                grid-row-gap: 20px;
+            }
+        }
+    }
+    .bar_menu{
+        padding: 3% 10% 3% 10%;
+    }
+    #information{
+        margin-top: 10%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.2fr 0.2fr;
+        grid-template-areas:
+                "shoes" 
+                "introduction"
+                "features";
+        .shoes{
+            display: flex;
+            justify-content: center;
+        }
+        .introduction{
+            margin-right: 0%;
+            margin-top: 5%;
+            p{
+                text-align: justify;
+            }
+        }
+        .features{
+            margin-right: 0%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+    }
+
+}
+
+@media screen and (max-width: 500px){
+    main{
+        max-width: 100%;
+        margin: 0px;
+    }
+    #product{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 0.5fr 0.2fr 1fr 0.4fr;
+        grid-template-areas: 
+                "tête"
+                "sac"
+                "miniature"
+                "prix"
+                "category";
+        .entête{
+            margin-left: 5%;
+        }
+        .sac{
+            display: flex;
+            justify-content: center;
+            .fleche{
+                left: 275px;
+                top: 125px;
+            }
+            img{
+                width: 300px;
+                height: 300px;
+            }
+        }
+        .miniature{
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+    .bar_menu{
+        padding: 3% 10% 3% 10%;
+    }
+    #information{
+        margin-top: 10%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.2fr 0.2fr;
+        grid-template-areas:
+                "shoes" 
+                "introduction"
+                "features";
+        .shoes{
+            img{
+                width: 300px;
+                height: 300px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        .introduction{
+            margin-right: 5%;
+            margin-left: 5%;
+        }
+        .features{
+            margin-right: 5%;
+            margin-left: 5%;
+        }
+    }
+    #related_products{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr 0.1fr 0.2fr 1fr 1fr 1fr 1fr 0.1fr;
+        grid-template-areas: 
+                "product "
+                "cotton_sweater"
+                "glitter"
+                "embroidered"
+                "floral"
+                "page"
+                "upsell"
+                "oversize"
+                "metallic"
+                "suede"
+                "striped"
+                "page2";
+        grid-column-gap: 30px;
+        grid-row-gap: 20px;
+    }
+}
