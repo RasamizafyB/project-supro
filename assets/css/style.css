@@ -627,10 +627,11 @@ header {
     font-size: 12px;
     font-weight: 300;
     padding: 10px 0; }
-  .new .flex-container-1 i, .new .flex-container-2 i {
+  .new .flex-container-1 .star i, .new .flex-container-2 .star i {
+    cursor: pointer;
     font-size: 0.7em;
     color: #999; }
-  .new .flex-container-1 .y, .new .flex-container-2 .y {
+  .new .flex-container-1 .star .y, .new .flex-container-2 .star .y {
     color: yellow; }
 
 .new a {

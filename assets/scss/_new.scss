@@ -26,12 +26,15 @@
             font-weight: 300;
             padding: 10px 0;
         }
-        i {
-            font-size: 0.7em;
-            color: $grey;
-        }
-        .y {
-            color: yellow;
+        .star {
+            i {
+                cursor: pointer;
+                font-size: 0.7em;
+                color: $grey;
+            }
+            .y {
+                color: yellow;
+            }
         }
     }
     .flex-container-2 {
