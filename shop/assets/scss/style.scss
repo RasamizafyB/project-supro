@@ -251,8 +251,8 @@ header {
             	border-style: none;
             }
 
-            p:nth-of-type(7) {
-            	margin: 0 0 20px 0;
+            p:nth-of-type(6) {
+            	margin: 0 0 40px 0;
             }
 
             h2 {
@@ -349,7 +349,11 @@ header {
             p:first-of-type {
             	border-style: none;
             	padding: 0 0 0 0;
-            }
+			}
+			
+			p:nth-of-type(6){
+				margin: 0 0 40px 0;
+			}
 
             h2 {
             	margin: 0 0 15px 0;
@@ -387,119 +391,6 @@ header {
         }
     }
 }
-
-
-
-/* ----- HEADER FROM 425PX TO 1023PX ----- */
-/*@media screen and (min-width: 425px) and (max-width: 1023px) {
-    
-    header {
-        background-position-y: right;
-        background-repeat: no-repeat;
-        .navig, .search {
-            display: none;
-        }
-        
-        .logo {
-            @include position(absolute, 5vh, 0, 0, 5%)
-            display: block;
-            width: 120px;
-            height: 60px;
-        }
-        
-        .icon {
-            @include position(absolute, 6vh, 0, 0, 65%)
-            .icons {
-                font-size: 1.7em;
-                padding: 0 25px;
-            }
-        }
-    }
-}*/
-
-
-/* ----- HEADER FROM 1024PX ----- */
-/*@media screen and (min-width: 1024px) {
-	header {
-    	padding: 5vh; 
-    	height: 30px;
-    	position: relative;
-    	margin: 0 0 40px 0;
-    	border-bottom: {
-    		style: solid;
-    		width: 1px;
-    		color: rgb(122, 122, 122);
-    	}
-    	
-    	.logo {
-        	@include position(absolute, 5vh, 0, 0, 5%)
-        	display: block;
-        	width: 80px;
-        	height: 40px;
-    	}
-    	
-    	.navig {
-        	@include position(absolute, 4vh, 0, 0, 20%)
-        	
-        	p {
-            	@include flex(inline-flex, center, center)
-            	width: 80px;
-            	height: 40px;
-            	margin: 0 0 0 0;
-
-            	a {
-            		letter-spacing: 1px;
-            		font-size: 90%;
-            		color: black;
-            		text-decoration: none;
-
-            		&:hover {
-            			color: #999;
-            		}
-            	}
-        	}
-    	}    
-    	
-    	.search {
-        	@include position(absolute, 4vh, 0, 0, 65%);
-        	@include flex(inline-flex, center, center)
-        	width: 200px;
-        	height: 40px;
-        	
-        	input {
-            	width: 200px;
-            	height: 40px;
-            	border-radius: 25px;
-            	padding: 0 40px 0 15px;
-            	border: none;
-            	
-            	&:focus {
-                	outline: none;
-            	}
-        	}
-        	
-        	i {
-            	@include position(absolute, 50%, 0, 0, 85%);
-            	transform: translateY(-30%);
-            	font-size: 0.8em;
-        	}
-    	}
-    	
-    	.icon {
-        	@include position(absolute, 4vh, 0, 0, 83%)
-        	
-        	.icons {
-            	@include flex(inline-flex, center, center)
-            	width: 40px;
-            	height: 40px;
-            	margin: 0 0 0 0;
-            	-webkit-text-fill-color: transparent;
-            	-webkit-text-stroke-width: 1px;
-            	-webkit-text-stroke-color: black;
-        	}
-    	}
-    }
-}*/
 
 
 
