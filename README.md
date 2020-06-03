@@ -11,16 +11,20 @@
 
 ##### Updates
 
-###### 26 may 2020
+###### 26 May 2020
 * HTML developement of shop_page
 
-###### 27 may 2020
+###### 27 May 2020
 * Started CSS styling with SCSS
 * Styled the position history section
 * Started styling of the title and tools
 * Styled the products grid
 * Started styling of the sorting options
 
-###### 28 may 2020
+###### 28 May 2020
 * Finished the styling of the shop page
 * CSS code revision to make it lighter
+
+###### 2 June 2020
+* Included the responsive design for smartphones and tablets
+* Working on the Header in responsive design
