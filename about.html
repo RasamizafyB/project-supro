@@ -11,33 +11,42 @@
 
 </head>
 <body>
-	<header>
-		<!-- nav bar -->
-        <img class="logo img-fluid" src="image/images1/logo.png" alt="Logo">
-
+	 <header>
+        <img class="logo" src="image/images1/logo.png" alt="Logo">
+        
         <div class="navig">
-            <p class="nav"><a href="index.html">Home</a></p>
-            <p class="nav"><a href="shop.html">Shop</a></p>
-            <p class="nav"><a href="product.html">Products</a></p>
-            <p class="nav"><a href="about.html">Pages</a></p>
+            <p class="nav"><a href="#">Home</a></p>
+            <p class="nav"><a href="#">Shop</a></p>
+            <p class="nav"><a href="#">Products</a></p>
+            <p class="nav"><a href="#">Pages</a></p>
             <p class="nav"><a href="#">Blog</a></p>
             <p class="nav"><a href="#">Contact</a></p>
         </div>
         
-       <div class="search">
+        <div class="nav-hamburger">
+            <p class="close-hamburger"><a href="#"><i class="far fa-times-circle"></i></a></p>
+            <p class="nav"><a href="./index.html">Home</a></p>
+            <p class="nav"><a href="./index.html">Shop</a></p>
+            <p class="nav"><a href="./index.html">Products</a></p>
+            <p class="nav"><a href="./index.html">Pages</a></p>
+            <p class="nav"><a href="./index.html">Blog</a></p>
+            <p class="nav"><a href="./index.html">Contact</a></p>
+        </div>
+        
+        <div class="search">
             <input type="search" placeholder="Start searching...">
             <i class="fas fa-search"></i>
-       </div>
-
+        </div>
+        
         <div class="icon">
             <p class="icons"><a href="#"><i class="fas fa-user"></i></a></p>
             <p class="icons"><a href="#"><i class="fas fa-heart"></i></a></p>
             <p class="icons"><a href="#"><i class="fas fa-shopping-cart"></i></a></p>
             <p class="icons"><a href="#"><i class="fas fa-cog"></i></a></p>
-        </div>
+            <p class="icons open-hamburger"><a href="#"><i class="fas fa-bars"></i></a></p>
+        </div>     
     
-       
-	</header>
+    </header>
 
 	<main>
 		<h1 class="jumbotron jumbotron-fluid">
@@ -255,5 +264,7 @@
         </div>
         
 	</footer>
+
+	<script src="assets/app.js"></script>
 </body>
 </html>
