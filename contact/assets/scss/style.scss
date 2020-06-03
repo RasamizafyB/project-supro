@@ -324,6 +324,10 @@ body{
 //responsive tablette
 
 @media (max-width: 768px){
+    body{
+        margin-left: 0%;
+        margin-right: 0%;
+    }
     #container{
         display: grid;
         grid-template-columns: 1fr;
