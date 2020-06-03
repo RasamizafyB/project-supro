@@ -1,0 +1,90 @@
+.new {
+    h2 {
+        padding: 0 0 1vh 20vw;
+        font-size: 2em;
+    }
+    h3 {
+        padding-left: 20vw;
+        font-size: 1em;
+        font-weight: 300;
+        color: $grey;
+    }
+    .flex-container-1 {
+        @include flex(flex, space-between, center)
+        width: 60vw;
+        margin: 10vh auto;
+        img {
+            width: 15vw;
+        }
+        p {
+            font-weight: bold;
+            padding: 10px 0;
+        }
+        h4 {
+            color: $grey;
+            font-size: 12px;
+            font-weight: 300;
+            padding: 10px 0;
+        }
+        .star {
+            i {
+                cursor: pointer;
+                font-size: 0.7em;
+                color: $grey;
+            }
+            .y {
+                color: yellow;
+            }
+        }
+    }
+    .flex-container-2 {
+        @extend .flex-container-1;
+    }    
+    a {
+        @include stylink();
+        display: block;
+        width: 90px;
+        margin: 5vh auto;
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .new {
+            h2 {
+                padding: 0 0 1vh 5vw;
+            }
+            h3 {
+                padding-left: 5vw;
+                }
+            .flex-container-1 {
+                @include flex(flex, space-between, center)
+                width: 60vw;
+                margin: 10vh auto;
+                & :nth-child(2) {
+                    display: none;
+                }
+                img {
+                    width: 25vw;
+                }
+            .flex-container-2 {
+                & :nth-child(2) {
+                    display: none;
+                }
+            }    
+        }
+    }    
+}
+
+@media (max-width: 500px) {
+    .new {
+            .flex-container-1 {
+                width: 80vw;
+                margin: 10vh auto;
+                img {
+                    width: 30vw;
+                } 
+        }
+    }    
+}

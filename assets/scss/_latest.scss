@@ -1,0 +1,190 @@
+.latest {
+    position: relative;
+    margin-top: 5vh;
+    height: 95vh;
+    position: relative;
+    h2 {
+        padding: 10vh 0 1vh 20vw;
+        font-size: 2em;
+    }
+    h3 {
+        padding-left: 20vw;
+        font-size: 1em;
+        font-weight: 300;
+        color: $grey;
+    }
+    .flex-container {
+        margin: 5vh 20vw;
+        @include flex(flex, space-between, center);
+        flex-wrap: wrap;
+        div {
+            width: 18vw;
+            img {
+                width: 18vw;
+            }
+            p {
+                font-weight: bold;
+                padding: 15px 0 0;
+            }
+            h4 {
+                color: $grey;
+                font-size: 12px;
+                font-weight: 300;
+                padding: 10px 0;
+            }
+            a {
+                @include stylink();
+                padding-top: 5px;
+            }
+        }
+    }
+    .more {
+        @include position(absolute, 15vh, 0, 0, 73%);
+        font-weight: bold;
+        display: block;
+        width: 85px;
+        height: 15px;
+        color: $black;
+        border-bottom: solid 2px $black;
+        font-size: 12px;
+    }
+    .mini-flex {
+        width: 400px;
+        height: 40px;
+        border-radius: 25px;
+        border-bottom: solid 1px $grey;
+        @include flex(flex, space-between, center);
+        @include position(absolute, 80vh, 0, 0, 53vw)
+        .mail {
+            @include position(absolute, 12px, 0, 0, 15px);
+            z-index: 2;
+        }
+        p {
+            @include position(absolute, 12px, 0, 0, 300px);
+            z-index: 2;
+        }
+        input {
+            @include position(absolute, 5px, 0, 0px, 40px);
+            z-index: 2;
+            width: 300px;
+            height: 30px;
+            border: none;
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .latest {
+        height: auto;
+        padding-bottom: 25vh;
+        h2 {
+            padding: 10vh 0 1vh 5vw;
+        }
+        h3 {
+            padding-left: 5vw;
+        }
+        .flex-container {
+            flex-wrap: wrap;
+            margin: 5vh auto;
+            div {
+                margin: 0 5vw;
+                width: 36vw;
+                img {
+                    width: 36vw;
+                }
+            }
+            .big {
+                width: 90vw;
+                margin: 0 auto;
+                padding-bottom: 5vh;
+                img {
+                    width: 90vw;
+                }
+            }
+        }
+        .more {
+            @include position(absolute, 13vh, 0, 0, 73%);
+        }
+        .abs-1 {
+            @include position(absolute,auto, auto,14vh, auto)
+        }
+        .abs-2 {
+            @include position(absolute,auto, auto,11vh, auto)
+        }
+        .mini-flex {
+            width: 300px;
+            @include position(absolute, auto, auto, 14vh, 53vw)
+            p {
+                @include position(absolute, 12px, 0, 0, 200px);
+            }
+
+        }
+    }
+}
+
+
+
+@media (max-width: 500px) {
+    .latest {
+        height: auto;
+        padding-bottom: 30vh;
+        .more {
+            display: none;
+        }
+        h2 {
+            padding: 5vh 10vw 1vh 10vw;
+        }
+        h3 {
+            padding: 0 10vw;
+        }
+        .flex-container {
+            flex-wrap: wrap;
+            margin: 5vh auto;
+            div {
+                margin: 0 5vw;
+                width: 36vw;
+                img {
+                    width: 36vw;
+                }
+            }
+            .down {
+                width: 80vw;
+                margin: 0 auto;
+                padding-bottom: 5vh;
+                img {
+                    width: 80vw;
+                }
+            }
+        }
+        .abs-1 {
+            @include position(absolute,auto, auto,25vh, auto)
+        }
+        .abs-2 {
+            @include position(absolute,auto, auto,16vh, auto)
+        }
+        .mini-flex {
+            width: 300px;
+            @include position(absolute, auto, auto, 5vh, 10vw)
+            p {
+                @include position(absolute, 12px, 0, 0, 200px);
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .latest {
+        .mini-flex {
+            width: 250px;
+            @include position(absolute, auto, auto, 7vh, 7vw)
+            p {
+                @include position(absolute, 12px, 0, 0, 150px);
+            }
+        }
+    }
+}
