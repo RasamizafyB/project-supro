@@ -1,4 +1,4 @@
-# escription of Project Supro
+# Description of Project Supro
 
 [Here](https://rasamizafyb.github.io/project-supro/) you can see our project, the online store og the brand **SUPRO**.
 
