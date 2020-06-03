@@ -20,7 +20,10 @@ header {
                 color: black;
             }
         }
-    }    
+    } 
+    .nav-hamburger{
+        display: none;
+    }   
     .search {
         @include position(absolute, 5vh, 0, 0, 65%);
         @include flex(inline-flex, center, center);
@@ -90,6 +93,25 @@ header {
         .navig, .search {
             display: none;
         }
+        .nav-hamburger{
+            @include flex(flex, center,center);
+            margin: -5vh;
+            flex-direction: column;
+            width: 100vw;
+            height: 100vh;
+            background-color: white;
+            opacity: 0;
+            position: fixed;
+            z-index: -2;
+            p {
+                padding: 3vh;
+                font-size: 40px;
+            }
+            .close-hamburger {
+                font-size: 60px;
+                padding-top: 0;
+            }
+        }
         .logo {
             @include position(absolute, 5vh, 0, 0, 5%);
             display: block;
@@ -139,6 +161,14 @@ header {
             .icons {
                 font-size: 1em;
                 padding: 0 15px;
+            }
+        }
+        .nav-hamburger {
+            p {
+                font-size: 25px;
+            }
+            .close-hamburger {
+                font-size: 50px;
             }
         }
         .trio {

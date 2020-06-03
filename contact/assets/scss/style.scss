@@ -27,6 +27,11 @@
                         "vide maps";
     grid-column-gap: 5%;
 }
+@mixin p {
+    margin-top: 5%;
+    font-size: small;
+    line-height: 20px;
+}
 body{
     width: 100%;
     margin: 0 auto;
@@ -158,27 +163,47 @@ body{
         grid-column: 1;
         grid-row: 2;
         .contain{
-            width: 315px;
+            width: 365px;
             height: 600px;
             padding: 3%;
             border:1px solid rgb(201, 201, 201);
-            
-            h2{
+            .store_list{
+                display: flex;
+                justify-content: start;
                 border-bottom: 1px solid rgb(201, 201, 201);
-                padding-bottom: 5%;
+                padding-bottom: 1%;
+                h2{
+                    font-size: x-large;
+                }            
+                .one{
+                    margin-right: 5%;
+                    padding-right: 10px;
+                    font-size: 20px;
+                    height: 30px;
+                    border-bottom: 1px solid black;
+                }
+                .zero{
+                    margin-left: 32%;
+                    font-size: 20px;
+                }
+                a{
+                    i{
+                        border: 1px solid rgb(190, 190, 190);
+                        border-radius: 5px;
+                        padding: 10px 15px 10px 15px;
+                        margin-top: 0px;
+                        position: relative;
+                        top: -7px;
+                    } 
+                }                      
             }
             .scroll{
                 overflow: auto;
-                height: 545px;
+                height: 530px;
             }
             img{
                 width: 100px;
                 height: 100px;                  
-            }
-            p{
-                margin-top: 5%;
-                font-size: small;
-                line-height: 20px;
             }
             .view_map{
                 display: flex;
@@ -199,6 +224,9 @@ body{
                 }
                 .info{
                     grid-area: info;
+                    p{
+                        @include p();
+                    }
                 }
                 .view_map{
                     grid-area: maps;
@@ -212,6 +240,9 @@ body{
                 }
                 .info{
                     grid-area: info;
+                    p{
+                        @include p();
+                    }
                 }
                 .view_map{
                     grid-area: maps;
@@ -225,6 +256,9 @@ body{
                 }
                 .info{
                     grid-area: info;
+                    p{
+                        @include p();
+                    }
                 }
                 .view_map{
                     grid-area: maps;
@@ -238,6 +272,9 @@ body{
                 }
                 .info{
                     grid-area: info;
+                    p{
+                        @include p();
+                    }
                 }
                 .view_map{
                     grid-area: maps;
@@ -251,6 +288,9 @@ body{
                 }
                 .info{
                     grid-area: info;
+                    p{
+                        @include p();
+                    }
                 }
                 .view_map{
                     grid-area: maps;
@@ -264,6 +304,9 @@ body{
                 }
                 .info{
                     grid-area: info;
+                    p{
+                        @include p();
+                    }
                 }
                 .view_map{
                     grid-area: maps;
@@ -275,5 +318,33 @@ body{
         grid-column: 1 / span 2;
         grid-row: 2;
         text-align: right;
+    }
+}
+
+//responsive tablette
+
+@media (max-width: 768px){
+    #container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.475fr 0.475fr 2fr 2fr;
+        grid-gap: 20px;
+        grid-template-areas: 
+                "area"
+                "distance"
+                "list"
+                "maps";
+        .area{
+            grid-area: area;
+        }
+        .distance{
+            grid-area: distance;
+        }
+        .list{
+            grid-area: list;
+        }
+        .maps{
+            grid-area: maps;
+        }
     }
 }

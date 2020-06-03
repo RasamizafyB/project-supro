@@ -34,6 +34,8 @@ header {
       height: 40px; }
       header .navig p a {
         color: black; }
+  header .nav-hamburger {
+    display: none; }
   header .search {
     position: absolute;
     top: 5vh;
@@ -117,6 +119,24 @@ header {
     background-repeat: no-repeat; }
     header .navig, header .search {
       display: none; }
+    header .nav-hamburger {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: -5vh;
+      flex-direction: column;
+      width: 100vw;
+      height: 100vh;
+      background-color: white;
+      opacity: 0;
+      position: fixed;
+      z-index: -2; }
+      header .nav-hamburger p {
+        padding: 3vh;
+        font-size: 40px; }
+      header .nav-hamburger .close-hamburger {
+        font-size: 60px;
+        padding-top: 0; }
     header .logo {
       position: absolute;
       top: 5vh;
@@ -178,6 +198,10 @@ header {
     header .icon .icons {
       font-size: 1em;
       padding: 0 15px; }
+  header .nav-hamburger p {
+    font-size: 25px; }
+  header .nav-hamburger .close-hamburger {
+    font-size: 50px; }
   header .trio {
     position: absolute;
     top: 25vh;
@@ -288,7 +312,7 @@ body {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 30px 100px 100px 50px;
-      grid-template-areas: "area area" "contry state" "city zipcode" "search search"; }
+      grid-template-areas: "area area" "contry state" "city zipcode" "search search"; }
       #container .area .contain .title {
         grid-area: area;
         border-bottom: 1px solid #c9c9c9; }
@@ -339,7 +363,7 @@ body {
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: 30px 100px 100px 50px;
-      grid-template-areas: "distance" "location" "radius" "search"; }
+      grid-template-areas: "distance" "location" "radius" "search"; }
       #container .distance .contain .title {
         grid-area: distance;
         border-bottom: 1px solid #c9c9c9; }
@@ -370,23 +394,39 @@ body {
     grid-column: 1;
     grid-row: 2; }
     #container .list .contain {
-      width: 315px;
+      width: 365px;
       height: 600px;
       padding: 3%;
       border: 1px solid #c9c9c9; }
-      #container .list .contain h2 {
+      #container .list .contain .store_list {
+        display: flex;
+        justify-content: start;
         border-bottom: 1px solid #c9c9c9;
-        padding-bottom: 5%; }
+        padding-bottom: 1%; }
+        #container .list .contain .store_list h2 {
+          font-size: x-large; }
+        #container .list .contain .store_list .one {
+          margin-right: 5%;
+          padding-right: 10px;
+          font-size: 20px;
+          height: 30px;
+          border-bottom: 1px solid black; }
+        #container .list .contain .store_list .zero {
+          margin-left: 32%;
+          font-size: 20px; }
+        #container .list .contain .store_list a i {
+          border: 1px solid #bebebe;
+          border-radius: 5px;
+          padding: 10px 15px 10px 15px;
+          margin-top: 0px;
+          position: relative;
+          top: -7px; }
       #container .list .contain .scroll {
         overflow: auto;
-        height: 545px; }
+        height: 530px; }
       #container .list .contain img {
         width: 100px;
         height: 100px; }
-      #container .list .contain p {
-        margin-top: 5%;
-        font-size: small;
-        line-height: 20px; }
       #container .list .contain .view_map {
         display: flex; }
         #container .list .contain .view_map a {
@@ -402,12 +442,16 @@ body {
         display: grid;
         grid-template-columns: 0.5fr 1fr;
         grid-template-rows: 1fr 50px;
-        grid-template-areas: "img info" "vide maps";
+        grid-template-areas: "img info" "vide maps";
         grid-column-gap: 5%; }
         #container .list .contain .panda .img_panda {
           grid-area: img; }
         #container .list .contain .panda .info {
           grid-area: info; }
+          #container .list .contain .panda .info p {
+            margin-top: 5%;
+            font-size: small;
+            line-height: 20px; }
         #container .list .contain .panda .view_map {
           grid-area: maps; }
       #container .list .contain .curabitur {
@@ -416,12 +460,16 @@ body {
         display: grid;
         grid-template-columns: 0.5fr 1fr;
         grid-template-rows: 1fr 50px;
-        grid-template-areas: "img info" "vide maps";
+        grid-template-areas: "img info" "vide maps";
         grid-column-gap: 5%; }
         #container .list .contain .curabitur .img_curabitur {
           grid-area: img; }
         #container .list .contain .curabitur .info {
           grid-area: info; }
+          #container .list .contain .curabitur .info p {
+            margin-top: 5%;
+            font-size: small;
+            line-height: 20px; }
         #container .list .contain .curabitur .view_map {
           grid-area: maps; }
       #container .list .contain .tandem {
@@ -430,12 +478,16 @@ body {
         display: grid;
         grid-template-columns: 0.5fr 1fr;
         grid-template-rows: 1fr 50px;
-        grid-template-areas: "img info" "vide maps";
+        grid-template-areas: "img info" "vide maps";
         grid-column-gap: 5%; }
         #container .list .contain .tandem .img_tandem {
           grid-area: img; }
         #container .list .contain .tandem .info {
           grid-area: info; }
+          #container .list .contain .tandem .info p {
+            margin-top: 5%;
+            font-size: small;
+            line-height: 20px; }
         #container .list .contain .tandem .view_map {
           grid-area: maps; }
       #container .list .contain .panda2 {
@@ -444,12 +496,16 @@ body {
         display: grid;
         grid-template-columns: 0.5fr 1fr;
         grid-template-rows: 1fr 50px;
-        grid-template-areas: "img info" "vide maps";
+        grid-template-areas: "img info" "vide maps";
         grid-column-gap: 5%; }
         #container .list .contain .panda2 .img_panda {
           grid-area: img; }
         #container .list .contain .panda2 .info {
           grid-area: info; }
+          #container .list .contain .panda2 .info p {
+            margin-top: 5%;
+            font-size: small;
+            line-height: 20px; }
         #container .list .contain .panda2 .view_map {
           grid-area: maps; }
       #container .list .contain .curabitur2 {
@@ -458,12 +514,16 @@ body {
         display: grid;
         grid-template-columns: 0.5fr 1fr;
         grid-template-rows: 1fr 50px;
-        grid-template-areas: "img info" "vide maps";
+        grid-template-areas: "img info" "vide maps";
         grid-column-gap: 5%; }
         #container .list .contain .curabitur2 .img_curabitur {
           grid-area: img; }
         #container .list .contain .curabitur2 .info {
           grid-area: info; }
+          #container .list .contain .curabitur2 .info p {
+            margin-top: 5%;
+            font-size: small;
+            line-height: 20px; }
         #container .list .contain .curabitur2 .view_map {
           grid-area: maps; }
       #container .list .contain .tandem2 {
@@ -472,15 +532,35 @@ body {
         display: grid;
         grid-template-columns: 0.5fr 1fr;
         grid-template-rows: 1fr 50px;
-        grid-template-areas: "img info" "vide maps";
+        grid-template-areas: "img info" "vide maps";
         grid-column-gap: 5%; }
         #container .list .contain .tandem2 .img_tandem {
           grid-area: img; }
         #container .list .contain .tandem2 .info {
           grid-area: info; }
+          #container .list .contain .tandem2 .info p {
+            margin-top: 5%;
+            font-size: small;
+            line-height: 20px; }
         #container .list .contain .tandem2 .view_map {
           grid-area: maps; }
   #container .maps {
     grid-column: 1 / span 2;
     grid-row: 2;
     text-align: right; }
+
+@media (max-width: 768px) {
+  #container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.475fr 0.475fr 2fr 2fr;
+    grid-gap: 20px;
+    grid-template-areas: "area" "distance" "list" "maps"; }
+    #container .area {
+      grid-area: area; }
+    #container .distance {
+      grid-area: distance; }
+    #container .list {
+      grid-area: list; }
+    #container .maps {
+      grid-area: maps; } }
