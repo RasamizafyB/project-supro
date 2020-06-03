@@ -28,3 +28,6 @@
 ###### 2 June 2020
 * Included the responsive design for smartphones and tablets
 * Working on the Header in responsive design
+
+###### 3 June 2020
+* Adapted the menu in responsive design
