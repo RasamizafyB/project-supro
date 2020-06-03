@@ -298,9 +298,9 @@ main {
 
 #product {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.1fr 1fr 0.4fr;
-  grid-template-areas: "tête tête"  "sac prix" "miniature category"; }
+  grid-template-columns: 50% 1fr;
+  grid-template-rows: 0.1fr 72.1% 0.4fr;
+  grid-template-areas: "tête tête"  "sac prix" "miniature category"; }
   #product .entête {
     grid-area: tête;
     margin: 40px 0% 2% 0%;
@@ -334,8 +334,8 @@ main {
         background-color: black;
         -webkit-text-fill-color: white; }
     #product .sac img {
-      width: 80ch;
-      height: 80ch;
+      width: 100%;
+      height: 100%;
       align-self: center; }
   #product .prix {
     grid-area: prix;
@@ -456,7 +456,7 @@ main {
       display: grid;
       grid-template-columns: 1fr 3fr 0.5fr;
       grid-template-rows: 40px 40px;
-      grid-template-areas: "quantity add_card like" "buy_now buy_now buy_now";
+      grid-template-areas: "quantity add_card like" "buy_now buy_now buy_now";
       grid-column-gap: 5px;
       grid-row-gap: 20px; }
       #product .prix .buy .quantity {
@@ -562,6 +562,7 @@ main {
             -o-filter: grayscale(0%); }
 
 .bar_menu {
+  margin-top: 5%;
   display: flex;
   justify-content: space-between;
   border-top: 1px solid #adadad;
@@ -573,11 +574,11 @@ main {
       color: black; }
 
 #information {
-  margin-top: 10%;
+  margin-top: 7%;
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 1fr 0.5fr;
-  grid-template-areas: "introduction shoes" "features shoes" "vide shoes"; }
+  grid-template-areas: "introduction shoes" "features shoes" "vide shoes"; }
   #information .shoes {
     grid-area: shoes; }
   #information .introduction {
@@ -605,7 +606,7 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 0.5fr 1fr 0.1fr 0.2fr 1fr 0.1fr;
-  grid-template-areas: "product product product product" "cotton_sweater glitter embroidered floral" "page page page page" "upsell upsell upsell upsell" "oversize  metallic suede striped" "page2 page2 page2 page2"; }
+  grid-template-areas: "product product product product" "cotton_sweater glitter embroidered floral" "page page page page" "upsell upsell upsell upsell" "oversize  metallic suede striped" "page2 page2 page2 page2"; }
   #related_products .product {
     grid-area: product;
     text-align: center; }
@@ -835,7 +836,7 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 0.5fr 1fr 1fr 0.1fr 0.2fr 1fr 1fr 0.1fr;
-    grid-template-areas: "product product product" "cotton_sweater glitter embroidered" "floral floral floral" "page page page" "upsell upsell upsell" "oversize  metallic suede" "striped striped striped" "page2 page2 page2"; }
+    grid-template-areas: "product product product" "cotton_sweater glitter embroidered" "floral floral floral" "page page page" "upsell upsell upsell" "oversize  metallic suede" "striped striped striped" "page2 page2 page2"; }
     #related_products .floral {
       margin: 0% auto; }
     #related_products .striped {
@@ -856,14 +857,14 @@ main {
     display: grid;
     grid-template-columns: 1fr 0.5fr;
     grid-template-rows: 40px 40px 40px;
-    grid-template-areas: "quantity like" "add_card add_card" "buy_now buy_now";
+    grid-template-areas: "quantity like" "add_card add_card" "buy_now buy_now";
     grid-column-gap: 5px;
     grid-row-gap: 20px; }
   #related_products {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 0.3fr 1fr 1fr 0.1fr 0.2fr 1fr 1fr 0.1fr;
-    grid-template-areas: "product product" "cotton_sweater glitter" "embroidered floral" "page page" "upsell upsell" "oversize  metallic" "suede striped" "page2 page2";
+    grid-template-areas: "product product" "cotton_sweater glitter" "embroidered floral" "page page" "upsell upsell" "oversize  metallic" "suede striped" "page2 page2";
     grid-column-gap: 30px;
     grid-row-gap: 20px; } }
 
@@ -876,7 +877,7 @@ main {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 0.1fr 1fr 0.2fr 1fr 0.4fr;
-    grid-template-areas: "tête"  "sac" "miniature" "prix" "category"; }
+    grid-template-areas: "tête"  "sac" "miniature" "prix" "category"; }
     #product .sac {
       display: flex;
       justify-content: center; }
@@ -891,7 +892,7 @@ main {
       display: grid;
       grid-template-columns: 1fr 3fr 0.5fr;
       grid-template-rows: 40px 40px 40px;
-      grid-template-areas: "quantity add_card like" "buy_now buy_now buy_now";
+      grid-template-areas: "quantity add_card like" "buy_now buy_now buy_now";
       grid-column-gap: 5px;
       grid-row-gap: 20px; }
   .bar_menu {
@@ -901,7 +902,7 @@ main {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 0.2fr 0.2fr;
-    grid-template-areas: "shoes"  "introduction" "features"; }
+    grid-template-areas: "shoes"  "introduction" "features"; }
     #information .shoes {
       display: flex;
       justify-content: center; }
@@ -923,7 +924,7 @@ main {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 0.1fr 0.5fr 0.2fr 1fr 0.4fr;
-    grid-template-areas: "tête" "sac" "miniature" "prix" "category"; }
+    grid-template-areas: "tête" "sac" "miniature" "prix" "category"; }
     #product .entête {
       margin-left: 5%; }
     #product .sac {
@@ -945,7 +946,7 @@ main {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 0.2fr 0.2fr;
-    grid-template-areas: "shoes"  "introduction" "features"; }
+    grid-template-areas: "shoes"  "introduction" "features"; }
     #information .shoes img {
       width: 300px;
       height: 300px;
@@ -961,6 +962,6 @@ main {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr 0.1fr 0.2fr 1fr 1fr 1fr 1fr 0.1fr;
-    grid-template-areas: "product " "cotton_sweater" "glitter" "embroidered" "floral" "page" "upsell" "oversize" "metallic" "suede" "striped" "page2";
+    grid-template-areas: "product " "cotton_sweater" "glitter" "embroidered" "floral" "page" "upsell" "oversize" "metallic" "suede" "striped" "page2";
     grid-column-gap: 30px;
     grid-row-gap: 20px; } }
