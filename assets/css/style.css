@@ -9,9 +9,7 @@
 
 header {
   padding: 5vh;
-  background-image: url(../images/abc.jpg);
-  background-size: cover;
-  height: 90vh;
+  height: 15vh;
   position: relative; }
   header .logo {
     position: absolute;
@@ -80,40 +78,6 @@ header {
       -webkit-text-stroke-color: black; }
     header .icon .open-hamburger {
       opacity: 0; }
-  header .social-media {
-    position: absolute;
-    top: 50vh;
-    right: 0;
-    bottom: 0;
-    left: 3%;
-    transform: translateY(-30%); }
-    header .social-media .social-medias {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 40px;
-      height: 30px; }
-      header .social-media .social-medias i {
-        color: #999; }
-  header .trio {
-    position: absolute;
-    top: 25vh;
-    right: 0;
-    bottom: 0;
-    left: 65%;
-    width: 20vw; }
-    header .trio p {
-      color: #f68773;
-      font-size: 14px; }
-    header .trio h4 {
-      font-size: 90px;
-      color: #222;
-      margin: 1vh 0 5vh 0; }
-    header .trio a {
-      font-weight: bold;
-      color: #222;
-      border-bottom: solid 2px #222;
-      font-size: 12px; }
 
 @media (max-width: 768px) {
   header {
@@ -158,36 +122,7 @@ header {
         font-size: 1.7em;
         padding: 0 25px; }
       header .icon .open-hamburger {
-        opacity: 1; }
-    header .social-media {
-      position: absolute;
-      top: 75vh;
-      right: 0;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-    header .trio {
-      position: absolute;
-      top: 25vh;
-      right: 0;
-      bottom: 0;
-      left: 15%;
-      width: 20vw; }
-      header .trio p {
-        color: #f68773;
-        font-size: 14px; }
-      header .trio h4 {
-        font-size: 90px;
-        color: #222;
-        margin: 1vh 0 5vh 0; }
-      header .trio a {
-        font-weight: bold;
-        color: #222;
-        border-bottom: solid 2px #222;
-        font-size: 12px; } }
+        opacity: 1; } }
 
 @media (max-width: 500px) {
   header .logo {
@@ -201,26 +136,94 @@ header {
     left: auto; }
     header .icon .icons {
       font-size: 1em;
-      padding: 0 15px; }
-  header .nav-hamburger p {
-    font-size: 25px; }
-  header .nav-hamburger .close-hamburger {
-    font-size: 50px; }
-  header .trio {
+      padding: 0 15px; } }
+
+.first-page {
+  background-image: url(../images/abc.jpg);
+  background-size: cover;
+  height: 90vh; }
+  .first-page .trio {
+    position: absolute;
+    top: 25vh;
+    right: 0;
+    bottom: 0;
+    left: 65%;
+    width: 20vw; }
+    .first-page .trio p {
+      color: #f68773;
+      font-size: 14px; }
+    .first-page .trio h4 {
+      font-size: 90px;
+      color: #222;
+      margin: 1vh 0 5vh 0; }
+    .first-page .trio a {
+      font-weight: bold;
+      color: #222;
+      border-bottom: solid 2px #222;
+      font-size: 12px; }
+  .first-page .social-media {
+    position: absolute;
+    top: 50vh;
+    right: 0;
+    bottom: 0;
+    left: 3%;
+    transform: translateY(-30%); }
+    .first-page .social-media .social-medias {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 30px; }
+      .first-page .social-media .social-medias i {
+        color: #999; }
+
+@media (max-width: 768px) {
+  .first-page .social-media {
+    position: absolute;
+    top: 75vh;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .first-page .trio {
+    position: absolute;
+    top: 25vh;
+    right: 0;
+    bottom: 0;
+    left: 15%;
+    width: 20vw; }
+    .first-page .trio p {
+      color: #f68773;
+      font-size: 14px; }
+    .first-page .trio h4 {
+      font-size: 90px;
+      color: #222;
+      margin: 1vh 0 5vh 0; }
+    .first-page .trio a {
+      font-weight: bold;
+      color: #222;
+      border-bottom: solid 2px #222;
+      font-size: 12px; } }
+
+@media (max-width: 500px) {
+  .first-page .trio {
     position: absolute;
     top: 25vh;
     right: 0;
     bottom: 0;
     left: 15%;
     width: 30vw; }
-    header .trio p {
+    .first-page .trio p {
       color: #f68773;
       font-size: 14px; }
-    header .trio h4 {
+    .first-page .trio h4 {
       font-size: 70px;
       color: #222;
       margin: 1vh 0 5vh 0; }
-    header .trio a {
+    .first-page .trio a {
       font-weight: bold;
       color: #222;
       border-bottom: solid 2px #222;
