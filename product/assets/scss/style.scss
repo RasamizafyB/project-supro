@@ -1,8 +1,8 @@
 
-@import "reset";
+@import "reset"; 
 @import "variables";
 @import "mixin";
-@import "header";
+@import "header"; 
 @import "footer";
 
 
@@ -11,7 +11,7 @@ $color-strike: rgb(153, 153, 153);
 
 @mixin display {
     display: flex;
-    justify-content: center;
+    justify-content: center;  
     align-items: center;
 }
 @mixin small {
@@ -24,7 +24,7 @@ $color-strike: rgb(153, 153, 153);
 }
 @mixin hover {
     :hover{
-        -webkit-text-stroke-color: black;
+        -webkit-text-stroke-color: black;  
     }
 }
 @mixin size { 
@@ -50,6 +50,26 @@ $color-strike: rgb(153, 153, 153);
             color: $color-strike;
         }
     }
+}
+@mixin transition($width, $height, $opacity) {
+    max-width: $width;
+            max-height: $height;
+            align-self: center;
+            position: relative;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+            .transition{
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                opacity: 0;
+                transition: opacity 1s ease;
+                &:hover{
+                    opacity: $opacity;
+                }
+            }
 }
 @mixin title_article {
     text-align: center;
@@ -128,13 +148,15 @@ main{
                 -webkit-text-fill-color: white;
             }
 
-        }
+        }  
         img{
             max-width: 650px;
             max-height: 588px;
             align-self: center;
         }
     }
+        
+    
     .prix{
         grid-area: prix;
         margin: 5%;
@@ -396,8 +418,9 @@ main{
     border-top: 1px solid rgb(173, 173, 173);
     border-bottom: 1px solid rgb(173, 173, 173);
     padding: 3% 30% 3% 30%;
-    color: rgb(141, 141, 141);
-    h3{
+    
+    a{
+        color: rgb(141, 141, 141);
         &:hover{
             color: black;
         }
@@ -462,19 +485,30 @@ main{
     .cotton_sweater{
         grid-area: cotton_sweater;
         @include articlele();
-        
+        .cotton1{
+            @include transition(270px, 270px, 1)
+        }
     }
     .glitter{
         grid-area: glitter;
         @include articlele();
+        .glitter1{
+            @include transition(270px, 270px, 1)
+        }
     }
     .embroidered{
         grid-area: embroidered;
         @include articlele();
+        .embroidered1{
+            @include transition(270px, 270px, 1)
+        }
     }
     .floral{
         grid-area: floral;
         @include articlele();
+        .floral1{
+            @include transition(270px, 270px, 1)
+        }
     }
     .page{
         grid-area: page;
@@ -487,18 +521,30 @@ main{
     .oversize{
         grid-area: oversize;
         @include articlele();
+        .oversize1{
+            @include transition(270px, 270px, 1)
+        }
     }
     .metallic{
         grid-area: metallic;
         @include articlele();
+        .metallic1{
+            @include transition(270px, 270px, 1)
+        }
     }
     .suede{
         grid-area: suede;
         @include articlele();
+        .suede1{
+            @include transition(270px, 270px, 1)
+        }
     }
     .striped{
         grid-area: striped;
         @include articlele();
+        .striped1{
+            @include transition(270px, 270px, 1)
+        }
     }
     .page2{
         grid-area: page2;

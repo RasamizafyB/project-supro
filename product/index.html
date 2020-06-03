@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Product</title>
 
-    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/reset.css"> 
     <link rel="stylesheet" href="./assets/css/style.css">
     <link href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -25,6 +25,16 @@
             <p class="nav"><a href="#">Blog</a></p>
             <p class="nav"><a href="#">Contact</a></p>
         </div>
+
+        <div class="nav-hamburger">
+            <p class="close-hamburger"><a href="#"><i class="far fa-times-circle"></i></a></p>
+            <p class="nav"><a href="./index.html">Home</a></p>
+            <p class="nav"><a href="./index.html">Shop</a></p>
+            <p class="nav"><a href="./index.html">Products</a></p>
+            <p class="nav"><a href="./index.html">Pages</a></p>
+            <p class="nav"><a href="./index.html">Blog</a></p>
+            <p class="nav"><a href="./index.html">Contact</a></p>
+        </div>
         
        <div class="search">
             <input type="search" placeholder="Start searching...">
@@ -36,6 +46,8 @@
             <p class="icons"><a href="#"><i class="fas fa-heart"></i></a></p>
             <p class="icons"><a href="#"><i class="fas fa-shopping-cart"></i></a></p>
             <p class="icons"><a href="#"><i class="fas fa-cog"></i></a></p>
+            <p class="icons open-hamburger"><a href="#"><i class="fas fa-bars"></i></a></p>
+        
         </div>
     </header>
 
@@ -54,7 +66,10 @@
                 <div class="fleche">
                     <i class="fas fa-arrow-right"></i>
                 </div>
-                <img src="./resources/prd_05_10.jpg" alt="mango Bag">
+                
+                    <img src="./resources/prd_05_10.jpg" alt="mango Bag">
+                    
+                
             </div>          
             
             <div class="prix">
@@ -200,15 +215,18 @@
         </div>
 
         <div class="bar_menu">
-                <h3>Description</h3>
-                <h3>More Information</h3>
-                <h3>Reviews</h3>
+                <a href="#">Description</a>
+                <a href="#">More Information</a> 
+                <a href="#">Reviews</a> 
         </div>
         
         <div id="information">
 
             <div class="shoes">
-                <img src="./resources/prd_description.jpg" alt="red shoes">
+                <div class="trans_shoes">
+                    <img src="./resources/prd_description.jpg" alt="red shoes"> 
+                   
+                </div>
             </div>
 
             <div class="introduction">
@@ -251,8 +269,10 @@
             </div>
 
             <div class="cotton_sweater">
-
-                <img src="./resources/prd_15_1.jpg" alt="Cotton Sweater">
+                <div class="cotton1">
+                    <img src="./resources/prd_15_1.jpg" alt="Cotton Sweater">
+                    <img class="transition" src="./resources/blog6_1.jpg" alt="shoes">
+                </div>
 
                 <h5>Cotton Sweater</h5>
 
@@ -261,9 +281,10 @@
             </div>
 
             <div class="glitter">
-
-                <img src="./resources/prd_16_1.jpg" alt="Glitter Decorated Shoes">
-
+                <div class="glitter1">
+                    <img src="./resources/prd_16_1.jpg" alt="Glitter Decorated">
+                    <img class="transition" src="./resources/bsl4.jpg" alt="glitter">
+                </div>
                 <h5>Glitter Decorated Shoes</h5>
 
                 <p>$40.00</p>
@@ -271,9 +292,10 @@
             </div>
 
             <div class="embroidered">
-
-                <img src="./resources/prd_17_1_1.jpg" alt="Embroidered Flowy Jacket">
-
+                <div class="embroidered1">
+                    <img src="./resources/prd_17_1_1.jpg" alt="Embroidered Flowy Jacket">
+                    <img class="transition" src="./resources/prd_16_1.jpg" alt="Jacket">
+                </div>
                 <h5>Embroidered Flowy Jackets</h5>
 
                 <p><del>$37.00</del> $35.00</p>
@@ -281,9 +303,10 @@
             </div>
 
             <div class="floral">
-
-                <img src="./resources/prd_13_1_1.jpg" alt="Floral Short Jumpsuit">
-
+                <div class="floral1">
+                    <img src="./resources/prd_13_1_1.jpg" alt="Floral Short Jumpsuit">
+                    <img class="transition" src="./resources/bsl3.jpg" alt="floral">
+                </div>
                 <h5>Floral Short Jumpsuit</h5>
 
                 <p>$30.00</p>
@@ -299,8 +322,10 @@
             </div>
 
             <div class="oversize">
-
-                <img src="./resources/prd_09_1_1_4.jpg" alt="Oversize Flecked Sweater">
+                <div class="oversize1">
+                    <img src="./resources/prd_09_1_1_4.jpg" alt="Oversize Flecked Sweater">
+                    <img class="transition" src="./resources/prd_14_1_1.jpg" alt="oversize">
+                </div>
 
                 <h5>Oversize Flecked Sweater</h5>
 
@@ -309,9 +334,10 @@
             </div>
 
             <div class="metallic">
-
-                <img src="./resources/prd_07_1_1.jpg" alt="Metallic Frame Glasses">
-
+                <div class="metallic1">
+                    <img src="./resources/prd_07_1_1.jpg" alt="Metallic Frame Glasses">
+                    <img class="transition" src="./resources/prd_19_1_1.jpg" alt="metallic">
+                </div>
                 <h5>Metallic Frame Glasses</h5>
 
                 <p>$66.00</p>
@@ -319,9 +345,10 @@
             </div>
 
             <div class="suede">
-
-                <img src="./resources/prd_06_1_1.jpg" alt="Suede Mixed Sneakers">
-
+                <div class="suede1">
+                    <img src="./resources/prd_06_1_1.jpg" alt="Suede Mixed Sneakers">
+                    <img class="transition" src="./resources/banner_h1_2.jpg" alt="suede">
+                </div>
                 <h5>Suede Mixed Sneakers</h5>
 
                 <p>$45.00</p>
@@ -329,9 +356,10 @@
             </div>
 
             <div class="striped">
-
-                <img src="./resources/prd_07_1_3.jpg" alt="Striped Cotton Sweater">
-
+                <div class="striped1">
+                    <img src="./resources/prd_07_1_3.jpg" alt="Striped Cotton Sweater">
+                    <img class="transition" src="./resources/prd_12_1_5.jpg" alt="striped">
+                </div>
                 <h5>Striped Cotton Sweater</h5>
 
                 <p>$67.00</p>
@@ -398,6 +426,8 @@
             <a href="#"><i class="fab fa-cc-discover"></i></a>
         </div>
     </footer>
+
+    <script src="assets/app.js"></script>
 
 </body>
 </html>

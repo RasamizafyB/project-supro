@@ -10,7 +10,7 @@ header {
   padding: 5vh;
   background-image: url(../images/abc.jpg);
   background-size: cover;
-  height: 20px;
+  height: 25px;
   position: relative; }
   header .logo {
     position: absolute;
@@ -35,6 +35,8 @@ header {
       height: 40px; }
       header .navig p a {
         color: black; }
+  header .nav-hamburger {
+    display: none; }
   header .search {
     position: absolute;
     top: 5vh;
@@ -49,9 +51,9 @@ header {
     header .search input {
       width: 200px;
       height: 40px;
-      border: 1px solid black;
       border-radius: 25px;
-      padding: 0 40px 0 15px; }
+      padding: 0 40px 0 15px;
+      border: 1px solid #bebebe; }
       header .search input:focus {
         outline: none; }
     header .search i {
@@ -77,6 +79,8 @@ header {
       -webkit-text-fill-color: transparent;
       -webkit-text-stroke-width: 1px;
       -webkit-text-stroke-color: black; }
+    header .icon .open-hamburger {
+      opacity: 0; }
   header .social-media {
     position: absolute;
     top: 50vh;
@@ -118,6 +122,24 @@ header {
     background-repeat: no-repeat; }
     header .navig, header .search {
       display: none; }
+    header .nav-hamburger {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: -5vh;
+      flex-direction: column;
+      width: 100vw;
+      height: 100vh;
+      background-color: white;
+      opacity: 0;
+      position: fixed;
+      z-index: -2; }
+      header .nav-hamburger p {
+        padding: 3vh;
+        font-size: 40px; }
+      header .nav-hamburger .close-hamburger {
+        font-size: 60px;
+        padding-top: 0; }
     header .logo {
       position: absolute;
       top: 5vh;
@@ -132,10 +154,12 @@ header {
       top: 6vh;
       right: 0;
       bottom: 0;
-      left: 65%; }
+      left: 60%; }
       header .icon .icons {
         font-size: 1.7em;
         padding: 0 25px; }
+      header .icon .open-hamburger {
+        opacity: 1; }
     header .social-media {
       position: absolute;
       top: 75vh;
@@ -179,6 +203,10 @@ header {
     header .icon .icons {
       font-size: 1em;
       padding: 0 15px; }
+  header .nav-hamburger p {
+    font-size: 25px; }
+  header .nav-hamburger .close-hamburger {
+    font-size: 50px; }
   header .trio {
     position: absolute;
     top: 25vh;
@@ -537,10 +565,11 @@ main {
   justify-content: space-between;
   border-top: 1px solid #adadad;
   border-bottom: 1px solid #adadad;
-  padding: 3% 30% 3% 30%;
-  color: #8d8d8d; }
-  .bar_menu h3:hover {
-    color: black; }
+  padding: 3% 30% 3% 30%; }
+  .bar_menu a {
+    color: #8d8d8d; }
+    .bar_menu a:hover {
+      color: black; }
 
 #information {
   margin-top: 10%;
@@ -592,6 +621,22 @@ main {
       margin-bottom: 3%; }
     #related_products .cotton_sweater p del {
       color: #999999; }
+    #related_products .cotton_sweater .cotton1 {
+      max-width: 270px;
+      max-height: 270px;
+      align-self: center;
+      position: relative; }
+      #related_products .cotton_sweater .cotton1 img {
+        width: 100%;
+        height: 100%; }
+      #related_products .cotton_sweater .cotton1 .transition {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        opacity: 0;
+        transition: opacity 1s ease; }
+        #related_products .cotton_sweater .cotton1 .transition:hover {
+          opacity: 1; }
   #related_products .glitter {
     grid-area: glitter;
     margin-left: auto;
@@ -601,6 +646,22 @@ main {
       margin-bottom: 3%; }
     #related_products .glitter p del {
       color: #999999; }
+    #related_products .glitter .glitter1 {
+      max-width: 270px;
+      max-height: 270px;
+      align-self: center;
+      position: relative; }
+      #related_products .glitter .glitter1 img {
+        width: 100%;
+        height: 100%; }
+      #related_products .glitter .glitter1 .transition {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        opacity: 0;
+        transition: opacity 1s ease; }
+        #related_products .glitter .glitter1 .transition:hover {
+          opacity: 1; }
   #related_products .embroidered {
     grid-area: embroidered;
     margin-left: auto;
@@ -610,6 +671,22 @@ main {
       margin-bottom: 3%; }
     #related_products .embroidered p del {
       color: #999999; }
+    #related_products .embroidered .embroidered1 {
+      max-width: 270px;
+      max-height: 270px;
+      align-self: center;
+      position: relative; }
+      #related_products .embroidered .embroidered1 img {
+        width: 100%;
+        height: 100%; }
+      #related_products .embroidered .embroidered1 .transition {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        opacity: 0;
+        transition: opacity 1s ease; }
+        #related_products .embroidered .embroidered1 .transition:hover {
+          opacity: 1; }
   #related_products .floral {
     grid-area: floral;
     margin-left: auto;
@@ -619,6 +696,22 @@ main {
       margin-bottom: 3%; }
     #related_products .floral p del {
       color: #999999; }
+    #related_products .floral .floral1 {
+      max-width: 270px;
+      max-height: 270px;
+      align-self: center;
+      position: relative; }
+      #related_products .floral .floral1 img {
+        width: 100%;
+        height: 100%; }
+      #related_products .floral .floral1 .transition {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        opacity: 0;
+        transition: opacity 1s ease; }
+        #related_products .floral .floral1 .transition:hover {
+          opacity: 1; }
   #related_products .page {
     grid-area: page;
     text-align: center;
@@ -639,6 +732,22 @@ main {
       margin-bottom: 3%; }
     #related_products .oversize p del {
       color: #999999; }
+    #related_products .oversize .oversize1 {
+      max-width: 270px;
+      max-height: 270px;
+      align-self: center;
+      position: relative; }
+      #related_products .oversize .oversize1 img {
+        width: 100%;
+        height: 100%; }
+      #related_products .oversize .oversize1 .transition {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        opacity: 0;
+        transition: opacity 1s ease; }
+        #related_products .oversize .oversize1 .transition:hover {
+          opacity: 1; }
   #related_products .metallic {
     grid-area: metallic;
     margin-left: auto;
@@ -648,6 +757,22 @@ main {
       margin-bottom: 3%; }
     #related_products .metallic p del {
       color: #999999; }
+    #related_products .metallic .metallic1 {
+      max-width: 270px;
+      max-height: 270px;
+      align-self: center;
+      position: relative; }
+      #related_products .metallic .metallic1 img {
+        width: 100%;
+        height: 100%; }
+      #related_products .metallic .metallic1 .transition {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        opacity: 0;
+        transition: opacity 1s ease; }
+        #related_products .metallic .metallic1 .transition:hover {
+          opacity: 1; }
   #related_products .suede {
     grid-area: suede;
     margin-left: auto;
@@ -657,6 +782,22 @@ main {
       margin-bottom: 3%; }
     #related_products .suede p del {
       color: #999999; }
+    #related_products .suede .suede1 {
+      max-width: 270px;
+      max-height: 270px;
+      align-self: center;
+      position: relative; }
+      #related_products .suede .suede1 img {
+        width: 100%;
+        height: 100%; }
+      #related_products .suede .suede1 .transition {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        opacity: 0;
+        transition: opacity 1s ease; }
+        #related_products .suede .suede1 .transition:hover {
+          opacity: 1; }
   #related_products .striped {
     grid-area: striped;
     margin-left: auto;
@@ -666,6 +807,22 @@ main {
       margin-bottom: 3%; }
     #related_products .striped p del {
       color: #999999; }
+    #related_products .striped .striped1 {
+      max-width: 270px;
+      max-height: 270px;
+      align-self: center;
+      position: relative; }
+      #related_products .striped .striped1 img {
+        width: 100%;
+        height: 100%; }
+      #related_products .striped .striped1 .transition {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        opacity: 0;
+        transition: opacity 1s ease; }
+        #related_products .striped .striped1 .transition:hover {
+          opacity: 1; }
   #related_products .page2 {
     grid-area: page2;
     text-align: center;
