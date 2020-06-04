@@ -20,7 +20,7 @@ html {
   -moz-box-sizing: inherit;
   box-sizing: inherit;
   }
-body {
+body :not(footer, header){
   	font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 	font-family: 'Roboto', sans-serif;
 
