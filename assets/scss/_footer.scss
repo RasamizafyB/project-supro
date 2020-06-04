@@ -29,6 +29,15 @@ footer {
     }
 }
 
+@media (max-width: 768px) {
+    footer {
+        margin: 5vh 10vw;
+         div {
+            margin: 0 3vw;
+         }
+    }
+  }
+
 @media (max-width: 500px) {
     footer {
         margin: 5vh 10vh;
@@ -38,6 +47,7 @@ footer {
         margin: 15vh 15vw 10vh;
         height: 40vh;
         div {
+            margin: 0;
             width: 30vw;
             text-align: center;
             a, p, i {

@@ -1,21 +1,28 @@
 header {
+    a {
+        color: black;
+    }
     padding: 5vh; 
     height: 15vh;
     position: relative;
+    
     .logo {
         @include position(absolute, 5vh, 0, 0, 5%)
         display: block;
         width: 80px;
         height: 40px;
     }
+    
     .navig {
         @include position(absolute, 5vh, 0, 0, 20%)
+    
         p {
             @include flex(inline-flex, center, center)
             width: 80px;
             height: 40px;
         }
     }    
+    
     .nav-hamburger{
         display: none;
     }
@@ -25,24 +32,29 @@ header {
         @include flex(inline-flex, center, center)
         width: 200px;
         height: 40px;
+    
         input {
             width: 200px;
             height: 40px;
             border-radius: 25px;
             padding: 0 40px 0 15px;
             border: none;
+    
             &:focus {
                 outline: none;
             }
         }
+    
         i {
             @include position(absolute, 50%, 0, 0, 85%);
             transform: translateY(-30%);
             font-size: 0.8em;
         }
     }
+    
     .icon {
         @include position(absolute, 5vh, 0, 0, 85%)
+    
         .icons {
             @include flex(inline-flex, center, center)
             width: 40px;
@@ -51,21 +63,60 @@ header {
             -webkit-text-stroke-width: 1px;
             -webkit-text-stroke-color: black;
         }
+    
         .open-hamburger {
             opacity: 0;
         }
     }
+    
+    .social-media {
+        @include position(absolute, 50vh, 0, 0, 3%);
+        transform: translateY(-30%);
+    
+        .social-medias {
+            @include flex(flex, center, center)
+            width: 40px;
+            height: 30px;
+    
+            i {
+                color: $grey;
+            }
+        }
+    }
+    
+    .trio {
+        @include position(absolute, 25vh, 0, 0, 65%)
+        width: 20vw;
+    
+        p {
+            color: $orange;
+            font-size: 14px;
+        }
+    
+        h4 {
+            font-size: 90px;
+            color: $black;
+            margin: 1vh 0 5vh 0;
+        }
+    
+        a {
+            @include stylink();
+        }
+    }
 }
+
 
 @media (max-width: 768px) {
     header {
-        background-position-y: right;
+        background-position-y: bottom;
         background-repeat: no-repeat;
+    
         .navig, .search {
             display: none;
         }
+    
         .nav-hamburger{
-            @include flex(flex, center,center);
+            @include flex(flex, center, center);
             margin: -5vh;
             flex-direction: column;
             width: 100vw;
@@ -74,29 +125,85 @@ header {
             opacity: 0;
             position: fixed;
             z-index: -2;
+    
             p {
-                padding: 3vh;
-                font-size: 40px;
+                width: 90%;
+                margin: 0 0 0 0;
+                padding: 10px 0 10px 0;
+                font-size: 20px;
+                border-bottom-style: solid;
+                border-bottom-width: 1px;
             }
+
+            p:first-of-type {
+            	border-style: none;
+            }
+
+            p:nth-of-type(6) {
+            	margin: 0 0 40px 0;
+            }
+
+            h2 {
+            	margin: 0 0 10px 0;
+            	width: 90%;
+            }
+
+            p:last-of-type {
+            	margin: 0 0 0 0;
+            	font-size: 15px;
+            	color: $grey;
+            	border-style: none;
+            }
+    
             .close-hamburger {
-                font-size: 60px;
+                font-size: 30px;
                 padding-top: 0;
             }
         }
+    
         .logo {
             @include position(absolute, 5vh, 0, 0, 5%)
             display: block;
             width: 120px;
             height: 60px;
         }
+    
         .icon {
             @include position(absolute, 6vh, 0, 0, 60%)
+    
             .icons {
                 font-size: 1.7em;
                 padding: 0 25px;
             }
+    
             .open-hamburger {
                 opacity: 1;
+            }
+        }
+    
+        .social-media {
+            @include position(absolute, 75vh, 0, 0, 50%);
+            transform: translateX(-50%);
+            @include flex(flex, center, center);     
+        }
+    
+        .trio {
+            @include position(absolute, 25vh, 0, 0, 15%)
+            width: 20vw;
+       
+            p {
+                color: $orange;
+                font-size: 14px;
+            }
+       
+            h4 {
+                font-size: 90px;
+                color: $black;
+                margin: 1vh 0 5vh 0;
+            }
+        
+            a {
+                @include stylink();
             }
         }
     }
@@ -105,16 +212,70 @@ header {
 
 @media (max-width: 500px) {
     header {
+        
         .logo {
             width: 80px;
             height: 40px;
         }
+        
         .icon {
             @include position(absolute, 4.5vh, 5vw, auto, auto)
+            
             .icons {
                 font-size: 1em;
-                padding: 0 15px;
+                padding: 0 10px;
             }
-        }   
+        }
+
+        .nav-hamburger {
+        
+            p {
+                font-size: 15px;
+                color: $grey;
+            }
+
+            p:first-of-type {
+            	border-style: none;
+            	padding: 0 0 0 0;
+			}
+			
+			p:nth-of-type(6){
+				margin: 0 0 40px 0;
+			}
+
+            h2 {
+            	margin: 0 0 15px 0;
+            }
+
+            p:last-of-type {
+            	border-style: none;
+            	font-size: 12px;
+            }
+        
+            .close-hamburger {
+                font-size: 30px;
+                margin: 0 0 0 0;
+            }
+        }
+        
+        .trio {
+            @include position(absolute, 25vh, 0, 0, 15%)
+            width: 30vw;
+        
+            p {
+                color: $orange;
+                font-size: 14px;
+            }
+        
+            h4 {
+                font-size: 70px;
+                color: $black;
+                margin: 1vh 0 5vh 0;
+            }
+        
+            a {
+                @include stylink();
+            }
+        }
     }
 }
