@@ -1,13 +1,13 @@
-@import "node_modules/bootstrap/scss/bootstrap";
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import 'variables';
-@import 'mixin';
-@import 'header';
-@import 'footer';
-
 $graytext: #999;
 $red: #f68773;
 $black: #222;
+@import "node_modules/bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import '../assets/scss/variables';
+@import '../assets/scss/mixin';
+@import '../assets/scss/header';
+@import '../assets/scss/footer';
+
 
 
 html {
@@ -44,9 +44,9 @@ hr{
 	border-top: 1.5px solid rgba(0, 0, 0, 0.1);
 }
 
-
 p{
 	font-size: 0.9em;
+	
 
 }
 
@@ -172,7 +172,7 @@ p{
 
 blockquote{
 
-	footer{
+	footer {
 		font-size: 40%;
 		font-style: normal;
 		height: 4em;

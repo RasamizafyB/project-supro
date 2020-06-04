@@ -8,7 +8,7 @@
 
 header {
   padding: 5vh;
-  height: 20vh;
+  height: 17vh;
   position: relative; }
   header a {
     color: black; }
@@ -1117,7 +1117,7 @@ footer {
       font-weight: bold; }
   footer .big {
     width: 19vw; }
-  footer .media, footer .card {
+  footer .media, footer .visa {
     text-align: center;
     font-size: 1.5em; }
 
