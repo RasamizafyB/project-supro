@@ -220,7 +220,7 @@ header {
 
 @media (max-width: 768px) {
     header {
-        background-position-y: right;
+        background-position-y: bottom;
         background-repeat: no-repeat;
     
         .navig, .search {
@@ -436,7 +436,7 @@ header {
 				.nav_bar {
 					margin: 0 0 50px 0;
 					
-					h1 {
+					h2 {
 						margin: 0 0 20px 0;
 						font-size: 200%;
 						text-align: center;
@@ -1200,7 +1200,7 @@ header {
 				.nav_bar {
 					margin: 0 0 50px 0;
 
-					h1 {
+					h2 {
 							margin: 0 0 20px 0;
 							font-size: 200%;
 						}
@@ -1896,7 +1896,7 @@ header {
 					align-items: center;
 					margin: 0 0 50px 0;
 					
-					h1 {
+					h2 {
 						margin: 0 0 0 0;
 						font-size: 200%;
 					}

@@ -152,7 +152,7 @@ header {
 
 @media (max-width: 768px) {
   header {
-    background-position-y: right;
+    background-position-y: bottom;
     background-repeat: no-repeat; }
     header .navig, header .search {
       display: none; }
@@ -313,7 +313,7 @@ header {
       margin: 0 0 100px 0; }
       main .shop_content .left_part .nav_bar {
         margin: 0 0 50px 0; }
-        main .shop_content .left_part .nav_bar h1 {
+        main .shop_content .left_part .nav_bar h2 {
           margin: 0 0 20px 0;
           font-size: 200%;
           text-align: center; }
@@ -802,7 +802,7 @@ header {
         margin: 0 0 50px 0; }
         main .shop_content .left_part .nav_bar {
           margin: 0 0 50px 0; }
-          main .shop_content .left_part .nav_bar h1 {
+          main .shop_content .left_part .nav_bar h2 {
             margin: 0 0 20px 0;
             font-size: 200%; }
           main .shop_content .left_part .nav_bar div {
@@ -1219,7 +1219,7 @@ header {
           grid-template-columns: 150px auto;
           align-items: center;
           margin: 0 0 50px 0; }
-          main .shop_content .left_part .nav_bar h1 {
+          main .shop_content .left_part .nav_bar h2 {
             margin: 0 0 0 0;
             font-size: 200%; }
           main .shop_content .left_part .nav_bar div {

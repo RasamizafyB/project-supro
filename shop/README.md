@@ -31,3 +31,6 @@
 
 ###### 3 June 2020
 * Adapted the menu in responsive design
+
+###### 4 June 2020
+* Processed HTML et CSS files in the W3C validator
