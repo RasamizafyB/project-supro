@@ -30,7 +30,7 @@ $color-strike: rgb(153, 153, 153);
 @mixin size { 
     color: $color-small;
     font-weight: 800;
-    font-size: 12px;
+    font-size: 12px; 
     text-decoration: none;
     background-color: rgb(194, 194, 194);
     padding: 1px 5px 1px 5px;
@@ -94,6 +94,8 @@ body{
     width: 100%;
     margin: 0%;
 }
+
+
 
 // main
 
