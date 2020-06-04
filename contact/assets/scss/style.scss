@@ -1,9 +1,9 @@
 
 @import "reset"; 
-@import "variables";
-@import "mixin"; 
-@import "header";
-@import "footer"; 
+@import "./assets/scss/variables";
+@import "./assets/scss/mixin"; 
+@import "./assets/scss/header";
+@import "./assets/scss/footer"; 
 
 @mixin input($width, $height, $top) {
     width: $width;
@@ -33,7 +33,7 @@
     line-height: 160%;
 }
 body{
-    width: 100%;
+    width: 100%; 
     margin: 0 auto;
 }
 .locator{
