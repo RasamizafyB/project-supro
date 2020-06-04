@@ -87,7 +87,7 @@ header {
       height: 40px;
       border-radius: 25px;
       padding: 0 40px 0 15px;
-      border: none; }
+      border: 1px solid #BEBEBE; }
       header .search input:focus {
         outline: none; }
     header .search i {
