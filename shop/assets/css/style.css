@@ -150,6 +150,7 @@ header {
       border-bottom: solid 2px #222;
       font-size: 12px; }
 
+/* ----- HEADER TO 768PX ----- */
 @media (max-width: 768px) {
   header {
     background-position-y: bottom;
@@ -240,6 +241,7 @@ header {
         border-bottom: solid 2px #222;
         font-size: 12px; } }
 
+/* ----- HEADER TO 500PX ----- */
 @media (max-width: 500px) {
   header .logo {
     width: 80px;
@@ -375,7 +377,7 @@ header {
             margin: 0 0 7.5px 0;
             text-align: center; }
             main .shop_content .left_part .first_line .first_line-second_product div .checked {
-              color: #F68872; }
+              color: #f68773; }
           main .shop_content .left_part .first_line .first_line-second_product p {
             font-size: 80%;
             color: #999;
@@ -526,7 +528,7 @@ header {
             margin: 0 0 7.5px 0;
             text-align: center; }
             main .shop_content .left_part .third_line .third_line-first_product div .checked {
-              color: #F68872; }
+              color: #f68773; }
           main .shop_content .left_part .third_line .third_line-first_product p {
             font-size: 80%;
             color: #999;
@@ -548,7 +550,7 @@ header {
             margin: 0 0 7.5px 0;
             text-align: center; }
             main .shop_content .left_part .third_line .third_line-second_product div .checked {
-              color: #F68872; }
+              color: #f68773; }
           main .shop_content .left_part .third_line .third_line-second_product p {
             font-size: 80%;
             color: #999;
@@ -589,7 +591,7 @@ header {
             margin: 0 0 7.5px 0;
             text-align: center; }
             main .shop_content .left_part .fourth_line .fourth_line-first_product div .checked {
-              color: #F68872; }
+              color: #f68773; }
           main .shop_content .left_part .fourth_line .fourth_line-first_product p {
             font-size: 80%;
             color: #999;
@@ -857,7 +859,7 @@ header {
           main .shop_content .left_part .first_line .first_line-second_product div:nth-of-type(1) {
             margin: 0 0 7.5px 0; }
             main .shop_content .left_part .first_line .first_line-second_product div:nth-of-type(1) .checked {
-              color: #F68872; }
+              color: #f68773; }
           main .shop_content .left_part .first_line .first_line-second_product p {
             font-size: 80%;
             color: #999;
@@ -978,7 +980,7 @@ header {
           main .shop_content .left_part .third_line .third_line-first_product div {
             margin: 0 0 7.5px 0; }
             main .shop_content .left_part .third_line .third_line-first_product div .checked {
-              color: #F68872; }
+              color: #f68773; }
           main .shop_content .left_part .third_line .third_line-first_product p {
             font-size: 80%;
             color: #999;
@@ -995,7 +997,7 @@ header {
           main .shop_content .left_part .third_line .third_line-second_product div {
             margin: 0 0 7.5px 0; }
             main .shop_content .left_part .third_line .third_line-second_product div .checked {
-              color: #F68872; }
+              color: #f68773; }
           main .shop_content .left_part .third_line .third_line-second_product p {
             font-size: 80%;
             color: #999;
@@ -1030,7 +1032,7 @@ header {
           main .shop_content .left_part .fourth_line .fourth_line-first_product div {
             margin: 0 0 7.5px 0; }
             main .shop_content .left_part .fourth_line .fourth_line-first_product div .checked {
-              color: #F68872; }
+              color: #f68773; }
           main .shop_content .left_part .fourth_line .fourth_line-first_product p {
             font-size: 80%;
             color: #999;
@@ -1275,7 +1277,7 @@ header {
           main .shop_content .left_part .first_line .first_line-second_product div:nth-of-type(1) {
             margin: 0 0 7.5px 0; }
             main .shop_content .left_part .first_line .first_line-second_product div:nth-of-type(1) .checked {
-              color: #F68872; }
+              color: #f68773; }
           main .shop_content .left_part .first_line .first_line-second_product p {
             font-size: 80%;
             color: #999;
@@ -1396,7 +1398,7 @@ header {
           main .shop_content .left_part .third_line .third_line-first_product div {
             margin: 0 0 7.5px 0; }
             main .shop_content .left_part .third_line .third_line-first_product div .checked {
-              color: #F68872; }
+              color: #f68773; }
           main .shop_content .left_part .third_line .third_line-first_product p {
             font-size: 80%;
             color: #999;
@@ -1413,7 +1415,7 @@ header {
           main .shop_content .left_part .third_line .third_line-second_product div {
             margin: 0 0 7.5px 0; }
             main .shop_content .left_part .third_line .third_line-second_product div .checked {
-              color: #F68872; }
+              color: #f68773; }
           main .shop_content .left_part .third_line .third_line-second_product p {
             font-size: 80%;
             color: #999;
@@ -1448,7 +1450,7 @@ header {
           main .shop_content .left_part .fourth_line .fourth_line-first_product div {
             margin: 0 0 7.5px 0; }
             main .shop_content .left_part .fourth_line .fourth_line-first_product div .checked {
-              color: #F68872; }
+              color: #f68773; }
           main .shop_content .left_part .fourth_line .fourth_line-first_product p {
             font-size: 80%;
             color: #999;
