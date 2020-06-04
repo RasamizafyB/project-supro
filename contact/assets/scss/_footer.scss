@@ -45,7 +45,7 @@ footer {
         div {
             width: 30vw;
             text-align: center;
-            a, p, i {
+            a, i {
                 padding: 10px 0;
                 color: $grey;
                 font-size: 0.9em;
@@ -59,13 +59,12 @@ footer {
                 font-weight: bold;
             }
         }
-        .big, .disap {
-            display: none;
-        }
-        .spr, .cpr {
-            padding: 5vh 0;
-            width: 80vw;
-            display: block;
+        .big_media {
+            display: flex;
+            flex-direction: column;
+            a{
+               padding-top: 15px;
+            }
         }
     }
   }
