@@ -1,9 +1,9 @@
 
-@import "reset"; 
-@import "variables";
-@import "mixin";
-@import "header"; 
-@import "footer";
+@import "../assets/scss/reset"; 
+@import "../assets/scss/variables";
+@import "../assets/scss/mixin";
+@import "../assets/scss/header"; 
+@import "../assets/scss/footer";
 
 
 $color-small: rgb(110, 110, 110);

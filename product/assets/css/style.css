@@ -8,10 +8,10 @@
 
 header {
   padding: 5vh;
-  background-image: url(../images/abc.jpg);
-  background-size: cover;
-  height: 25px;
+  height: 20vh;
   position: relative; }
+  header a {
+    color: black; }
   header .logo {
     position: absolute;
     top: 5vh;
@@ -33,8 +33,6 @@ header {
       align-items: center;
       width: 80px;
       height: 40px; }
-      header .navig p a {
-        color: black; }
   header .nav-hamburger {
     display: none; }
   header .search {
@@ -53,7 +51,7 @@ header {
       height: 40px;
       border-radius: 25px;
       padding: 0 40px 0 15px;
-      border: 1px solid #bebebe; }
+      border: none; }
       header .search input:focus {
         outline: none; }
     header .search i {
@@ -116,9 +114,9 @@ header {
       border-bottom: solid 2px #222;
       font-size: 12px; }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   header {
-    background-position-y: right;
+    background-position-y: bottom;
     background-repeat: no-repeat; }
     header .navig, header .search {
       display: none; }
@@ -135,10 +133,26 @@ header {
       position: fixed;
       z-index: -2; }
       header .nav-hamburger p {
-        padding: 3vh;
-        font-size: 40px; }
+        width: 90%;
+        margin: 0 0 0 0;
+        padding: 10px 0 10px 0;
+        font-size: 20px;
+        border-bottom-style: solid;
+        border-bottom-width: 1px; }
+      header .nav-hamburger p:first-of-type {
+        border-style: none; }
+      header .nav-hamburger p:nth-of-type(6) {
+        margin: 0 0 40px 0; }
+      header .nav-hamburger h2 {
+        margin: 0 0 10px 0;
+        width: 90%; }
+      header .nav-hamburger p:last-of-type {
+        margin: 0 0 0 0;
+        font-size: 15px;
+        color: #999;
+        border-style: none; }
       header .nav-hamburger .close-hamburger {
-        font-size: 60px;
+        font-size: 30px;
         padding-top: 0; }
     header .logo {
       position: absolute;
@@ -202,11 +216,23 @@ header {
     left: auto; }
     header .icon .icons {
       font-size: 1em;
-      padding: 0 15px; }
+      padding: 0 10px; }
   header .nav-hamburger p {
-    font-size: 25px; }
+    font-size: 15px;
+    color: #999; }
+  header .nav-hamburger p:first-of-type {
+    border-style: none;
+    padding: 0 0 0 0; }
+  header .nav-hamburger p:nth-of-type(6) {
+    margin: 0 0 40px 0; }
+  header .nav-hamburger h2 {
+    margin: 0 0 15px 0; }
+  header .nav-hamburger p:last-of-type {
+    border-style: none;
+    font-size: 12px; }
   header .nav-hamburger .close-hamburger {
-    font-size: 50px; }
+    font-size: 30px;
+    margin: 0 0 0 0; }
   header .trio {
     position: absolute;
     top: 25vh;
@@ -243,10 +269,6 @@ footer {
       font-size: 0.9em; }
       footer div a i, footer div p i, footer div i i {
         padding-right: 15px; }
-      footer div a:hover, footer div p:hover, footer div i:hover {
-        color: black; }
-      footer div a .big cpr, footer div p .big cpr, footer div i .big cpr {
-        color: #999; }
     footer div h4 {
       padding-bottom: 15px;
       font-size: 16px;
@@ -256,6 +278,12 @@ footer {
   footer .media, footer .card {
     text-align: center;
     font-size: 1.5em; }
+
+@media (max-width: 768px) {
+  footer {
+    margin: 5vh 10vw; }
+    footer div {
+      margin: 0 3vw; } }
 
 @media (max-width: 500px) {
   footer {
@@ -268,6 +296,7 @@ footer {
     margin: 15vh 15vw 10vh;
     height: 40vh; }
     footer div {
+      margin: 0;
       width: 30vw;
       text-align: center; }
       footer div a, footer div p, footer div i {
